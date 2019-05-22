@@ -1,0 +1,113 @@
+body {
+
+    text-align:center;font-size: 14px;
+    overflow:hide;
+    overflow-y: hidden;
+    overflow-style: auto;
+}
+#result{font-family:serif;font-size:12px;}
+
+@media screen and (min-width: 10em) {
+
+    .fundo{
+
+        background: -moz-linear-gradient(left, white 15%,  #ccc,#365775);
+        background:-webkit-linear-gradient(left, white 15%,  #ccc,#365775);
+        background:-ms-linear-gradient(left, white 15%,  #ccc,#365775);
+        background:-o-linear-gradient(left, white 15%,  #ccc,#365775);
+        background-attachment: fixed;
+
+    }
+
+    .logo h6{font-size: 8px; font-weight: normal;
+        text-align: center; display: inline;}
+
+    .logo img{width: 30px; margin-left: -2em;}
+
+    .texto h2{font-size: 12px;margin-left: 10em;}
+    h5{font-size: 20px; color: green; margin-left: 5em;}
+}
+
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+
+    .fundo{
+
+        background: -moz-linear-gradient(left, white 15%, #365775, #ccc);
+        background:-webkit-linear-gradient(left, white 15%, #365775, #ccc);
+        background:-ms-linear-gradient(left, white 15%, #365775, #ccc);
+        background:-o-linear-gradient(left, white 15%, #365775, #ccc);
+        background-attachment: fixed;
+    }
+
+    .logo h6{font-size: 12px;font-weight: normal;
+        text-align: center; display: inline;}
+
+    .logo img{width: 40px; margin-left: -5em;}
+
+    h5{font-size: 20px;}
+    .texto h2{font-size: 15px;margin-left: 10em;}
+    .lista_geral{top:0px;}
+}
+
+/* Show priority 2 at 560px (35em x 16px) */
+@media screen and (min-width: 35em) {
+
+
+    h5{font-size: 25px}
+
+    .logo h6{font-size: 12px;font-weight: normal;
+        text-align: center; display: inline;}
+
+    .logo img{width: 45px; margin-left: -2em;}
+
+    .texto h2{font-size: 20px;margin-left: 10em;}
+}
+
+/* Show priority 3 at 720px (45em x 16px) */
+@media screen and (min-width: 45em) {
+
+    .fundo{
+
+        background-image: -moz-linear-gradient(left, white 10%, #365775, #ccc)
+    background-image:-webkit-linear-gradient(left, white 10%, #365775, #ccc);
+        background-image:-ms-linear-gradient(left, white 10%, #365775, #ccc);
+        background-image:-o-linear-gradient(left, white 10%, #365775, #ccc);
+        background-attachment: fixed;
+
+    }
+
+    .logo h6{font-size: 12px;font-weight: normal;
+        text-align: center; display: inline;}
+
+    .logo img{width: 70px; margin-left: -2em;}
+
+    .texto h2{font-size: 28px;margin-left: 5em;}
+
+    h5{font-size: 32px}
+}
+
+#put_image{background: url("img/fundo1.jpg");}
+
+#image_est {
+
+    margin-right:1em;
+    margin-top:-1em;
+
+}
+
+#push{margin-top:-.1em;}
+
+.cab{
+
+    background: -moz-linear-gradient(#c3cebc, black, #c3cebc);
+    background:-webkit-linear-gradient(#c3cebc, black, #c3cebc);
+    background:-ms-linear-gradient(#c3cebc,black, #c3cebc);
+    background:-o-linear-gradient(#c3cebc, black, #c3cebc);
+    padding:15px;
+    color:white;
+    margin-top:-.1em;
+    margin-botton:-.1em;
+    font-family:serif;
+}
+ul {  list-style-type: none;  }

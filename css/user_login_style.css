@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*---------------------- estilo de login ---------------------------- */
+
+.ui-form { width:470px; margin:0 auto; }
+.ui-form .ui-widget-header h2 { margin:10px 0 10px 20px; }
+.ui-form .ui-widget-content { padding:20px; }
+.ui-form label, .ui-form input, .ui-form .ui-state-error,
+.ui-form .ui-icon, .ui-form .ui-state-error p { float:left; }
+.ui-form label, .ui-state-error p {
+font-size:12px; padding:10px 10px 0 0;
+}
+.ui-form .ui-state-error { padding:4px; }
+.ui-form .ui-state-error p {
+font-weight:bold; padding-top:5px;
+}
+.ui-form .ui-state-error .ui-icon { margin:5px 3px 0 4px; }
+
+.ui-corner-all { 
+-moz-border-radius:0; -webkit-border-radius:0;
+border-radius:0;
+}
+.ui-widget-header {
+font-family:Georgia; background:#534741;
+border:1px solid #362f2d; color:#c7b299;
+}
+
+.header{
+    padding:10px;
+    font-style:italic; 
+    font-weight:bold;
+    font-family:Georgia;
+    color:red;
+}
+.ui-form .ui-widget-header h2 {
+margin:0; border:1px solid #998675; padding:10px;
+font-style:italic; font-weight:normal;
+}
+.ui-form .ui-widget-content { 
+background:#c7b299; border:1px solid #362f2d; border-top:0;
+padding:0;
+}
+.ui-widget-content form {
+padding:20px; border:1px solid #f3eadf;
+}
+.ui-widget-content .ui-state-error {
+border:1px solid #e7cc17; background:#fbf5cd;
+}
+.ui-widget-content .ui-state-error-text { 
+color:#e7cc17; padding-left:10px;
+}
+.ui-state-error .ui-icon { display:none; }
+
+
+/*---------------------jQuery-footer-------------------------------*/
+
+.nav-glyphish-example .ui-btn { padding-top: 40px ; }
+.nav-glyphish-example .ui-btn:after { width: 30px; 
+		height: 30px; 
+		margin-left: -15px ; 
+		
+  }
+  
+
+
+

@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/*These apply across all breakpoints because they are outside of a media query */
+table.columns-compare thead th {
+    background-color: #fff;
+}
+table.columns-compare thead th h4 {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    margin: 0;
+}
+table.columns-compare thead th h3 {
+    font-size: .9em;
+    margin: -.4em 0 .8em 0;
+}
+table.columns-compare th.label {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    opacity: 0.5;
+    padding: 1.2em .8em;
+    background-color: #ddd;
+}
+table.columns-compare tbody tr.photos td {
+    background-color: #fff;
+    padding: 0;
+}
+table.columns-compare tbody tr.photos img {
+    max-width: 100%;
+    min-width: 60px;
+}
+/*  Use the target selector to style the column chooser button */
+a[href="#nota-table-popup"] {
+    margin-bottom: 1.2em;
+}
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+    .columns-compare th.ui-table-priority-1,
+    .columns-compare td.ui-table-priority-1 {
+        display: table-cell;
+    }
+}
+/* Show priority 2 at 560px (35em x 16px) */
+@media screen and (min-width: 35em) {
+    .columns-compare th.ui-table-priority-2,
+    .columns-compare td.ui-table-priority-2 {
+        display: table-cell;
+    }
+}
+/* Show priority 3 at 720px (45em x 16px) */
+@media screen and (min-width: 45em) {
+    .columns-compare th.ui-table-priority-3,
+    .columns-compare td.ui-table-priority-3 {
+        display: table-cell;
+    }
+}
+/* Manually hidden */
+.columns-compare th.ui-table-cell-hidden,
+.columns-compare td.ui-table-cell-hidden {
+    display: none;
+}
+/* Manually shown */
+.columns-compare th.ui-table-cell-visible,
+.columns-compare td.ui-table-cell-visible {
+    display: table-cell;
+}
+
+/*---------------TABLE GERAL----------------------------------------*/
+
+.movie-list thead th,
+.movie-list tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.movie-list tbody th,
+.movie-list tbody td {
+    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.movie-list tbody tr:last-child th,
+.movie-list tbody tr:last-child td {
+    border-bottom: 0;
+}
+.movie-list tbody tr:nth-child(odd) td,
+.movie-list tbody tr:nth-child(odd) th {
+    background-color: #eeeeee; /* non-RGBA fallback  */
+    background-color: rgba(0,0,0,.04);
+}
+
+
+/*---------------------------------------My table list puta --------------------*/
+
+.table th
+{
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    font-family:  monospace;
+    /*background: -moz-linear-gradient(#24246A, white);*/
+    /*background:-webkit-linear-gradient(#24246A, white);*/
+    /*background:-ms-linear-gradient(#24246A, white);*/
+    /*background:-o-linear-gradient(#24246A, white);*/
+
+    color: #000080;
+
+}
+
