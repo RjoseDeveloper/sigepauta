@@ -363,18 +363,13 @@ $(document).ready(function(e) {
 
     }
 
-    function print_lista_pauta(item) {
+    function print_lista_pauta(item, valor) {
+        var acao ="";
 
-        if (item == 'pdf') {
-            var acao = 'D'
-        } else if (item == 'html') {
-            var acao = 'I';
-        } else {
-            var acao = 'D';
-        }
-        var ptn = $('#campo_ptn').val();
-        window.location = '../reports/Relatorio_pautaFreq.php?ptn=' + ptn + '&acao=' + acao;
+        if (valor == 'pdf') {acao = 'I'}
 
+        if (valor == 'html') {acao = 'I';}
 
+        window.location = '../reports/Relatorio_pautaFreq.php?ptn=' + item + '&acao=' + acao;
     }
 

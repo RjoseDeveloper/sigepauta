@@ -89,23 +89,17 @@ switch($param) {
             }
         }
 
-        ?>
-
-        <?php
-        if ($_SESSION['tipo'] != 'estudante') {
-            ?>
-
         session_start();
 
+        if ($_SESSION['tipo'] == 'estudante') {?>
 
             <div class="container alert alert-success"> <?php echo "<strong>" . $messages . "<strong>" ?>
                 <a href="../view/configAdmin/clientes.php" class="pull-right"> &times;</a>
             </div>
 
-            if ($_SESSION['tipo'] != 'estudante'){?>
 
+        <?php }else { ?>
 
-        <?php } else { ?>
 
             <div class="container alert alert-success"> <?php echo "<strong>" . $messages . "<strong>" ?>
                 <a href="../view/Estudante_pauta.php" class="pull-right"> &times;</a>
@@ -116,7 +110,7 @@ switch($param) {
                 </div>
 
 
-        <?php } ?>
+        <?php }  ?>
 
         <?php
         break;
@@ -134,6 +128,7 @@ switch($param) {
 
         $curso = $_REQUEST['curso'];
         $iduser = $_REQUEST['user'];
+
         $disciplina = $_REQUEST['disciplina'];
         $turno = $_REQUEST['turno'];
         $regime = $_REQUEST['regime'];

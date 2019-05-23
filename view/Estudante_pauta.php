@@ -109,6 +109,8 @@ if (!isset($_SESSION['username'])){?>
 
     </head>
 
+
+
 <body>
 
 <div data-role="page" class="ui-container" style="background: #fff">
@@ -168,7 +170,7 @@ if (!isset($_SESSION['username'])){?>
                         $disp = $row['idDisciplina'];
                         $curso=$row['curso'];
 
-                        if ($estudante_sql->obterQtdAvaliacaoPub($disp,2,$row['idcurso'], 0) >= 0){?>
+                        if ($estudante_sql->obterQtdAvaliacaoPub($disp,2,$row['idcurso'], 0) >= 0){ ?>
                             <div  data-role="collapsible" data-theme="c" style=" color:#008000" id="ctr_pauta">
                                 <h3 > <li value="<?php echo $row['idDisciplina']?>"
                                           class="getDisp" onclick="get_item_disp(this.value)" style="list-style: none">

@@ -60,23 +60,17 @@ GROUP BY tipoavaliacao.descricao";
         $db->closeDatabase();
     }
 
-    public function listar_tipo_avaliacao($disp, $curso, $av)
+    public function listar_tipo_avaliacao($disp, $curso, $idpauta)
     {
-        $query="SELECT DISTINCT data_avaliacao.descricaoteste,
-                pautanormal.idPautaNormal as idNota,
-                pautanormal.idTipoAvaliacao as idavaliacao
-                FROM data_avaliacao INNER JOIN pautanormal
-
-            ON pautanormal.idTipoAvaliacao=data_avaliacao.id_data  INNER JOIN disciplina
-            ON disciplina.idDisciplina= pautanormal.idDisciplina INNER JOIN estudante_nota
-            ON estudante_nota.idPautaNormal = pautanormal.idPautaNormal
-            WHERE disciplina.idDisciplina='$disp' AND pautanormal.idcurso= '$curso'";
+        $query="SELECT data_avaliacao.descricaoteste,pautanormal.idPautaNormal as idNota,
+                FROM data_avaliacao INNER JOIN pautanormal ON data_avaliacao.id_data = pautanormal.idTipoAvaliacao
+            WHERE pautanormal.idPautaNormal='$idpauta'";
 
         $db = new mySQLConnection();
         $result = mysqli_query($db->openConection(),$query);
-        while ($array[] = mysqli_fetch_assoc($result)){;}
-        return ($array);
-
+        if ($array = mysqli_fetch_assoc($result)){
+            echo $array['descricaoteste'];
+        }
         $db->closeDatabase();
     }
 

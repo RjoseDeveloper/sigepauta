@@ -28,6 +28,7 @@ if (empty($_POST['descricao'])){
     $date_added=date("Y-m-d");
     $ano = $_POST['ano'];
     $natureza = $_POST['natureza'];
+    $curso = $_POST['curso'];
 
     // check if user or email address already exists
     $sql = "SELECT * FROM disciplina WHERE descricao = '" . $descricao. "'";
@@ -37,9 +38,9 @@ if (empty($_POST['descricao'])){
         $errors[] = "O disciplina ja foi registada.";
     } else {
         // write new user's data into database
-        $sql = "INSERT INTO disciplina(creditos,descricao,codigo,data_registo,natureza,anolectivo)
+        $sql = "INSERT INTO disciplina(creditos,descricao,codigo,data_registo,natureza,anolectivo,idcurso)
                             VALUES('".$credito."','".$descricao."','".$codigo."','" . $date_added. "',
-                            '" .$natureza. "','".$ano."')";
+                            '" .$natureza. "','".$ano."','".$curso."')";
 
         $query_new_user_insert = mysqli_query($con,$sql);
         echo $sql;

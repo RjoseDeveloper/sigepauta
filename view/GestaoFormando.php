@@ -72,7 +72,7 @@ if (!isset($_SESSION['username'])){?>
             <li><a data-toggle="tab" href="#menu1">INSCRIÇÃO - DISCIPLINA</a></li>
             <?php
                 if ($_SESSION['tipo']!="estudante"){ ?>
-            <li><a data-toggle="tab" href="#menu2">CONSULTAS REGULARES</a></li>
+<!--            <li><a data-toggle="tab" href="#menu2">CONSULTAS REGULARES</a></li>-->
 
             <?php }?>
         </ul>
@@ -212,10 +212,10 @@ if (!isset($_SESSION['username'])){?>
 
                     <?php }else{?>
 
-                    <h4>DADOS DO ALUNO</h4>
+                    <h4>INFORMAÇÕES DE ESTUDANTE</h4>
                     <?php include 'configAdmin/ajax/buscar_aluno.php';?>
 
-                    <h4> DADOS DE INSCRICAO</h4>
+                    <h4> DADOS DE INSCRIÇÃO</h4>
                     <?php include 'configAdmin/ajax/disciplina_aluno.php'; }?>
 
             </div>
@@ -243,7 +243,7 @@ if (!isset($_SESSION['username'])){?>
                     <label for="user">Seleccionar Aluno:</label>
 
                     <select class="form-control" data-style="btn-primary"
-                            data-width="auto" id="user" n ame="user" required="">
+                            data-width="auto" id="user" name="user" required="">
                         <?php
                         $resut = mysqli_query($con,'SELECT * FROM utilizador INNER JOIN previlegio
                                                     on previlegio.idprevilegio = utilizador.idprevilegio
@@ -302,14 +302,11 @@ if (!isset($_SESSION['username'])){?>
                         <?php }  ?>
                     </select>
 
-                    <!--select class="form-control"  data-style="btn-primary"
-                            data-width="auto" id="turma" name="turma" required="Escolha a turma">
-                    </select-->
                     <br>
 
                     <div class="pull-right">
                         <button type="submit" class="btn btn-primary" id="btn_inscricaov">
-                            <span class="glyphicon glyphicon-plus" title="Cadastrar"> Adicionar</button>
+                            <span class="glyphicon glyphicon-chevron-right" title="Cadastrar"> Registar Operação</button>
 
 <!--                        <a href="#" class="btn btn-success" id="btn_print" onclick="imprimir_ficha()">-->
 <!--                            <span class="glyphicon glyphicon-print" title="Imprimir"></span></a>-->
@@ -388,15 +385,14 @@ if (!isset($_SESSION['username'])){?>
 <script type="text/javascript">
 
     $(document).ready(function(){
-        var curso = $('select#curso_id').val();
-        //alert(curso);
-        load_table_matricula(curso,0,0,8,3,0);
-        $('#guardar_inscricao').hide();
 
+        var curso = $('select#curso_id').val();
+
+        load_table_matricula(curso,0,0,8,3,0);
         $( "#guardar_inscricao" ).submit(function( event ) {
             // $('#btn_inscricaov').attr("disabled", true);
-
             var parametros = $(this).serialize();
+
             $.ajax({
                 type: "POST",
                 url: "../controller/FormandoCtr.php?acao=4",
@@ -432,14 +428,15 @@ if (!isset($_SESSION['username'])){?>
             }
         });
         event.preventDefault();
+    }
 
 
-            function enable_inscricao(){
+    function enable_inscricao(){
 
                 $('#guardar_inscricao').show();
                 $('.tbl_disciplina').hide();
 
-            }
+    }
 
         function get_item_val(item){
             $('#campo_frm').val(item);

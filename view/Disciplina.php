@@ -9,7 +9,7 @@
 
         li{list-style: none;  padding: -2em;}
         .doc_ul_a{ cursor: pointer;}
-        .form-control{  margin-top: 5px;  }
+        .form-control{margin-top: 5px;}
 
     </style>
 
@@ -26,36 +26,62 @@
                     <input type="text" required="" name="descricao" class="form-control" value="" id="descricao" placeholder="Descrição da Disciplina"/>
                     <input type="text" required="" name="credito" class="form-control" value="" id="credito" placeholder="Creditos"/>
 
-                    <select name="natureza" id="natureza" class="form-control" required="">
+                        <div class="row">
 
-                        <option value="" data-theme="a" desable="desable"> -- Regime -- </option> 
-                        <option value="Integral"> Integral </option>
-                        <option value="Modular"> Modular </option>
-                        <option value="Laboratorio"> Laboratorio </option>
-                        <option value="Pesquisa de Campo"> Pesquisa de Campo</option>
-                         
-                    </select>
+                            <div class="col-md-4">
+                                <select name="natureza" id="natureza" class="form-control" required="">
 
-                        <select name="ano" id="ano" class="form-control" required="">
-                            <option value="" data-theme="a" desable="desable"> -- Ano Académico -- </option>
+                                    <option value="" data-theme="a" desable="desable"> -- Regime -- </option> 
+                                    <option value="Integral"> Integral </option>
+                                    <option value="Modular"> Modular </option>
+                                    <option value="Laboratorio"> Laboratorio </option>
+                                    <option value="Pesquisa de Campo">Pesquisa de Campo</option>
+                                     
+                                </select>
+                            </div>
 
-                            <?php
+                            <div class="col-md-4">
 
-                                $rs = mysqli_query($con, 'SELECT * FROM anolectivo');
-                                while ($row = mysqli_fetch_assoc($rs)){?>
+                                <select name="ano" id="ano" class="form-control" required="">
+                                    <option value="" data-theme="a" desable="desable"> -- Ano Académico -- </option>
 
-                             
-                            <option value="<?php echo $row['idano'] ?>"> <?php echo utf8_encode($row['nivel'])?> </option>
-                            <?php  }?>
-                             
-                        </select>
+                                    <?php
+
+                                    $rs = mysqli_query($con, 'SELECT * FROM anolectivo');
+                                    while ($row = mysqli_fetch_assoc($rs)){?>
+                                        <option value="<?php echo $row['idano'] ?>"> <?php echo utf8_encode($row['nivel'])?> </option>
+                                    <?php } ?>
+                                     
+                                </select>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <select name="curso" id="curso" class="form-control" required="">
+                                    <option value="" data-theme="a" desable="desable"> -- Curso -- </option>
+
+                                    <?php
+
+                                    $rs = mysqli_query($con, 'SELECT * FROM curso');
+                                    while ($row = mysqli_fetch_assoc($rs)){?>
+                                        <option value="<?php echo $row['idcurso'] ?>"> <?php echo utf8_encode($row['descricao'])?> </option>
+                                    <?php  }?>
+                                     
+                                </select>
+
+                            </div>
+
+                        </div>
+
 
                     <div class="pull-right">
                       
                     <button type="submit" class="btn btn-primary" data-theme="b" data-mini="true" data-inline="true"
                             style="font-size:12px;
-                 margin-right: -.1em;background:#4682B4; border:none; padding: 10px 50px"  class="guardar_datos" id="guardar_datos">Registar</button>
+                 margin-right: -.1em;background:#4682B4; border:none; padding: 10px 50px"  class="guardar_datos" id="guardar_datos">Registar Operação</button>
                         </div>
+                        <br>
 
                     </form>
                 </div> <!-- fim div class sm-7 tamanho de textos-->

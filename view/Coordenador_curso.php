@@ -155,15 +155,16 @@ $myvar = 0;
 
                 <h3 style="float:left; font-family:serif"><br>
 
-                    <a  href="" data-inline="true" data-mini="true" class="sv" id="notif_em" style="font-family: serif; color:white;">Notificações</a>
-                    <a  href="" data-inline="true" data-mini="true"  class="sv" id="publicarX" style="font-family: serif; color:white;">Publicações</a>
-                    <a  href="" data-inline="true" data-mini="true"  class="sv" id="config" style="font-family: serif; color:white;">Configurações</a>
+                    <a  href="" data-inline="true" data-mini="true"  class="sv" id="publicar" style="font-family: serif; color:white;">Publicações</a>
+                    <a  href="" data-inline="true" data-mini="true" class="sv" id="notif_inc" style="font-family: serif; color:white;">Notificações</a>
+<!--                    <a  href="" data-inline="true" data-mini="true"  class="sv" id="config" style="font-family: serif; color:white;">Configurações</a>-->
                     <!--hr style="border: 2px solid #ff9933"--->
 
                 </h3>
             </div>
 
             <div class="ui-body ui-body-c"> <br><br>
+
                 <div style="width: 95%; margin-top: 1em" class="publicao_pauta">
 
                     <ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar disciplina... nome"

@@ -26,7 +26,7 @@ class PublicarPauta{
   INNER JOIN pautanormal ON pautanormal.idcurso = curso.idcurso
   INNER JOIN utilizador ON utilizador.id = curso.coordenador
   INNER JOIN professor ON utilizador.id = professor.idutilizador
-WHERE pautanormal.estado = '$estado' AND professor.idprofessor='$idDoc'";
+WHERE pautanormal.estado = '$estado' AND professor.idprofessor='$idDoc' OR utilizador.idprevilegio=3 OR utilizador.idprevilegio=6";
 
         $result = mysqli_query($db->openConection(),$query);
         $vector[] = null;
@@ -123,10 +123,10 @@ AND pautanormal.idPautaNormal = '$pautaNormal'";
         if( $ctr==0){
 
             $query ="SELECT disciplina.descricao as valor FROM disciplina
- INNER JOIN pautanormal
-ON pautanormal.idDisciplina = disciplina.idDisciplina
+ INNER JOIN pautanormal ON pautanormal.idDisciplina = disciplina.idDisciplina
 WHERE pautanormal.idPautaNormal = '$ptn'";
         }
+
         if ($ctr== 2){
             $query = "SELECT pautanormal.idcurso as valor FROM pautanormal
 WHERE pautanormal.idPautaNormal = '$ptn'";
@@ -145,8 +145,8 @@ WHERE pautanormal.idPautaNormal ='$ptn'";
 
         }
         if ($ctr== 4){
-            $query ="SELECT tipoavaliacao.idTipoAvaliacao as valor FROM tipoavaliacao
-          INNER JOIN pautanormal on pautanormal.idTipoAvaliacao = tipoavaliacao.idTipoAvaliacao
+            $query ="SELECT data_avaliacao.descricaoteste as valor FROM data_avaliacao
+          INNER JOIN pautanormal ON data_avaliacao.id_data = pautanormal.idTipoAvaliacao
 WHERE pautanormal.idPautaNormal =  '$ptn'";
         }
 

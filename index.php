@@ -46,7 +46,7 @@
                     </a>
                 </span>
                 <span class="navbar-caption-wrap"><a class="navbar-caption text-danger display-4"
-                                                     href="index.php">SIGP-SISTEMA DE GESTÃO PAUTAS</a></span>
+                                                     href="index.php">SIGEP-SISTEMA DE GESTÃO PAUTAS</a></span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -265,8 +265,8 @@
                 <p class="mbr-text">Suporte Ténico raimundo.jose@unilurio.ac.mz Phone: +258 849018210 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br><br></p>
             </div>
             <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <h5 class="pb-3">Instituição</h5>
-                <p class="mbr-text">miguel.junior@unilurio.ac.mz<br>tloreiro@unilurio.ac.mz<br>felermino.ali@unilurio.ac.mz</p>
+                <h5 class="pb-3">Sectores de Apoio</h5>
+                <p class="mbr-text">Departamento de Informatica<br>Registo Academico<br>Departamento Pedagogico</p>
             </div>
         </div>
         <div class="footer-lower">
@@ -311,8 +311,6 @@
     </div>
 </section>
 
-
-
   <div class="modal fade" id="_modalogin" tabindex="-1" role="dialog"
        aria-labelledby="mediumModalLabel" aria-hidden="true" data-backdrop="static">
 
@@ -325,7 +323,6 @@
                       <span aria-hidden="true">&times;</span>
                   </button>
               </div>
-
               <div>
 
                   <div class="modal-body" style="padding: 30px 50px">
@@ -369,8 +366,6 @@
 
   <script type="text/javascript" src="js/js_function.js"> </script>
   <script type="text/javascript" src="js/js_index.js"></script>
-
-
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/tether/tether.min.js"></script>

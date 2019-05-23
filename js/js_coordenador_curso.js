@@ -6,22 +6,19 @@
 $(document).ready(function(e) {
 
     $('.notificacao_pauta').hide();
-    $('#publicarX').hide();
 
-    $('#notif_em').click(function(){
+    $('#notif_inc').click(function(){
+
         $('.publicao_pauta').hide();
         $('.notificacao_pauta').show('slow');
-        $(this).hide();
-        $('#publicarX').show();
 
     });
 
-    $('#publicarX').click(function(){
+    $('#publicar').click(function(){
 
         $('.publicao_pauta').fadeIn('slow');
         $('.notificacao_pauta').hide();
-        $('#notif_em').show();
-        $(this).hide();
+
     });
 
     $('.resultados').on('click','li ', function(){

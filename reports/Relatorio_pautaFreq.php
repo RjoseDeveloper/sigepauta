@@ -29,35 +29,19 @@
             $scorrente = "";
             $teste ="";
             $curso="";
-            $var ="";
+
             $t =0;
 
-
                  $ptn = $_GET['ptn'];
-
                  $nome_disp=$publicar_pauta->pautaNormal($ptn, 0);
                  $idDisp=$publicar_pauta->pautaNormal($ptn, 1);
                  $idcurso = $publicar_pauta->pautaNormal($ptn, 2);
                  $nomeCurso = $publicar_pauta->pautaNormal($ptn, 3);
                  $tipo = $publicar_pauta->pautaNormal($ptn, 4);
 
-                 $vetor  = $sql_estudante->listar_tipo_avaliacao($idDisp, $idcurso, $tipo);
+                 $var  = $sql_estudante->listar_tipo_avaliacao($idDisp, $idcurso, $ptn);
+                 $teste = utf8_decode($tipo);
 
-                 $t=0;
-                 foreach ($vetor as $value) {
-
-                      if ( $value!= null){++$t;
-
-                           if (($value['idNota'] == $ptn)){
-                               $var = ', '.$value['descricaoteste'];
-                           }
-                           if ($tipo > 3){
-                               $var = $value['descricaoteste'];
-                           }
-                     }
-                 }
-
-                 $teste = utf8_decode($var);
 	             $pdf=new FPDF();
                  $pdf->AddPage();
                  $pdf->SetFont('Arial','B',10);
@@ -67,19 +51,15 @@
       $number_of_row = mysqli_num_rows($result);
       $i=0; $coluna= 76;
 
-
-
       while($row = mysqli_fetch_assoc($result)){
           if ($i == 0 ){
               $dp = $row['disp'];
-
           }
-      if ($ctr_est->validar_busca_recorrencia($row['idaluno'], $idDisp, $idcurso, 4) < 10){
 
+      if ($ctr_est->validar_busca_recorrencia($row['idaluno'], $idDisp, $idcurso, 4) < 10){
            $i++;
         if ($row["nota"] == -1){
             $rs_nota = 'SN';
-
         }else{
             $rs_nota = $row['nota'];
           }
@@ -227,5 +207,5 @@ $pdf->MultiCell(0,6,utf8_decode("Observações - SN (Sem nota)"),0,'C');
               $pdf->Cell(0,10,$docente,0,0,'C');
 
               ob_clean();
-              $pdf->Output($nome_disp.' - '.'.pdf',$_GET['acao']);
+              $pdf->Output($nome_disp.' - '.$tipo.'.pdf',$_GET['acao']);
 ?>

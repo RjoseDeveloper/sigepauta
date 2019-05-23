@@ -84,13 +84,10 @@ if (!isset($_SESSION['username'])){?>
                 </div>
 
                 <div class="pull-right">
-                    <a class="btn btn-default btn_show_plano" id="btn_show_plano" value="Mostrar Plano">
-                        <span class="glyphicon glyphicon-eye-open"></span></a>
-
-
-                    <button class="btn btn-default" data-toggle="modal" data-target="#plano_aula" data-backdrop="false">
-                        <span class="glyphicon glyphicon-plus"></span></button>
-
+                    <a class="btn btn-primary btn_show_plano" id="btn_show_plano" value="Mostrar Plano">
+                        <span class="glyphicon glyphicon-chevron-left">&nbsp;</span> Mostrar </a>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#plano_aula" data-backdrop="false">
+                        Adicionar<span class="glyphicon glyphicon-chevron-right">&nbsp;</span></button>
 
                 </div>
                 </div>
