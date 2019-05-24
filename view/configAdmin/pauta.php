@@ -41,12 +41,16 @@ $gestao_pautas = new GestaoPautasSQL();
                                 <?php
                                 $arrayCurso = $query->listaCursoDocente($idDoc);
                                 $result = mysqli_query($db->openConection(),$query->listaDisciplina($idDoc, 0));
-                                while ($row= mysqli_fetch_assoc($result)){?>
+                                while ($row= mysqli_fetch_assoc($result)){
+                                    $_SESSION['idcurso']= $row['idcurso'];
+
+                                    ?>
 
                         <li class="list-group-item doc_ul_a"  value="<?php echo $row['idDisciplina']?>"">
                         <input type="hidden" value="<?php echo $row['descricao']?>" id="descricao_curs"/>
                         <input type="hidden" value="<?php echo $row['idDisciplina']?>" id="id_curs"/>
-                        <input type="hidden" value="<?php echo $row['idCurso']?>" id="id_curso"/>
+                        <input type="hidden" value="<?php echo $row['idcurso']?>" id="id_curso"/>
+
 
                         <h6 >
 
@@ -84,7 +88,7 @@ $gestao_pautas = new GestaoPautasSQL();
                             <!----------- Mostra um select box de tipos de avaliacoes ----------->
                             <input type="hidden" id="txt_av" value=""/>
                             <div style="float: right">
-                                <a class="btn btn-success" href="../Form_reports.php?acao=10" id="editp" target="frm_content">Relatorios
+                                <a class="btn btn-success" href="../Form_reports.php?acao=10&idcurso=" id="editp" target="frm_content">Relatorios
                                     <span class="glyphicon glyphicon-print"></span></a>
                             </div>
                         </div>
@@ -197,12 +201,14 @@ $gestao_pautas = new GestaoPautasSQL();
                     <tbody class="table_visualizar" style="font-size: 13px">
                     </tbody>
                 </table>
-
             </div>
+
             <div class="modal-footer">
                 <div class="ctr_disp"></div>
+
+                <button type="reset" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 <a href="#" class="btn btn-info enviar_pauta" id="enviar_pauta"
-                        style=" border: none" data-mini="true" data-inline="true" data-theme="b"> Enviar Pauta</a>
+                        style=" border: none" data-mini="true" data-inline="true" data-theme="b"> Registar Pauta</a>
             </div>
         </div>
 

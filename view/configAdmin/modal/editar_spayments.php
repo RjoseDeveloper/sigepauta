@@ -24,7 +24,7 @@
                   <input type="text" name="actividade" id="actividade" value="" class="form-control">
 
                   <p class="data_dinamics"></p>
-<!--                  <button value="actividade" class="opt_nova_av btn btn-default pull-right"> Nova Avaliação</button>-->
+                  <button type="reset" class="btn btn-default" data-dismiss="modal">Fechar</button>
                   <button type="submit" class="btn btn-primary pull-right">Guardar Dados</button>
           </div>
 

@@ -76,7 +76,7 @@
 
             <div class="modal-footer">
 
-                <!--                  <button value="actividade" class="opt_nova_av btn btn-default pull-right"> Nova Avaliação</button>-->
+                <button type="reset" class="btn btn-default" data-dismiss="modal">Fechar</button>
                 <button type="submit" class="btn btn-primary pull-right" id="guardar_dados">Guardar Dados</button>
 
             </div>

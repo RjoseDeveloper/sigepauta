@@ -1,11 +1,13 @@
 <?php
-
 /*-------------------------
 Autor: rjose
 ---------------------------*/
 /* Connect To Database*/
 $pessoa = new PessoaSQL();
+$estudante_sql = new EstudantesSQL();
 $queries = $pessoa->get_disciplina_aluno($_SESSION['username']);
+
+
 $query = mysqli_query($con, $queries);?>
 
 <div class="table-responsive col-8 tbl_disciplina">
@@ -34,10 +36,8 @@ $query = mysqli_query($con, $queries);?>
             $id_disp = $row['idDisciplina'];
             $date_added = date('d/m/Y', strtotime($row['data_registo']));
             $status = $row['status'];
-
             if ($status != 1 ){$text_estado="Aceite";$label_class='label-success';}
             else{$text_estado="Rejeitada";$label_class='label-warning';}
-
             ?>
 
             <tr>
@@ -51,9 +51,7 @@ $query = mysqli_query($con, $queries);?>
                 <td><span class="pull-right">
                                 <a href="#" class='btn btn-default' title='Exluir da Lista' "><i class="glyphicon glyphicon-trash"></i>
                         </a>
-
                             </span>
-
                 </td>
 
             </tr>

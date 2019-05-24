@@ -19,13 +19,12 @@ FROM disciplina_curso INNER JOIN disciplina ON disciplina.idDisciplina = discipl
 
     function disciplinas_professor($id){
 
-        return "SELECT disciplina.descricao as disp, curso.descricao as c, periodo.descricao as periodo,
-  turma.descricao as sessao, disciplina_curso.data
+        return "SELECT disciplina.descricao as disp, curso.descricao as c, disciplina.anolectivo,
+  disciplina.natureza, disciplina_curso.data
 FROM disciplina INNER JOIN disciplina_curso ON disciplina.idDisciplina = disciplina_curso.iddisciplina
   INNER JOIN curso ON curso.idcurso = disciplina_curso.idcurso
-  INNER JOIN periodo ON periodo.idperiodo = curso.idperiodo
-  INNER JOIN turma on turma.idcurso = curso.idcurso
-WHERE disciplina_curso.idutilizador = '$id' GROUP BY disciplina_curso.idturma ";
+WHERE disciplina_curso.idutilizador = '$id'
+GROUP BY disciplina.descricao, curso.descricao, disciplina.anolectivo, disciplina.natureza, disciplina_curso.data ";
 
     }
 

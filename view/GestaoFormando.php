@@ -13,11 +13,13 @@ if (!isset($_SESSION['username'])){?>
     require_once('../functions/conexion.php');
     require '../QuerySql/Classes.php';
     //require '../functions/Conexao.php';
+    require '../QuerySql/EstudantesSQL.php';
 
     $semestre = date('m') < 7 ? '1º':' 2º';
     $ano = date('Y');
     $classes = new Classes();
     $db = new mySQLConnection();
+    $estudante_sql = new EstudantesSQL();
 } ?>
 
 
@@ -68,7 +70,7 @@ if (!isset($_SESSION['username'])){?>
     <div class="container">
     <!--h4 style="color:#00516e" class="info_cadastro">Formulario de Cadastro - Formando, Cursos e Periodos</h4-->
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">DADOS DO ALUNO</a></li>
+            <li class="active"><a data-toggle="tab" href="#home">DADOS GERAIS</a></li>
             <li><a data-toggle="tab" href="#menu1">INSCRIÇÃO - DISCIPLINA</a></li>
             <?php
                 if ($_SESSION['tipo']!="estudante"){ ?>
@@ -120,7 +122,7 @@ if (!isset($_SESSION['username'])){?>
 
                             <label for="apelido">Apelido:</label><input type="text" id="apelido" required name="apelido" value="" class="form-control"/>
                             <label for="name">Nome:</label><input type="text" id="nome" name="nome" value="" class="form-control" required/>
-                            <label for="bi_recibo">BI/Recibo/Cedula Pessoal:</label>
+                            <label for="bi_recibo">BI/Recibo/Passaporte:</label>
                         <input type="text" id="bi_recibo" name="bi_recibo" value="" class="form-control" required/>
 
                         <label for="estadocivil">Estado Civil:</label>
@@ -136,18 +138,18 @@ if (!isset($_SESSION['username'])){?>
 
                         </select>
 
-                            <label for="data_nascimento">Data de Nacimento:</label>
-                            <input type="date" id="data_nascimento" name="data_nascimento" value="" class="form-control" required/>
-
-                            <label for="nivelescolar">Nivel Escolar:</label>
-                            <select class="form-control" data-style="btn-primary" data-width="auto" id="nivelescolar" name="nivelescolar">
-                                <option value="0" desabled="desabled">Selecionar nivel escolar</option>
-                                <?php
-                                $resut = mysqli_query($con,'SELECT * FROM nivelescolar');
-                                while ($row = mysqli_fetch_assoc($resut)){ ?>
-                                    <option value="<?php echo $row['idnivel'] ?>"><?php echo utf8_encode($row['descricao']) ?></option>
-                                <?php }  ?>
-                            </select>
+<!--                            <label for="data_nascimento">Data de Nacimento:</label>-->
+<!--                            <input type="date" id="data_nascimento" name="data_nascimento" value="" class="form-control" required/>-->
+<!---->
+<!--                            <label for="nivelescolar">Nivel Escolar:</label>-->
+<!--                            <select class="form-control" data-style="btn-primary" data-width="auto" id="nivelescolar" name="nivelescolar">-->
+<!--                                <option value="0" desabled="desabled">Selecionar nivel escolar</option>-->
+<!--                                --><?php
+//                                $resut = mysqli_query($con,'SELECT * FROM nivelescolar');
+//                                while ($row = mysqli_fetch_assoc($resut)){ ?>
+<!--                                    <option value="--><?php //echo $row['idnivel'] ?><!--">--><?php //echo utf8_encode($row['descricao']) ?><!--</option>-->
+<!--                                --><?php //}  ?>
+<!--                            </select>-->
 
                         </div> <!-- fim primeiro bloco---->
 
@@ -184,7 +186,7 @@ if (!isset($_SESSION['username'])){?>
 
                             </select>
 
-                            <label for="distrito">Naturalidade:</label>
+                            <label for="distrito">Distrito:</label>
                             <select class="form-control first_select" data-style="btn-primary" data-width="auto" id="distrito" name="distrito">
                             </select>
                             <div class="lista_distritos"></div>
@@ -192,12 +194,12 @@ if (!isset($_SESSION['username'])){?>
                             <h3 class="sucesso_reg_est" style="color:blue" align="right"></h3>
                             <label for="provincia">Sofre Alguma Doença?:</label>
 
-                            <input type="text" class="form-control" required  name="doenca" value="" id="doenca" placeholder="Indique o Nome da Doença"/>
-                            <label for="notas">Orientações Medicas *:</label>
-                            <textarea class="form-control" id="notas" name="notas"></textarea>
-
-                            <label for="notas">Possui Alergia*:</label>
-                            <input type="text" class="form-control"  name="alergia" value="" id="alergia" placeholder="Registar o tipo de alergia a Alimentos"/>
+                            <input type="text" class="form-control"  name="doenca" value="" id="doenca" placeholder="Indique o Nome da Doença"/>
+<!--                            <label for="notas">Orientações Medicas *:</label>-->
+<!--                            <textarea class="form-control" id="notas" name="notas"></textarea>-->
+<!---->
+<!--                            <label for="notas">Possui Alergia*:</label>-->
+<!--                            <input type="text" class="form-control"  name="alergia" value="" id="alergia" placeholder="Registar o tipo de alergia a Alimentos"/>-->
 
                             <br>
                             <div class="pull-right">
@@ -212,10 +214,28 @@ if (!isset($_SESSION['username'])){?>
 
                     <?php }else{?>
 
-                    <h4>INFORMAÇÕES DE ESTUDANTE</h4>
+                    <h4>INFORMAÇÕES DE ESTUDANTE</h4><hr>
                     <?php include 'configAdmin/ajax/buscar_aluno.php';?>
 
                     <h4> DADOS DE INSCRIÇÃO</h4>
+                       <select name="ano_academico" id="ano_academico" class="selectpicker" data-style="btn-primary" data-width="auto">
+
+                           <option selected="selected">Seleccionar Ano</option>
+                           <?php
+                           for($i = $estudante_sql->obter_ano_ingresso($_SESSION['username']); $i< date('Y'); $i++){ ?>
+                               <option value=""> <?php echo $i ?> </option>
+                           <?php } ?>
+                           <option value="">...</option>
+                       </select>
+
+                       <select id="select_semestre" class="selectpicker" data-style="btn-primary" data-width="auto">
+                           <option value="" disabled="disabled" >Seleccionar Semestre</option>
+
+                           <option  value="1">SEMESTRE 1</option>
+                           <option  value="2">SEMESTRE 2</option>
+
+                       </select>
+
                     <?php include 'configAdmin/ajax/disciplina_aluno.php'; }?>
 
             </div>
@@ -228,11 +248,8 @@ if (!isset($_SESSION['username'])){?>
 
                 <form class="form-horizontal" method="post" id="guardar_inscricao" name="guardar_inscricao">
 
-                    <div class="col-xs-12">
-                        <h3 class="msg_sucesso" style="background: #fff; padding: 8px;
-                     color: #0000CC; font-size: 18px;">
-                            Adicionar Disciplinas do Semestre Currente</h3>
-                    </div>
+                    <div class="col-xs-12 msg_sucesso" style="background: #fff; padding: 8px;
+                     color: #0000CC; font-size: 18px;"> ADICIONAR DISCIPLINAS DO SEMESTRE </div>
 
                     <div class="col-xs-6 pull-left">
 

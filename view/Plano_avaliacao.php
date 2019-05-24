@@ -84,10 +84,10 @@ if (!isset($_SESSION['username'])){?>
                 </div>
 
                 <div class="pull-right">
-                    <a class="btn btn-primary btn_show_plano" id="btn_show_plano" value="Mostrar Plano">
+                    <a class="btn btn-default btn_show_plano" id="btn_show_plano" value="Mostrar Plano">
                         <span class="glyphicon glyphicon-chevron-left">&nbsp;</span> Mostrar </a>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#plano_aula" data-backdrop="false">
-                        Adicionar<span class="glyphicon glyphicon-chevron-right">&nbsp;</span></button>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#plano_aula" data-backdrop="false">
+                        Adicionar &nbsp;<span class="glyphicon glyphicon-chevron-right"></span></button>
 
                 </div>
                 </div>
@@ -98,13 +98,10 @@ if (!isset($_SESSION['username'])){?>
 
 
     <div class="docente_disp">
-        <h4 style="color:#002752">DETALHES DO PLANO DE AVALIAÇÃO</h4>
+        <h5 style="color:#f95e0f">DETALHES DO PLANO DE AVALIAÇÃO</h5>
 
-        <div name="fmr_plano_avaliacaox" id="fmr_plano_avaliacao">
-            <br>
-            <!---  Saessao mostra plano de avliacao -->
+        <div name="fmr_plano_avaliacao" id="fmr_plano_avaliacao">
             <div class=" col-md-6 pull-left">
-
                 <table class="table table-responsive ui-shadow table-stripe ui-responsive">
                     <title>Detalhes do Plano</title>
                       
@@ -240,6 +237,7 @@ if (!isset($_SESSION['username'])){?>
 
                 </div>
                 <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Fechar</button>
                     <button value="" class="btn btn-primary sv_plano" onclick="registar_plano()" id="sv_plano">Guardar Plano</button>
                 </div>
             </div>

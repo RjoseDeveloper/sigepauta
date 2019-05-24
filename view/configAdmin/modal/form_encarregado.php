@@ -72,6 +72,7 @@
                             </div>
 
                             <div class="modal-footer">
+                                <button type="reset" class="btn btn-default" data-dismiss="modal">Fechar</button>
                                 <button type="submit" name="btn_save_encarregado" id="btn_save_encarregado" class="btn btn-success">Guardar Dados</button>
                             </div>
                         </form>

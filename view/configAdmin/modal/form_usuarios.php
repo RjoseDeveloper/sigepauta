@@ -143,7 +143,7 @@
         </div>
 
 		  <div class="modal-footer">
-<!--			<button type="reset" class="btn btn-warning" data-dismiss="modal">Cancelar</button>-->
+			<button type="reset" class="btn btn-warning" data-dismiss="modal">Fechar</button>
 			<button type="submit" class="btn btn-primary" id="guardar_datos">Guardar Dados</button>
 		  </div>
 		  </form>

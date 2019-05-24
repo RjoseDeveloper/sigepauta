@@ -17,6 +17,7 @@ require_once('../functions/Conexao.php');
 $query = new QuerySql();
 $idDoc = $query->getDoc_id($_SESSION['username']);
 $db = new mySQLConnection();
+$idcurso = 30; // $_SESSION['idcurso'];
 
 $teste = FALSE;
 ?>
@@ -90,7 +91,7 @@ $teste = FALSE;
                 <option value="" disabled="disabled" >Seleccionar Turma</option>
                 <?php
 
-                $result = mysqli_query($db->openConection(), "SELECT * FROM turma WHERE turma.idcurso=30"); // usar sessio['30']
+                $result = mysqli_query($db->openConection(), "SELECT * FROM turma WHERE turma.idcurso=".$idcurso); // usar sessio['30']
                 while ($row = mysqli_fetch_assoc($result)) {?>
                     <option  value="<?php echo $row['idturma']?>"><?php echo $row['descricao']?></option>
                 <?php } ?>

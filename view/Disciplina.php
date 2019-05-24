@@ -31,8 +31,8 @@
                             <div class="col-md-4">
                                 <select name="natureza" id="natureza" class="form-control" required="">
 
-                                    <option value="" data-theme="a" desable="desable"> -- Regime -- </option> 
-                                    <option value="Integral"> Integral </option>
+                                    <option value="" data-theme="a" desable="desable"> -- Natureza -- </option> 
+                                    <option value="Teorico/Pratico"> Teorico/Pratico </option>
                                     <option value="Modular"> Modular </option>
                                     <option value="Laboratorio"> Laboratorio </option>
                                     <option value="Pesquisa de Campo">Pesquisa de Campo</option>
@@ -76,6 +76,7 @@
 
 
                     <div class="pull-right">
+
                       
                     <button type="submit" class="btn btn-primary" data-theme="b" data-mini="true" data-inline="true"
                             style="font-size:12px;

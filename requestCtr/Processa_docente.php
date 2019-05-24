@@ -290,13 +290,13 @@ $dc = new DocenteSQL();
     </tr>
 
     <tr>
-        <td>Curso e Regime</td>
-        <td><?php echo $linhas['c'].'/ '.$linhas['periodo'] ?></td>
+        <td>Curso e Nivel Academico</td>
+        <td><?php echo $linhas['c'].'/ '.$linhas['anolectivo'].'º ANO' ?></td>
     </tr>
 
     <tr>
-        <td>Nivel  & Ano </td>
-        <td><?php echo utf8_encode($linhas['sessao']).' / '. date("Y", strtotime($linhas['data'])) ?></td>
+        <td>Natureza  & Ano </td>
+        <td><?php echo utf8_encode($linhas['natureza']).' / '. date("Y", strtotime($linhas['data'])) ?></td>
     </tr>
 
         <?php }?>

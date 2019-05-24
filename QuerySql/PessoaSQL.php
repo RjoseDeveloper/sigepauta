@@ -35,7 +35,7 @@ WHERE encarregado_educacao.idpessoa = '$id'";
 
     function get_disciplina_aluno($iduser){
 
-        $sql ="SELECT disciplina.codigo,inscricao.data_registo, inscricao.status, disciplina.creditos, disciplina.natureza, disciplina.idDisciplina, disciplina.descricao
+        $sql ="SELECT DISTINCT disciplina.codigo,inscricao.data_registo, inscricao.status, disciplina.creditos, disciplina.natureza, disciplina.idDisciplina, disciplina.descricao
                  from disciplina INNER JOIN inscricao ON inscricao.iddisciplina = disciplina.idDisciplina
                   INNER JOIN utilizador ON utilizador.id = inscricao.idutilizador
                 WHERE utilizador.username='$iduser'";

@@ -25,7 +25,7 @@ WHERE  data_avaliacao.status='$status' AND pautanormal.idusers ='$id'";
 
     public function listaDisciplina($docente, $ctr){
         $this->db = new mySQLConnection();
-        $query = "SELECT DISTINCT curso.idCurso,curso.descricao as curso, disciplina.idDisciplina, disciplina.descricao
+        $query = "SELECT DISTINCT curso.idcurso,curso.descricao as curso, disciplina.idDisciplina, disciplina.descricao
 FROM disciplina INNER JOIN disciplina_curso ON disciplina.idDisciplina = disciplina_curso.iddisciplina
  INNER JOIN curso ON curso.idcurso = disciplina_curso.idcurso
  INNER JOIN utilizador ON utilizador.id = disciplina_curso.idutilizador

@@ -54,12 +54,12 @@ switch($param) {
         $utilitizador = $_REQUEST['campo_utilizador'];
         $iddistrito = $_REQUEST['distrito'];
         $bi_recibo = $_REQUEST['bi_recibo'];
-        $nivelescolar = $_REQUEST['nivelescolar'];
+        $nivelescolar = 8;// $_REQUEST['nivelescolar'];
         $idendereco = $_REQUEST['endereco'];
         $data = $_REQUEST['data_nascimento'];
         $doenca = $_REQUEST['doenca'];
-        $alergia = $_REQUEST['alergia'];
-        $notas = $_REQUEST['notas'];
+        $alergia = ""; // $_REQUEST['alergia'];
+        $notas = "";//$_REQUEST['notas'];
         $date_added = date("Y-m-d");
         $num_mec = date("Y") + rand(1000, 2000);
 
