@@ -123,6 +123,8 @@ if (!isset($_SESSION['username'])){?>
                         <li><a  href="GestaoFormando.php" target="frm_content" >INSCRIÇÃO ESTUDANTE</a></li>
                         <li value="plano_av"><a href="planoav.php" target="frm_content" >PLANO DE AVALIAÇÃO</a></li>
                         <li><a href="Estudante_pauta.php" target="frm_content">NOTIFICAÇÕES</a></li>
+
+                        <li><a href="Estudante_pauta.php" target="frm_content">NOTIFICAÇÕES2</a></li>
 <!--                        <li class="active"><a href="Estudante_pauta.php" target="frm_content">Preencricao</a></li>-->
                         <li onclick="destroy_user_session();"><a href="#"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
 
