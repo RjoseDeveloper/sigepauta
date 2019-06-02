@@ -123,8 +123,6 @@ if (!isset($_SESSION['username'])){?>
                         <li><a  href="GestaoFormando.php" target="frm_content" >INSCRIÇÃO ESTUDANTE</a></li>
                         <li value="plano_av"><a href="planoav.php" target="frm_content" >PLANO DE AVALIAÇÃO</a></li>
                         <li><a href="Estudante_pauta.php" target="frm_content">NOTIFICAÇÕES</a></li>
-
-                        <li><a href="Estudante_pauta.php" target="frm_content">NOTIFICAÇÕES2</a></li>
 <!--                        <li class="active"><a href="Estudante_pauta.php" target="frm_content">Preencricao</a></li>-->
                         <li onclick="destroy_user_session();"><a href="#"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
 
@@ -205,6 +203,8 @@ if (!isset($_SESSION['username'])){?>
                                     <li><a href="configAdmin/professor.php"target="frm_content" >GERIR DOCENTES <i class="pull-right glyphicon glyphicon-people"></i></a></li>
                                     <li id="manageStudentNav"><a href="configAdmin/cursos.php" target="frm_content">CURSOS E TURMAS <i class="pull-right glyphicon glyphicon-eye"></i></a></li>
                                     <li id="manageStudentNav"><a href="../view/configAdmin/disciplina.php" target="frm_content">GERIR DISCIPLINAS <i class="pull-right glyphicon glyphicon-send"></i></a></li>
+                                    <li id="manageStudentNav"><a href="../view/WebService_disciplina.php" target="frm_content">Integracao <i class="pull-right glyphicon glyphicon-send"></i></a></li>
+                                    <li id="manageStudentNav"><a href="../view/index.php" target="frm_content">Integracao com sistema <i class="pull-right glyphicon glyphicon-send"></i></a></li>
                                     <li><a id="users"  href="configAdmin/usuarios.php" target="frm_content" >UTILIZADORES DO SISTEMA <i class="pull-right glyphicon glyphicon-users"></i></a></li>
 
                                 </ul>
