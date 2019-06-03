@@ -43,7 +43,7 @@
 
 <table id="clientes" align="center">
 
-    <caption><h2>Lista das Disciplinas</h2></caption>
+    <caption><h2>Importar Disciplinas</h2></caption>
 
     <thead>
     <tr>
@@ -78,7 +78,7 @@
     curl_close($curl); //Encerra a biblioteca
     $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
     //$clientes = $data->cliente; função de selecionar o obejto nao suportada pelo POST do WS
-    $connect=mysqli_connect("localhost","root","dblinkx","pautas_fe");
+    $connect=mysqli_connect("localhost","root","dblinkx","pautas_fe","3306");
 
 
     foreach ($data as $c) //cria a classe de tratamento
@@ -120,9 +120,9 @@
     }//encerra PHP else
     ?>
 
-    <tr  style="background-color: f1f1f1">
+    <tr  style="background-color: #f1f1f1">
         <td colspan="4" align="center">
-            <button type="button" onclick="abrir()" class="botao" style="width: 110px; float: none;" >Cadastrar</button>
+            <button type="button" onclick="abrir()" class="btn btn-info botao" style="width: 110px; float: none;" >Cadastrar</button>
         </td>
     </tr>
 

@@ -36,8 +36,7 @@ class PautaFrequencia {
         $db = new mySQLConnection();
         //$intenal = new PautaFrequencia();
 
-        $query = "SELECT DISTINCT AVG(estudante_nota.nota) as media, disciplina.idDisciplina,
-                        data_avaliacao.descricaoteste as descricao, data_avaliacao.id_data as tipo from estudante_nota
+        $query = "SELECT DISTINCT AVG(estudante_nota.nota) as media, data_avaliacao.idplano as tipo, disciplina.idDisciplina from estudante_nota
 
                         INNER JOIN pautanormal on pautanormal.idPautaNormal = estudante_nota.idPautaNormal
                         INNER JOIN disciplina ON disciplina.idDisciplina = pautanormal.idDisciplina
@@ -133,7 +132,7 @@ INNER JOIN inscricao ON disciplina.idDisciplina = inscricao.iddisciplina
 
         $query ="";
         $sql3 = "data_avaliacao.id_data as tipo, pautanormal.idPautaNormal,
-                               data_avaliacao.descricaoteste from estudante_nota
+                               data_avaliacao.descricaoteste as descricao from estudante_nota
 
         INNER JOIN pautanormal on pautanormal.idPautaNormal = estudante_nota.idPautaNormal
         INNER JOIN data_avaliacao ON data_avaliacao.id_data = pautanormal.idTipoAvaliacao
@@ -141,11 +140,11 @@ INNER JOIN inscricao ON disciplina.idDisciplina = inscricao.iddisciplina
 
         if ($ctr == 0) {
 
-           $query.= $sql1.' '.$sql2.' '.$sql3."AND estudante_nota.idaluno = '$aluno'";
+           $query.= $sql1.' '.$sql2.' '.$sql3." AND estudante_nota.idaluno = '$aluno'";
 
         }elseif($ctr == 2){
 
-            $query.= $sql1.' '.$sql3."GROUP BY pautanormal.idPautaNormal";
+            $query.= $sql1.' '.$sql3." GROUP BY pautanormal.idPautaNormal";
         }
         $query.=" ORDER BY data_avaliacao.descricaoteste";
 
@@ -167,11 +166,11 @@ INNER JOIN disciplina ON disciplina.idDisciplina = estudante_disciplina.iddiscip
 AND estudante_disciplina.idcurso='$curso'");
     }
 
-    public function returnPesoAvaliacao($disp, $avaliacao)
+    public function returnPesoAvaliacao($disp, $idplano)
     {
-        $query ="SELECT planoavaliacao.peso,tipoavaliacao.descricao FROM planoavaliacao
+        $query ="SELECT planoavaliacao.peso FROM planoavaliacao
                  INNER JOIN tipoavaliacao ON tipoavaliacao.idTipoAvaliacao = planoavaliacao.idTipoAvaliacao
-        WHERE planoavaliacao.idDisciplina = '$disp' AND planoavaliacao.idTipoAvaliacao = '$avaliacao'";
+        WHERE planoavaliacao.idDisciplina = '$disp' AND planoavaliacao.idplano = '$idplano'";
 
         $link =new mySQLConnection();
 

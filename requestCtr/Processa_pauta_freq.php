@@ -38,6 +38,7 @@
 
     $discp = $_REQUEST['disp'];
     $acao = $_REQUEST['acao'];
+    $idcurso = $_REQUEST['curso'];
     $estado_pn=2;
 
        switch ($acao) {
@@ -121,30 +122,36 @@
         case 2:
 
             $frm =""; $formula="";
-            if ($ctr_est->obterQtdAvaliacaoPub($discp,$estado_pn,$idcurso, 0) >= 1) {
 
-//                echo '<div  align="left" style="color: blue; margin-top:-4em"><h4>Mapa de Frequencia</h4></div>';
+            /***
+             * Estado 2 avaliacao ja foi realizada
+             * Estado 1 avaliacao nao foi realizadas
+             */
 
-                echo '<div><table data-role="table" id="table-custom"
-                                           class="table ui-body-c ui-responsive">';
+            if ($ctr_est->QtdAvaliacaoPub($discp,1) == $ctr_est->QtdAvaliacaoPub($discp,2) ) {
+
+                echo '<div  align="left" style="color: blue; margin-top:-4em"><h4>Mapa de Frequencia</h4></div>';
+
+                echo '<div><table data-role="table" id="table-custom" class="table ui-body-c ui-responsive">';
                 echo '<thead class="table_exame_freq">';
 
                 if (($_SESSION['tipo'] != 'racademico')) {
 
-                    $media = $pautaFreq->obterMediaFrequecia($discp, $idAluno, $estado_pn,$idcurso, 0);
+                    $media = $pautaFreq->obterMediaFrequecia($discp, $idAluno, 2,$idcurso, 0);
                     $query = $pautaFreq->ordenacaoTestes($discp, $idAluno, $estado_pn,$idcurso,0);
+
                     $result = mysqli_query($db->openConection(), $query);
 
-                    if (mysqli_num_rows($result) > 0){
-                        echo '<tr class="table_frequencia" style="border: none; font-size: 12px; background-color: #fff">';
+                    //if (mysqli_num_rows($result) > 0){
+
+                        echo '<tr class="table_frequenciax" style="border: none; font-size: 13px; background-color: #fff">';
 
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo '<th>'.$row['descricao'].'</th>';
+                            $peso = $pautaFreq->returnPesoAvaliacao($discp,$row['tipo']);
+                            $frm = $frm.'Media('.$row['descricao'].') *'.$peso/100;
+                            $frm = $frm.'+';
                         }
-
-                        $peso = $pautaFreq->returnPesoAvaliacao($discp,$row['tipo']);
-                        $frm = $frm.'Media('.$row['descricao'].') *'.$peso/100;
-                        $frm = $frm.'+';
 
                         /// Aplicar algoritmo de ordenacao para agrupar notas, calcular a media e nota de frequencia.
 
@@ -167,6 +174,7 @@
                     }
 
                     echo '<td>'.$media.'</td>';
+
                     if ($media >= 10 && $media< 16 ){
                         $estado = "Admitido";
                     }
@@ -179,10 +187,10 @@
                     echo '<td>'.$estado.'</td>';
                     $formula ='MediaFreq = '.$frm;
                     echo '</tr>';
-
-                    }else{
-                        echo'Impossivel Calcular a nota de frequencia';
-                    }
+//
+//                    }else{
+//                        echo'Impossivel Calcular a nota de frequencia';
+//                    }
 
                 } else {
 

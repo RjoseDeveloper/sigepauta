@@ -60,17 +60,23 @@ GROUP BY tipoavaliacao.descricao";
         $db->closeDatabase();
     }
 
-    public function listar_tipo_avaliacao($disp, $curso, $idpauta)
+    public function listar_tipo_avaliacao($disp, $curso, $av)
     {
-        $query="SELECT data_avaliacao.descricaoteste,pautanormal.idPautaNormal as idNota,
-                FROM data_avaliacao INNER JOIN pautanormal ON data_avaliacao.id_data = pautanormal.idTipoAvaliacao
-            WHERE pautanormal.idPautaNormal='$idpauta'";
+        $query="SELECT DISTINCT data_avaliacao.descricaoteste,
+                pautanormal.idPautaNormal as idNota,
+                pautanormal.idTipoAvaliacao as idavaliacao
+                FROM data_avaliacao INNER JOIN pautanormal
+
+            ON pautanormal.idTipoAvaliacao=data_avaliacao.id_data  INNER JOIN disciplina
+            ON disciplina.idDisciplina= pautanormal.idDisciplina INNER JOIN estudante_nota
+            ON estudante_nota.idPautaNormal = pautanormal.idPautaNormal
+            WHERE disciplina.idDisciplina='$disp' AND pautanormal.idcurso= '$curso'";
 
         $db = new mySQLConnection();
         $result = mysqli_query($db->openConection(),$query);
-        if ($array = mysqli_fetch_assoc($result)){
-            echo $array['descricaoteste'];
-        }
+        while ($array[] = mysqli_fetch_assoc($result)){;}
+        return ($array);
+
         $db->closeDatabase();
     }
 
@@ -322,24 +328,25 @@ WHERE inscricao.idutilizador = '$id';";
         }
     }
 
-    public function obterQtdAvaliacaoPub($disciplina,$estado,$curso, $ctr){
+
+    /***
+     * @param $disciplina
+     * @param $estado
+     * @return mixed quantidade de avaliacoes realizadas e nao realizadas dependendo do estado que for pasado
+     */
+    public function QtdAvaliacaoPub($disciplina,$estado){
         $db = new mySQLConnection();
 
-        $query = "SELECT  data_avaliacao.id_data as tipo, disciplina.idDisciplina,data_avaliacao.descricaoteste as descricao
-                    FROM pautanormal INNER JOIN data_avaliacao
-                    ON data_avaliacao.id_data = pautanormal.idTipoAvaliacao INNER JOIN  disciplina
-                    ON disciplina.idDisciplina = pautanormal.idDisciplina
-                    WHERE disciplina.idDisciplina = '$disciplina' AND pautanormal.estado= '$estado' and pautanormal.idcurso ='$curso'
-GROUP BY data_avaliacao.id_data";
+        $query = "SELECT  COUNT(data_avaliacao.idplano) as av_realizada
+from planoavaliacao INNER JOIN data_avaliacao ON
+data_avaliacao.idplano = planoavaliacao.idplano
+WHERE planoavaliacao.idDisciplina='$disciplina' and data_avaliacao.`status` = '$estado'";
 
         $result = mysqli_query($db->openConection(), $query);
-        if ($ctr == 0){
-            return (mysqli_num_rows($result));
+        if ($rs = mysqli_num_rows($result)){
 
-        }else{
+            return $rs['av_realizada'];
 
-            while($row[] = mysqli_fetch_assoc($result)){;}
-            return  ($row);
         }
     }
 
@@ -406,36 +413,15 @@ GROUP BY data_avaliacao.id_data";
 
     }
 
-    public function consultarOrdemAvaliacao($disciplina, $ano, $ctr){
-        $sql = "SELECT DISTINCT data_avaliacao.dataRealizacao,data_avaliacao.descricaoteste,
-          planoavaliacao.idplano, data_avaliacao.status
-FROM data_avaliacao INNER JOIN planoavaliacao  ON planoavaliacao.idplano = data_avaliacao.idplano
-  INNER JOIN disciplina_curso ON disciplina_curso.iddisciplina = planoavaliacao.idDisciplina
-WHERE planoavaliacao.idDisciplina= '$disciplina'  AND YEAR(planoavaliacao.data_registo) = '$ano'";
-
-        if ($ctr != 0){ // plano estudante ou geral
-            $sql.=" AND disciplina_curso.idutilizador =".$_SESSION['id'];
-        }
-        return $sql;
-    }
-
-    public function getPlanoAvaliacao($disciplina, $ano, $ctr) {
-        $sql ="";
-        $sql ="SELECT DISTINCT disciplina.descricao as disp,planoavaliacao.idplano,planoavaliacao.peso,
-  tipoavaliacao.descricao, tipoavaliacao.idTipoAvaliacao
-FROM tipoavaliacao INNER JOIN planoavaliacao
-ON tipoavaliacao.idTipoAvaliacao = planoavaliacao.idTipoAvaliacao INNER JOIN disciplina
-ON disciplina.idDisciplina = planoavaliacao.idDisciplina
-INNER JOIN disciplina_curso ON disciplina.idDisciplina = disciplina_curso.iddisciplina
-
-WHERE planoavaliacao.idDisciplina= '$disciplina' AND YEAR(planoavaliacao.data_registo) = '$ano' ";
-
-
-        if ($ctr != 0){ // plano estudante ou geral
-            $sql.="AND disciplina_curso.idutilizador =".$_SESSION['id'];
-        }
-
-        return $sql;
+    public function getPlanoAvaliacao($disciplina)
+    {
+        return("SELECT data_avaliacao.dataRealizacao,data_avaliacao.descricaoteste, disciplina.descricao as disp,planoavaliacao.idplano,
+                     planoavaliacao.peso, tipoavaliacao.descricao, tipoavaliacao.idTipoAvaliacao, data_avaliacao.status
+                     FROM tipoavaliacao INNER JOIN planoavaliacao
+                     ON tipoavaliacao.idTipoAvaliacao = planoavaliacao.idTipoAvaliacao INNER JOIN disciplina
+                     ON disciplina.idDisciplina = planoavaliacao.idDisciplina INNER JOIN data_avaliacao
+                     ON planoavaliacao.idplano = data_avaliacao.idplano
+              WHERE planoavaliacao.idDisciplina= '$disciplina'");
     }
 
     public function checkIdPautaNorml($disciplina, $av,$estado,$idptn, $curso , $ctr){
