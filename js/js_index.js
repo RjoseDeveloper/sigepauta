@@ -143,7 +143,7 @@ function login_online(){
     }else{
 
         $('#name').css({'border':'2px solid blue '});
-        $(".result_login").html("Carro, prencher todos os campos vazios")
+        $(".result_login").html("Deve prencher todos os campos vazios")
             .css({'font-size':'14px','color':'red','font-weight':'bold'});
     }
 };
