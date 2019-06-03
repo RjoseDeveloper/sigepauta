@@ -203,8 +203,8 @@ if (!isset($_SESSION['username'])){?>
                                     <li><a href="configAdmin/professor.php"target="frm_content" >GERIR DOCENTES <i class="pull-right glyphicon glyphicon-people"></i></a></li>
                                     <li id="manageStudentNav"><a href="configAdmin/cursos.php" target="frm_content">CURSOS E TURMAS <i class="pull-right glyphicon glyphicon-eye"></i></a></li>
                                     <li id="manageStudentNav"><a href="../view/configAdmin/disciplina.php" target="frm_content">GERIR DISCIPLINAS <i class="pull-right glyphicon glyphicon-send"></i></a></li>
-                                    <li id="manageStudentNav"><a href="../view/WebService_disciplina.php" target="frm_content">INTEGRAÇÃO DE DADOS<i class="pull-right glyphicon glyphicon-send"></i></a></li>
-<!--                                    <li id="manageStudentNav"><a href="../view/index.php" target="frm_content">Integracao com sistema <i class="pull-right glyphicon glyphicon-send"></i></a></li>-->
+                                    <li id="manageStudentNav"><a href="../view/WebService_disciplina.php" target="frm_content">INTEGRAÇÃO DE DADOS 1<i class="pull-right glyphicon glyphicon-send"></i></a></li>
+                                    <li id="manageStudentNav"><a href="../view/index.php" target="frm_content">INTEGRACAO DE DADOS 2 <i class="pull-right glyphicon glyphicon-send"></i></a></li>
                                     <li><a id="users"  href="configAdmin/usuarios.php" target="frm_content" >UTILIZADORES DO SISTEMA <i class="pull-right glyphicon glyphicon-users"></i></a></li>
 
                                 </ul>

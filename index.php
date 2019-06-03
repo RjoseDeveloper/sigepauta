@@ -137,7 +137,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		aspectos e determinantes para que o processo de ensino e aprendizagem ocorra de maneira eficaz.
 		
 		</div>
-        
+        <div class="clearfix"></div>
 	</div>
 	<!-- //newsletter-->
 

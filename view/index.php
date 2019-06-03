@@ -112,7 +112,7 @@
     }//encerra PHP else
     ?>
 
-    <tr  style="background-color: f1f1f1">
+    <tr  style="background-color: #f1f1f1">
         <td colspan="4" align="center">
             <button type="button" onclick="abrir()" class="botao" style="width: 110px; float: none;" >Cadastrar</button>
         </td>
