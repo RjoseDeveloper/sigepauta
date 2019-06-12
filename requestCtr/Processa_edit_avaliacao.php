@@ -2,16 +2,16 @@
 
 	session_start();
 
-	require_once("../QuerySql/AllQuerySQL.php");
+	require_once("../Query/AllQuerySQL.php");
 	require_once("../controller/DisciplinaCtr.php");
 	require_once("../controller/EstudanteNotaCtr.php");
 	require_once("../controller/PautaRecorrenciaCtr.php");
 	require_once("../controller/PautaNormalCtr.php");
-    require_once('../QuerySql/EstudantesSQL.php');
-    require_once("../functions/Conexao.php");
-    require_once('../QuerySql/PublicacaoPautaSQL.php');
-    require_once('../QuerySql/PautaFrequenciaSQL.php');
-    require_once('../libs/PHPMailer/class.phpmailer.php');
+    require_once('../Query/EstudantesSQL.php');
+    require_once("../dbconf/getConection.php");
+    require_once('../Query/PublicacaoPautaSQL.php');
+    require_once('../Query/PautaFrequenciaSQL.php');
+    require_once('../bibliotecas/PHPMailer/class.phpmailer.php');
     require_once('../controller/EstudanteCtr.php');
 
     $pauta_frequencia = new PautaFrequencia();

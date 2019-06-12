@@ -1,6 +1,6 @@
 ﻿<?php
 
-  require_once '../functions/Conexao.php';
+  require_once '../dbconf/getConection.php';
    global $mydb;
 
    class TipoAvaliacaoController{

@@ -1,17 +1,17 @@
 ﻿<?php
 
 session_start();
-require_once('../functions/Conexao.php');
+
 require_once('../controller/ActividadeCtr.php');
-require_once('../QuerySql/AllQuerySQL.php');
+require_once('../Query/AllQuerySQL.php');
 require_once '../controller/PlanoAvaliacaoCtr.php';
 require_once('../controller/TipoAvaliacaoCtr.php');
-require_once('../QuerySql/EstudantesSQL.php');
-require_once('../QuerySql/PublicacaoPautaSQL.php');
+require_once('../Query/EstudantesSQL.php');
+require_once('../Query/PublicacaoPautaSQL.php');
 require_once('../controller/EstudanteCtr.php');
-require_once('../QuerySql/DocenteSQL.php');
+require_once('../Query/DocenteSQL.php');
 
-$QueryCtr = new QuerySql();
+$query = new QuerySql();
 $docente_sql = new DocenteSQL();
 $estudanteQueryCtr = new EstudantesSQL();
 $db = new mySQLConnection();
@@ -36,7 +36,7 @@ switch($acao){
 
     case 4:
         $t=0;
-        $consulta = $QueryCtr->listarPlanoActual($_SESSION['max']);
+        $consulta = $query->listarPlanoActual($_SESSION['max']);
         $result = mysqli_query($db->openConection(), $consulta);
         while ($row = mysqli_fetch_assoc($result)) {
 
@@ -55,7 +55,7 @@ switch($acao){
 
     case 6:
 
-        $max = $QueryCtr->seletMaxIndex();
+        $max = $query->seletMaxIndex();
         $_SESSION['max']= $max;
         echo $max;
 
@@ -79,21 +79,21 @@ switch($acao){
 
         $result = mysqli_query($db->openConection(), $consulta2);
         $t=1;
-        $dp ="";
 
         while ($row = mysqli_fetch_assoc($result)) {
 
             //$dp = $row['disp'];
-            echo '<tr class="ui-bar-d">';
-            echo '<td align="center" class="nome_tabela">'.$t.'</td>';
-            echo '<td style="text-align: left">'.$row['descricaoteste'].'</td>';
 
-            echo '<td style="">'.$row['dataRealizacao'].'</td>';
+            echo '<tr  class="ui-bar-d">';
+            echo '<td style="text-align: center" class="nome_tabela">'.$t.'</td>';
+            echo '<td style="text-align: center">'.$row['descricaoteste'].'</td>';
+
+            echo '<td style="text-align: center">'.$row['dataRealizacao'].'</td>';
             $status=$row['status'];
             ++$t;
             if ($status == 1){$text_estado="Não Realizado";$label_class='label-warning';}
             else{$text_estado="Realizado"; $label_class='label-success';}
-            echo '<td style="color:blue">'.$text_estado.'</td>';
+            echo '<td style="color:blue; text-align: center">'.$text_estado.'</td>';
 
             echo '<td style="text-align: center">';
 
@@ -128,7 +128,7 @@ switch($acao){
         echo '<div align="right"><h3>Disciplina a Notificar _'.$nome_disp.'</h3></div>';
 
         $t=0; $doc="";
-        $proc = $QueryCtr->listaDocentesDisciplina($disp);
+        $proc = $query->listaDocentesDisciplina($disp);
         $result = mysqli_query($db->openConection(), $proc);
 
         while ($row = mysqli_fetch_assoc($result)){
@@ -188,18 +188,18 @@ switch($acao){
 
         while ($row = mysqli_fetch_assoc($result)) {
 
-            echo '<tr class="ui-bar-d">';
-            echo '<td align="center">'.$t.'</td>';
-            echo '<td align="center">'.$row['disp'].'</td>';
-            echo '<td align="left">'.$row['descricao'].'</td>';
-            echo '<td >'.$row['peso'].'</td>';
+            echo '<tr class="ui-bar-d" style="text-align: center">';
+            echo '<td style="text-align: center">'.$t.'</td>';
+            echo '<td style="text-align: center">'.$row['disp'].'</td>';
+            echo '<td style="text-align: center">'.$row['descricao'].'</td>';
+            echo '<td style="text-align: center" >'.$row['peso'].'</td>';
 
             if ($_SESSION['tipo'] == 'docente' || $_SESSION['tipo'] == 'coordenador') {
 
                 echo '<td><button value="" onclick="edit_plano('.$row['idplano'].')" class="btn btn-default glyphicon glyphicon-edit"></button></td>';
 //                echo'<button value="" onclick="remove_plano('.$row['idplano'].')"  class="btn btn-warning btn-sm glyphicon glyphicon-remove"></button> &nbsp;</td>';
             }else{
-                echo '<td align="center">--</td>';
+                echo '<td style="text-align: center">--</td>';
             }
 
             echo '</tr>';

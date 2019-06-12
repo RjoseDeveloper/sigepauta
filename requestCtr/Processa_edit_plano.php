@@ -8,15 +8,15 @@
 
 session_start();
 
-require_once('../functions/Conexao.php');
+require_once('../dbconf/getConection.php');
 require_once('../controller/ActividadeCtr.php');
-require_once('../QuerySql/AllQuerySQL.php');
+require_once('../Query/AllQuerySQL.php');
 require_once '../controller/PlanoAvaliacaoCtr.php';
 require_once('../controller/TipoAvaliacaoCtr.php');
-require_once('../QuerySql/EstudantesSQL.php');
-require_once('../QuerySql/PublicacaoPautaSQL.php');
+require_once('../Query/EstudantesSQL.php');
+require_once('../Query/PublicacaoPautaSQL.php');
 require_once('../controller/EstudanteCtr.php');
-require_once('../QuerySql/DocenteSQL.php');
+require_once('../Query/DocenteSQL.php');
 
 $QueryCtr = new QuerySql();
 $docente_sql = new DocenteSQL();

@@ -26,18 +26,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 	<!--//tags -->
-	<link href="assets_/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="assets_/css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="assets_/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
-	<link href="assets_/css/font-awesome.css" rel="stylesheet">
+	<link href="bibliotecas/layout_home/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="bibliotecas/layout_home/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="bibliotecas/layout_home/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	<link href="bibliotecas/layout_home/css/font-awesome.css" rel="stylesheet">
 	<!-- //for bootstrap working -->
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700" rel="stylesheet">
-	<script src="_assets/js/jquery-1.7.1.min.js"></script>
+	<script src="bibliotecas/jQuery/js/jquery-1.7.1.min.js"></script>
 	 
 </head>
 
 <body>
+
+
+<?php
+    include 'view/utilizador/form_usuarios.php';
+?>
+
 	<div class="top_header" id="home">
 		<!-- Fixed navbar -->
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -51,8 +57,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
           </button>
 					<div class="logo-w3layouts-agileits">
-						<h1> <a class="navbar-brand" href="index.html"><i class="fa fa-clone" aria-hidden="true"></i> 
-						SIG-PAUTA <span class="desc">Consultas e Publicação de Pautas Academicas</span></a></h1>
+						<h1> <a class="navbar-brand" href="#">
+
+                                <i class="fa fa-folder-open" aria-hidden="true"></i>
+
+						SIGPAUTA <span class="desc">Consultas e Publicação de Pautas Academicas</span></a></h1>
 					</div>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
@@ -62,10 +71,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						</ul>
 						<ul class="nav navbar-nav">
-							<li><a class="request" href="index.html">Home</a></li>
-							<li><a href="/">Sobre o Sistema</a></li>
+							<li><a class="request" href="#">Home</a></li>
+							<li><a href="#">Sobre o Sistema</a></li>
 				
-							<li><a href="/index.html#footer">Contactos</a></li>
+							<li><a href="#">Contactos</a></li>
 						
 						</ul>
 					</div>
@@ -87,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="item active">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>SIG - PAUTA</h3>
+						<h3>SIGPAUTA</h3>
 						<p>Sistema Intergrado de Gestão de Pautas</p>
 						
 					</div>
@@ -96,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="item item2">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>VANTAGENS DO SIG-PAUTA</h3>
+						<h3>VANTAGENS</h3>
 						<p>Reduzir o custo administrativo da instituição e<br> garantir acesso à tempo real de informações extrategicas para a tomada de decisão</p>
 						
 					</div>
@@ -105,8 +114,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="item item3">
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>COMO UTILIZAR</h3>
-						<p>Estar Matricluado e Inscrito nas Disciplinas Curriculares através do eSIRA.</p>
+						<h3>COMO ACEDER ?</h3>
+						<p>Para o Estudante, deve estar Matricluado e Inscrito nas Disciplinas Curriculares através do eSIRA.</p>
 						
 					</div>
 				</div>
@@ -128,13 +137,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- /newsletter-->
 	<div class="newsletter_w3ls_agileits">
 		<div class="col-sm-6 newsleft">
-			<h3>O que é SIG-PAUTA (Sistema Integrado de Gestão de Pauta)</h3>
+			<h3>O que é SIG-PAUTA (Sistema Integrado de Gestão de Pautas)</h3>
 		</div>
 		<div class="col-sm-6 newsright" style="text-align:justify">
 		
-		O <strong>SIG-PAUTA</strong> é um sistema interativo concebido para auxiliar as tarefas inerentes 
+		O <strong>SIGPAUTA</strong> é um sistema interativo concebido para auxiliar as tarefas inerentes
 		as consultas e publicação de resultados academicos, com objectivo de organizar todas as áreas, 
-		aspectos e determinantes para que o processo de ensino e aprendizagem ocorra de maneira eficaz.
+		aspectos e determinantes para que o processo de ensino e aprendizagem ocorra de maneira eficiente.
 		
 		</div>
         <div class="clearfix"></div>
@@ -143,9 +152,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<!-- footer -->
 	<div class="footer">
-		<div class="footer_inner_info_w3ls_agileits">
+
+        <p class="pull-left">
+            <img src="view/fragments/img/lurio-logo.png" width="150" height="150"/>
+        </p>
+		<div class="footer_inner_info_w3ls_agileits" style="margin-top: -5em">
+
+
 	
-			<p class="copy-right">&copy 2018 Desenvolvido pelo Data Center | link website <a href="http://www.fe.unilurio.ac.mz">fe.unilurio.ac.mz</a></p>
+			<p class="copy-right">UNIVERSIDADE LURIO, FACULDADE DE ENGENHARIA<br>
+                Departamento de Engenharia Informatica<br>
+                 Desenvolvido pelo Data Center &copy 2018 | Website <a href="http://www.fe.unilurio.ac.mz">fe.unilurio.ac.mz</a></p>
 		</div>
 	</div>
 	
@@ -187,8 +204,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                       </div>
                   </div>
 
-<!--                  <a href="view/configAdmin/ajax"></a>-->
-
               </div>
           </div>
       </div>
@@ -196,13 +211,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	</div>
 	<!-- //footer -->
-	
-	
-	
-	<script type="text/javascript" src="assets_/js/jquery-2.2.3.min.js"></script>
-	<script type="text/javascript" src="assets_/js/bootstrap.js"></script>
-	 <script type="text/javascript" src="js/js_function.js"> </script>
-  <script type="text/javascript" src="js/js_index.js"></script>
+
+	<script type="text/javascript" src="bibliotecas/layout_home/js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="bibliotecas/layout_home/js/bootstrap.js"></script>
+	 <script type="text/javascript" src="view/fragments/js/js_function.js"> </script>
+  <script type="text/javascript" src="view/fragments/js/js_index.js"></script>
 
   
 	<script>
@@ -215,7 +228,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<!-- js -->
 	<!-- Smooth-Scrolling-JavaScript -->
-	<script type="text/javascript" src="assets_/js/easing.js"></script>
+	<script type="text/javascript" src="bibliotecas/layout_home/js/easing.js"></script>
 
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
@@ -230,16 +243,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="text/javascript">
 		function open_modal(){
         $('#_modalogin').modal('hide');
-        //$('#myModal').modal();
+        $('#myModal').modal();
 
     }
 
     function callback_login(){
         $('#_modalogin').modal('show');
         $('#myModal').modal('hide');
-
     }
-
 
     $( "#guardar_usuario" ).submit(function( event ) {
         $('#guardar_datos').attr("disabled", true);
@@ -268,10 +279,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</script>
 	<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
-	<script type="text/javascript" src="assets_/js/jquery-1.7.2.js"></script>
-	<script src="assets_/js/jquery.quicksand.js" type="text/javascript"></script>
-	<script src="assets_/js/script.js" type="text/javascript"></script>
-	<script src="assets_/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script type="text/javascript" src="bibliotecas/layout_home/js/jquery-1.7.2.js"></script>
+	<script src="bibliotecas/layout_home/js/jquery.quicksand.js" type="text/javascript"></script>
+	<script src="bibliotecas/layout_home/js/script.js" type="text/javascript"></script>
+	<script src="bibliotecas/layout_home/js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
 
 </body>

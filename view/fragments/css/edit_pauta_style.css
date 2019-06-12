@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+.drop{
+
+
+            /*background: -moz-linear-gradient(#534741,white ,#534741);*/
+
+     background:-webkit-linear-gradient(white , #ccc ,white);
+     background:-ms-linear-gradient(white , #ccc ,white);
+     background:-o-linear-gradient(white , #ccc ,white);
+     background: -moz-linear-gradient(white , #ccc ,white);
+
+}
+
+.style_header{
+    background:#00516e; border:none;  border-bottom: 4px solid #ff9933;
+}
+
+.helder_edit{
+	background:#193742;
+}
+
+body {
+	padding: 10px;
+	background: #eaeaea;
+	text-align: center;
+	font-family: arial;
+	font-size: 13px;
+	color: #333333;
+
+    overflow-x: scroll;
+}
+.mainpage {
+	width: 1000px;
+	height: auto;
+	background: #ffffff;
+
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	margin: auto;
+	text-align: left;
+	margin-top:5em;
+
+}
+
+.conteudo {
+	padding: 10px;
+	min-height: 150px;
+}
+.rodape {
+	padding:2px 12px;
+	text-align: right;
+}
+.rodape a {
+	color: #999999;
+	text-decoration: none;
+}
+.rodape a:hover {
+	text-decoration: underline;
+}
+.label_div {
+	width: 120px;
+	float: left;
+	line-height: 28px;
+}
+
+.input_nota{
+
+	height: 20px;
+	float:inherit;
+	padding: 5px 10px;
+
+}
+.input_container input {
+    padding: 10px 20px;
+
+	/*height: 20px;
+	width: 200px;
+
+	border: 1px solid #cccccc;
+	border-radius: 0;*/
+}
+
+.input_container{
+    padding:0 3px;
+    width: 220px;
+
+}
+.input_container ul , #rs_docente ul {
+	width: 220px;
+	border: 1px solid #eaeaea;
+	position: absolute;
+	z-index: 9;
+	background: #f3f3f3;
+	list-style:none;
+}
+.input_container ul li , #s_docente ul li{
+	padding: 3px;
+	width: 215px;
+}
+.input_container ul li:hover, #s_docente ul li:hover {
+	background: #eaeaea;
+	padding: 3px;
+	color: green;
+}
+#resultado, #rs_docente {
+	display: none;
+}
+/*-------------------------Formtacao de drop down menu --------------------------*/
+
+
+
+

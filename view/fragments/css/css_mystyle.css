@@ -1,0 +1,53 @@
+.tbl_cursos th{
+
+    padding: 10px;
+    color:#145072 ;
+    text-align: center;
+}
+
+table .tbl_cursos {
+    border-collapse: collapse;
+    width:100%
+}
+.tbl_cursos th,td{
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+.tbl_cursos tr:nth-child(even){
+    background-color:#f2f2f2;
+}
+.tbl_cursos tr:hover{
+    color: #000080;
+}
+.tbl_cursos th{
+    font-size: 14px;
+    font-family: "Courier New", Courier, monospace
+text-align: center;;
+}
+
+.modal_header{
+    background-color: #007CCC; border: none;
+    padding-bottom: -1em;
+}
+.modal_header h4{font-size: 12px; color: white; font-weight: bold}
+li{list-style: none;  padding: -2em;}
+.doc_ul_a{ cursor: pointer;}
+
+/***
+style for modal
+*/
+
+.modal-header, .close {
+    text-align: left;
+    font-size: 30px;
+    border: none;
+}
+.modal-footer {
+    background-color: #f9f9f9;
+}
+label {
+    color:#145072;
+    font-size: 13px;
+    font-weight: bold;
+}

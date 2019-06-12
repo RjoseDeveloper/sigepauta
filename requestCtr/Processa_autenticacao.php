@@ -2,8 +2,8 @@
 
 
 
-	require_once("../functions/Conexao.php");
-	require_once('../QuerySql/AutenticarSQL.php');
+	require_once("../dbconf/getConection.php");
+	require_once('../Query/AutenticarSQL.php');
 
 if (!session_start()){
     session_start();

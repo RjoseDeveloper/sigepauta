@@ -6,30 +6,17 @@
  * Time: 11:59 PM
  */
 
-require_once '../QuerySql/Classes.php';
-require_once '../QuerySql/PessoaSQL.php';
-require_once('../functions/db.php');
-require_once('../functions/conexion.php');
-require_once '../functions/getRowId.php';
-
+require_once '../Query/Classes.php';
+require_once '../Query/PessoaSQL.php';
+require_once('../dbconf/db.php');
+require_once('../dbconf/conexion.php');
 
 $classes = new Classes();
 $p = new PessoaSQL();
 $param = $_REQUEST['acao'];
 $messages ="";
 
-?>
-
-    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css" type="text/css"
-          xmlns="http://www.w3.org/1999/html"/>
-    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css" type="text/css"/>
-    <script type="text/javascript" src="../libs/jQuery/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../libs/jQuery/js/jquery-1.11.3.js"></script>
-    <script src="../_assets/js/jquery-1.8.3.min.js"></script>
-
-    <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
-
-<?php
+include '../view/layouts/head.php';
 
 switch($param) {
     case 1:
@@ -94,7 +81,7 @@ switch($param) {
         if ($_SESSION['tipo'] == 'estudante') {?>
 
             <div class="container alert alert-success"> <?php echo "<strong>" . $messages . "<strong>" ?>
-                <a href="../view/configAdmin/clientes.php" class="pull-right"> &times;</a>
+                <a href="../view/aluno/alunos.php" class="pull-right"> &times;</a>
             </div>
 
 
@@ -102,11 +89,11 @@ switch($param) {
 
 
             <div class="container alert alert-success"> <?php echo "<strong>" . $messages . "<strong>" ?>
-                <a href="../view/Estudante_pauta.php" class="pull-right"> &times;</a>
+                <a href="../view/aluno/Estudante_pauta.php" class="pull-right"> &times;</a>
             </div>
 
                 <div class="container alert alert-success"> <?php echo "<strong>".$messages."<strong>" ?>
-                    <a href="../view/GestaoFormando.php" class="pull-right"> &times;</a>
+                    <a href="../view/aluno/Aluno.php" class="pull-right"> &times;</a>
                 </div>
 
 
@@ -149,7 +136,7 @@ switch($param) {
         ?>
 
         <div class="container alert alert-success"> <?php echo $alert ?>
-            <a href="../view/GestaoFormando.php#menu1" class="pull-right active_btn"> &times;</a>
+            <a href="../view/aluno/Aluno.php" class="pull-right active_btn"> &times;</a>
         </div>
 
         <?php

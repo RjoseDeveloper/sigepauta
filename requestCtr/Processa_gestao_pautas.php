@@ -8,8 +8,8 @@
 
    session_start();
 
-   require_once('../functions/Conexao.php');
-   require_once('../QuerySql/GestaoPautasSQL.php');
+   require_once('../dbconf/getConection.php');
+   require_once('../Query/GestaoPautasSQL.php');
 
     $query = new GestaoPautasSQL();
     $db = new mySQLConnection();

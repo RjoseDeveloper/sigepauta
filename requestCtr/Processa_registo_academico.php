@@ -1,10 +1,10 @@
 <?php
 
-   require_once('../functions/Conexao.php');
+   require_once('../dbconf/getConection.php');
    require_once('../controller/EstudanteNotaCtr.php');
-   require_once('../QuerySql/AllQuerySQL.php');
-   require_once('../QuerySql/EstudantesSQL.php');
-   require_once('../QuerySql/RegistoAcademicoSQL.php');
+   require_once('../Query/AllQuerySQL.php');
+   require_once('../Query/EstudantesSQL.php');
+   require_once('../Query/RegistoAcademicoSQL.php');
     require_once('../controller/CursoCtr.php');
     require_once('../controller/DisciplinaCtr.php');
     require_once('../controller/DocenteCtr.php');

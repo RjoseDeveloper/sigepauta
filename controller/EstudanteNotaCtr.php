@@ -1,35 +1,33 @@
 ﻿<?php
 
-	require_once '../functions/Conexao.php';
-    require_once("../QuerySql/AllQuerySQL.php");
-    $query = new QuerySql();
 
    class EstudanteNotaController{
+       private $db;
+
+       public function __construct(){
+           $this->db = new mySQLConnection();
+       }
 
        public function read($id){
-		   $db = new mySQLConnection();
-		   if ($db){
+		   if ($this->db){
 
 			   $query= "SELECT * FROM estudante_nota WHERE idPautaNormal={$id}";
-			   $result_set = mysqli_query($db->openConection(),$query);
+			   $result_set = mysqli_query($this->db->openConection(),$query);
 			   $found = mysqli_fetch_assoc($result_set);
-		   return(print_r($found));
 
-		   }else{
-			   return(false);
-			   }
+               return(print_r($found));
 
-		$db->closeDatabase();
+		   }else{return(false);}
+		$this->db->closeDatabase();
        }
 
 	   //In this Place use this form
 
 	    public function insertF1($idp, $nota, $idest){
 
-		   $db = new mySQLConnection();
  		   $query = 'INSERT INTO `estudante_nota`(`idaluno`, `idPautaNormal`, `nota`) VALUES (?,?,?)';
 
-		   $stmt = mysqli_prepare($db->openConection(),$query);
+		   $stmt = mysqli_prepare($this->db->openConection(),$query);
 		   $res= mysqli_stmt_bind_param($stmt,'iid',$idest, $idp, $nota);
 
     	   if (mysqli_stmt_execute($stmt)){
@@ -44,10 +42,8 @@
 
        public function update($idNota, $nota){
 
-          $db = new mySQLConnection();
-
            $query = "UPDATE estudante_nota SET nota = ? WHERE idNota = ?";
-           $stmt = mysqli_prepare($db->openConection(),$query);
+           $stmt = mysqli_prepare($this->db->openConection(),$query);
            $result = mysqli_stmt_bind_param($stmt,'id',$idNota, $nota);
            if (mysqli_stmt_execute($stmt)){
 
@@ -55,23 +51,21 @@
            }else{
                echo('Nao foi possivel publicar a pauta');
              }
-         $db->closeDatabase();
+         $this->db->closeDatabase();
 
        }
 
        public function delete($id){
 
-		   	 $db = new mySQLConnection();
-
 		     $query = "DELETE FROM `estudante_nota` WHERE `idPautaNormal`= ?";
-		     if ($stmt = mysqli_prepare($db->openConection(),$query)){
+		     if ($stmt = mysqli_prepare($this->db->openConection(),$query)){
 			   $result = mysqli_stmt_bind_param($stmt,'i',$id);
 			   if(mysqli_stmt_execute($stmt)){
 					echo('removido com sucesso!');
 		  	   }else{
 			   		echo('problemas na remocao!');
 			   }
-		    $db->closeDatabase();
+		    $this->db->closeDatabase();
            }
        }
 
@@ -79,7 +73,7 @@
 
 		   $db = new mySQLConnection();
 		   $query= "SELECT * FROM `estudante_nota`";
-		   $result_set = mysqli_query($db->openConection(),$query);
+		   $result_set = mysqli_query($this->db->openConection(),$query);
 		   while ($row = mysqli_fetch_assoc($result_set)){
 				echo $row['nota'];
 			}

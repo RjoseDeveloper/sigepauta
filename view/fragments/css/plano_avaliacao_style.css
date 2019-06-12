@@ -1,0 +1,27 @@
+
+.lb_avaliacao {
+
+}
+
+.opt_nova_av{
+    background-color: #ccc;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    color: #080808;
+    font-weight: bold;
+}
+.docente_disp li{
+    cursor: auto;
+}
+
+.docente_disp li.hover{
+    background: rgba(235,240,250,255);
+}
+
+.btn_nova_av{
+    cursor: context-menu;
+}
+
+li{
+    color:#0000CC;
+}
+

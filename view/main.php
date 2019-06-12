@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require_once '../QuerySql/EstudantesSQL.php';
-require_once '../functions/Conexao.php';
+require_once '../Query/EstudantesSQL.php';
+require_once '../dbconf/getConection.php';
 
 $estudante_sql = new EstudantesSQL();
 $db = new mySQLConnection();
@@ -29,29 +29,16 @@ if (!isset($_SESSION['username'])){?>
 -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link rel="shortcut icon" href="PUT YOUR FAVICON HERE">-->
-
-        <!-- Google Web Font Embed -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,
-        300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
         <!-- Bootstrap core CSS -->
 
-        <link href="../libs/bootstrap/css/bootstrap.css" rel='stylesheet' type='text/css'>
-        <link href="../libs/bootstrap/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
-        <!-- Custom styles for this template -->
-        <link href="header/js/colorbox/colorbox.css"  rel='stylesheet' type='text/css'>
-        <link href="header/css/templatemo_style.css"  rel='stylesheet' type='text/css'>
-        <link href="header/css/css_mystyle.css"  rel='stylesheet' type='text/css'>
+        <?php require '../view/layouts/_header.html' ?>
 
-        <script src="../_assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="fragments/js/js_function.js" type="text/javascript"></script>
+        <script src="fragments/js/js_estudante.js" type="text/javascript"></script>
+        <script src="fragments/js/js_plano_avaliacao.js" type="text/javascript"></script>
+        <script src="fragments/js/js_registo_academico.js" type="text/javascript"></script>
 
-        <script src="../js/js_function.js" type="text/javascript"></script>
-        <script src="../js/js_estudante.js" type="text/javascript"></script>
-        <script src="../js/js_plano_avaliacao.js" type="text/javascript"></script>
-        <script src="../js/js_registo_academico.js" type="text/javascript"></script>
-        <![endif]-->
 
         <style>
 
@@ -88,11 +75,14 @@ if (!isset($_SESSION['username'])){?>
                         <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="/">
-                        <img src="../assets/images/lurio-logo-272x265.png" alt="Mobirise" title="" style="height: 5rem;">
+                        <img src="fragments/img/lurio-logo.png" alt="Unilurio Fe" title="" style="height: 5rem;">
                     </a>
                 </span>
-                            <span class="navbar-caption-wrap"><a class="navbar-caption text-danger display-4" href="#">
-                                    SIGEPAUTAS</a></span>
+                            <span class="navbar-caption-wrap">
+                                <a class="navbar-caption text-danger display-5" href="#">
+                                    SIGEPAUTAS</a>
+                            </span>
+
                         </div>
                     </div><br>
 
@@ -101,15 +91,18 @@ if (!isset($_SESSION['username'])){?>
 
                     <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="configAdmin/pauta.php" target="frm_content">HOME</a></li>
+                            <li class="active"><a href="/" target="frm_content">HOME</a></li>
+                            <li ><a href="pauta/pautas.php" target="frm_content">REGISTO DE PAUTA</a></li>
 <!--                            <li value=""><a href="configAdmin/pauta.php" target="frm_content">Gestão de Pautas</a></li>-->
 <!--                            <li value="avfrq"><a href="../view/Plano_avaliacao.php" target="frm_content">Plano de Avaliação</a></li>-->
-                            <li value="plano_av"><a href="Form_reports.php?acao=10" target="frm_content">RELATORIOS DE PAUTAS</a></li>
-                            <li><a href="Plano_avaliacao.php" target="frm_content">PLANO DE AVALIAÇÃO</a></li>
-                            <li onclick="destroy_user_session()"><a href="#"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
+                            <li value="plano_av"><a href="report/Form_reports.php?acao=10" target="frm_content">RELATORIOS DE PAUTAS</a></li>
+                            <li><a href="plano_avaliacao/Plano_avaliacao.php" target="frm_content">PLANO DE AVALIAÇÃO</a></li>
+                            <li><a href="classes/logout.php"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
 
                         </ul>
                     </div> <!--/.nav-collapse docente -->
+
+
 
 
                     <?php } elseif ($_SESSION['tipo'] == 'estudante'){?>
@@ -118,13 +111,13 @@ if (!isset($_SESSION['username'])){?>
 
                     <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                     <ul class="nav navbar-nav navbar-right" style="margin-bottom: 2px">
-                        
-                        <li class="active"><a href="Estudante_pauta.php" target="frm_content">HOME</a></li>
-                        <li><a  href="GestaoFormando.php" target="frm_content" >INSCRIÇÃO ESTUDANTE</a></li>
-                        <li value="plano_av"><a href="planoav.php" target="frm_content" >PLANO DE AVALIAÇÃO</a></li>
-                        <li><a href="Estudante_pauta.php" target="frm_content">NOTIFICAÇÕES</a></li>
+                        <li class="active"><a href="../../www/index.php" target="frm_content">HOME</a></li>
+                        <li ><a href="aluno/Estudante_pauta.php" target="frm_content">PAUTAS PUBLICADAS</a></li>
+                        <li><a  href="aluno/Aluno.php" target="frm_content" >INSCRIÇÃO ESTUDANTE</a></li>
+                        <li value="plano_av"><a href="plano_avaliacao/Plano_docente.php" target="frm_content" >PLANO DE AVALIAÇÃO</a></li>
+                        <li><a href="aluno/Estudante_pauta.php" target="frm_content">NOTIFICAÇÕES</a></li>
 <!--                        <li class="active"><a href="Estudante_pauta.php" target="frm_content">Preencricao</a></li>-->
-                        <li onclick="destroy_user_session();"><a href="#"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
+                        <li><a href="classes/logout.php"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
 
                     </ul>
                     </div><!--/.nav-collapse Estudante-->
@@ -135,10 +128,10 @@ if (!isset($_SESSION['username'])){?>
                     <div class="navbar-collapse collapse" id="templatemo-nav-bar">
 
                     <ul class="nav navbar-nav navbar-right" style="margin-top: 5px">
-
-                        <li class="active"><a href="Coordenador_curso.php" target="frm_content">HOME</a></li>
-                        <li value=""><a href="configAdmin/pauta.php" target="frm_content">PAUTAS DOCENTE</a></li>
-                        <li value="plano_av"><a href="Form_reports.php?acao=10" target="frm_content">RELATORIOS DE PAUTAS</a></li>
+                        <li class="active"><a href="/" target="frm_content">HOME</a></li>
+                        <li ><a href="pedagogico/Direcao.php" target="frm_content">PUBLICAÇÃO DE PAUTAS</a></li>
+                        <li value=""><a href="pauta/pautas.php" target="frm_content">PAUTAS DOCENTE</a></li>
+                        <li value="plano_av"><a href="report/Form_reports.php?acao=10" target="frm_content">RELATORIOS DE PAUTAS</a></li>
 
                         <li class="dropdown" id="">
 
@@ -147,18 +140,18 @@ if (!isset($_SESSION['username'])){?>
                                 <i class=""></i> <?php echo 'GESTÃO PEDAGOGICA';?> <span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="../view/Plano_avaliacao.php" target="frm_content" >PLANO DE AVALIAÇÃO</a></li>
-                                <li><a href="configAdmin/avaliacao.php" target="frm_content">MENU AVALIAÇÃO</a></li>
-                                <li><a href="configAdmin/payments_session.php" target="frm_content">CALENDARIO DE ACTIVIDADES</a></li>
-                                <li><a href="configAdmin/professor.php"target="frm_content" >GERIR DOCENTES <i class="pull-right glyphicon glyphicon-people"></i></a></li>
-                                <li id="manageStudentNav"><a href="configAdmin/cursos.php" target="frm_content">CURSOS E TURMAS <i class="pull-right glyphicon glyphicon-eye"></i></a></li>
-                                <li id="manageStudentNav"><a href="../view/configAdmin/disciplina.php" target="frm_content">MENU DISCIPLINAS <i class="pull-right glyphicon glyphicon-send"></i></a></li>
-                                <li><a id="users"  href="configAdmin/usuarios.php" target="frm_content" >UTILIZADORES DO SISTEMA <i class="pull-right glyphicon glyphicon-users"></i></a></li>
-                                <li><a href="configAdmin/perfil.php" target="frm_content">MENU INSTITUIÇÃO</a></li>
+                                <li><a href="plano_avaliacao/Plano_avaliacao.php" target="frm_content" >PLANO DE AVALIAÇÃO</a></li>
+                                <li><a href="avaliacao/avaliacao.php" target="frm_content">MENU AVALIAÇÃO</a></li>
+                                <li><a href="actividade/activity_session.php" target="frm_content">CALENDARIO DE ACTIVIDADES</a></li>
+                                <li><a href="professor/professor.php" target="frm_content" >GERIR DOCENTES <i class="pull-right glyphicon glyphicon-people"></i></a></li>
+                                <li id="manageStudentNav"><a href="curso/cursos.php" target="frm_content">CURSOS E TURMAS <i class="pull-right glyphicon glyphicon-eye"></i></a></li>
+                                <li id="manageStudentNav"><a href="disciplina/disciplinas.php" target="frm_content">MENU DISCIPLINAS <i class="pull-right glyphicon glyphicon-send"></i></a></li>
+                                <li><a id="users"  href="utilizador/usuarios.php" target="frm_content" >UTILIZADORES DO SISTEMA <i class="pull-right glyphicon glyphicon-users"></i></a></li>
+                                <li><a href="instituicao/perfil.php" target="frm_content">PERFIL INSTITUIÇÃO</a></li>
                             </ul>
                         </li>
 
-                        <li onclick="destroy_user_session();"><a href="#"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
+                        <li><a href="classes/logout.php"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
 
                     </ul>
 
@@ -171,10 +164,8 @@ if (!isset($_SESSION['username'])){?>
 
                     <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                         <ul class="nav navbar-nav navbar-right" style="margin-top: 5px">
-
-                            <li class="active"><a href="Gestao_Academica.php" target="frm_content">HOME</a></li>
-                            <li value=""><a href="configAdmin/pauta.php" target="frm_content">PAUTAS DOCENTE</a></li>
-                            <li><a href="../view/Plano_avaliacao.php" target="frm_content">PLANO DE AVALIAÇÃO</a></li>
+                            <li class="active"><a href="../view/registo_academico/Gestao_Academica.php" target="frm_content">HOME</a></li>
+                            <li ><a href="registo_academico/Registo_Academico.php" target="frm_content">ADMINISTRAR PAUTAS</a></li>
 
                             <li class="dropdown" id="">
 
@@ -184,9 +175,10 @@ if (!isset($_SESSION['username'])){?>
 
                                 <ul class="dropdown-menu">
 
-                                    <li id="addStudentNav"><a href="configAdmin/clientes.php" target="frm_content">MENU ESTUDANTE  <i class="pull-right glyphicon glyphicon-user"></i></a></li>
-                                    <li><a  href="configAdmin/exameExtraordinario.php" target="frm_content" >PEDIDOS DE EXAMES</a></li>
-                                    <li><a  href="Registo_Academico.php" target="frm_content">RELATORIOS DE PAUTAS</a></li>
+                                    <li id="addStudentNav"><a href="aluno/alunos_all.php?acao=master" target="frm_content">GERIR ESTUDANTES  <i class="pull-right glyphicon glyphicon-user"></i></a></li>
+                                    <li><a  href="exames/exame_extraordinario.php" target="frm_content" >PEDIDOS DE EXAMES</a></li>
+<!--                                    <li><a  href="registo_academico/Registo_Academico.php" target="frm_content">RELATORIOS DE PAUTAS</a></li>-->
+
 
                                 </ul>
                             </li>
@@ -200,12 +192,12 @@ if (!isset($_SESSION['username'])){?>
 
                                 <ul class="dropdown-menu">
 
-                                    <li><a href="configAdmin/professor.php"target="frm_content" >GERIR DOCENTES <i class="pull-right glyphicon glyphicon-people"></i></a></li>
-                                    <li id="manageStudentNav"><a href="configAdmin/cursos.php" target="frm_content">CURSOS E TURMAS <i class="pull-right glyphicon glyphicon-eye"></i></a></li>
-                                    <li id="manageStudentNav"><a href="../view/configAdmin/disciplina.php" target="frm_content">GERIR DISCIPLINAS <i class="pull-right glyphicon glyphicon-send"></i></a></li>
-                                    <li id="manageStudentNav"><a href="../view/WebService_disciplina.php" target="frm_content">INTEGRAÇÃO DE DADOS 1<i class="pull-right glyphicon glyphicon-send"></i></a></li>
-                                    <li id="manageStudentNav"><a href="../view/index.php" target="frm_content">INTEGRACAO DE DADOS 2 <i class="pull-right glyphicon glyphicon-send"></i></a></li>
-                                    <li><a id="users"  href="configAdmin/usuarios.php" target="frm_content" >UTILIZADORES DO SISTEMA <i class="pull-right glyphicon glyphicon-users"></i></a></li>
+                                    <li><a href="professor/professor.php"target="frm_content" >GERIR DOCENTES <i class="pull-right glyphicon glyphicon-people"></i></a></li>
+                                    <li id="manageStudentNav"><a href="curso/cursos.php" target="frm_content">CURSOS E TURMAS <i class="pull-right glyphicon glyphicon-eye"></i></a></li>
+                                    <li id="manageStudentNav"><a href="disciplina/disciplinas.php" target="frm_content">GERIR DISCIPLINAS <i class="pull-right glyphicon glyphicon-send"></i></a></li>
+                                    <li id="manageStudentNav"><a href="integracao/WebService_disciplina.php" target="frm_content">INTEGRAÇÃO DE DADOS 1</a></li>
+                                    <li value=""><a href="pauta/pautas.php" target="frm_content">PAUTAS DOCENTE</a></li>
+                                    <li><a href="plano_avaliacao/Plano_avaliacao.php" target="frm_content">PLANO DE AVALIAÇÃO</a></li>
 
                                 </ul>
 
@@ -228,7 +220,10 @@ if (!isset($_SESSION['username'])){?>
 <!--                                    <span class=""></span>-->
 <!--                                </ul>-->
 <!--                            </li>-->
-                            <li onclick="destroy_user_session();"><a href="#"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
+
+                            <li><a id="users"  href="utilizador/usuarios.php" target="frm_content" >UTILIZADORES  <i class="pull-right glyphicon glyphicon-users"></i></a></li>
+
+                            <li><a href="classes/logout.php"><span class="glyphicon glyphicon-log-out"></span> SAIR</a></li>
                         </ul>
                         <?php } ?>
                     </div> <!--/.container-fluid coordenador-->
@@ -244,16 +239,16 @@ if (!isset($_SESSION['username'])){?>
                 <?php
 
                 if ($_SESSION['tipo'] == 'docente'){
-                    $page_init = 'configAdmin/pauta.php';
+                    $page_init = 'pauta/pautas.php';
 
                 } elseif ($_SESSION['tipo'] == 'estudante'){
-                    $page_init = 'Estudante_pauta.php';
+                    $page_init = 'aluno/Aluno.php';
 
                 }elseif ($_SESSION['tipo'] == 'coordenador' || $_SESSION['tipo'] == 'dir_adjunto_pedag' || $_SESSION['tipo'] == 'director'){
-                    $page_init = 'Coordenador_curso.php';
+                    $page_init = 'pedagogico/Direcao.php';
                 }
                 elseif ($_SESSION['tipo'] == 'racademico'){
-                    $page_init = 'Gestao_Academica.php';
+                    $page_init = 'registo_academico/Gestao_Academica.php';
                 }
                 ?>
                 <iframe src="<?php echo $page_init ?>" width="100%" height="1000" name="frm_content" frameborder="0"></iframe>
@@ -383,7 +378,7 @@ if (!isset($_SESSION['username'])){?>
                             <?php
                             if ($_SESSION['tipo'] == 'docente' || $_SESSION['tipo'] == 'coordenador') {?>
 
-                                <a href="Plano_avaliacao.php" target="frm_content" class="btn btn-primary">Novo Plano</a>
+                                <a href="plano_avaliacao/Plano_avaliacao.php" target="frm_content" class="btn btn-primary">Novo Plano</a>
                             <?php }else {?>
                                 <!--a href="#" class="btn btn-primary mb-2">Comentar</a-->
                             <?php }?>
@@ -398,12 +393,6 @@ if (!isset($_SESSION['username'])){?>
             <!---------------------------------------------------------------------------------------------->
 
 
-
-        <!----------                     fim modal ------------>
-        <script src="header/js/js_script.js"  type="text/javascript"></script>
-        <script src="header/js/jquery.min.js" type="text/javascript"></script>
-        <script src="header/js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
-        <script src="header/js/templatemo_script.js"  type="text/javascript"></script>
 
     </body>
   </html>

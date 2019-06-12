@@ -6,16 +6,12 @@
  * Time: 9:07 PM
  */
 
-require_once('../functions/Conexao.php');
-require_once('../QuerySql/UtilizadorSQL.php');
-require_once('../model/UtilizadorMDL.php');
-require_once('../controller/UtilizadorCtr.php');
+require_once('../dbconf/getConection.php');
+require_once('../Query/UtilizadorSQL.php');
 
 $sql_utilizador = new UtilizadorSQL();
-$utilizadorCtr = new UtilizadorCtr();
-$utilizadorMDL = new UtilizadorMDL();
-
 $db = new mySQLConnection();
+
 $estado = 2;
 $acao = $_GET['acao'];
 

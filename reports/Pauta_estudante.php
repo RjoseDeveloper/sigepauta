@@ -2,22 +2,22 @@
 
 session_start();
 
-require_once('../QuerySql/PublicacaoPautaSQL.php');
-require_once("../functions/Conexao.php");
+require_once('../Query/PublicacaoPautaSQL.php');
+require_once("../phpUnitTest/getConection.php");
 require_once('../controller/EstudanteNotaCtr.php');
 require_once('../controller/PautaNormalCtr.php');
-require_once('../QuerySql/AllQuerySQL.php');
+require_once('../Query/AllQuerySQL.php');
 
-require_once('../QuerySql/EstudantesSQL.php');
+require_once('../Query/EstudantesSQL.php');
 require_once('../controller/PautaNormalCtr.php');
-require_once('../QuerySql/PublicacaoPautaSQL.php');
-require_once('../QuerySql/PautaFrequenciaSQL.php');
+require_once('../Query/PublicacaoPautaSQL.php');
+require_once('../Query/PautaFrequenciaSQL.php');
 require_once('../controller/EstudanteCtr.php');
 
 
-require_once '../libs/fpdf/fpdf.php';
-require_once '../libs/fpdf/fpdf.css';
-define('FPDF_FONTPATH', '../libs/fpdf/font/') ;
+require_once '../bibliotecas/fpdf/fpdf.php';
+require_once '../bibliotecas/fpdf/fpdf.css';
+define('FPDF_FONTPATH', '../bibliotecas/fpdf/font/') ;
 
 //define('FPDF_FONTPATH', '../fpdf/font/') ;
 

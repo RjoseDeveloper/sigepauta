@@ -2,11 +2,11 @@
 
 	session_start();
 
-	require_once("../QuerySql/AllQuerySQL.php");
+	require_once("../Query/AllQuerySQL.php");
 	require_once("../controller/DisciplinaCtr.php");
-	require_once('../functions/Conexao.php');
-	require_once("../QuerySql/EstudantesSQL.php");
-	require_once('../QuerySql/PublicacaoPautaSQL.php');
+	require_once('../dbconf/getConection.php');
+	require_once("../Query/EstudantesSQL.php");
+	require_once('../Query/PublicacaoPautaSQL.php');
     require_once('../controller/EstudanteCtr.php');
 
           $query = new QuerySql();

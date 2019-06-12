@@ -2,17 +2,17 @@
 
    session_start();
 
-   require_once('../QuerySql/PublicacaoPautaSQL.php');
-   require_once("../functions/Conexao.php");
+   require_once('../Query/PublicacaoPautaSQL.php');
+   require_once("../dbconf/getConection.php");
    require_once('../controller/EstudanteNotaCtr.php');
    require_once('../controller/PautaNormalCtr.php');
-   require_once('../QuerySql/AllQuerySQL.php');
-   require_once('../QuerySql/EstudantesSQL.php');
+   require_once('../Query/AllQuerySQL.php');
+   require_once('../Query/EstudantesSQL.php');
    require_once('../controller/PautaNormalCtr.php');
-   require_once('../QuerySql/PublicacaoPautaSQL.php');
-   require_once('../QuerySql/PautaFrequenciaSQL.php');
+   require_once('../Query/PublicacaoPautaSQL.php');
+   require_once('../Query/PautaFrequenciaSQL.php');
    require_once('../controller/EstudanteCtr.php');
-   require_once ('../QuerySql/RegistoAcademicoSQL.php');
+   require_once('../Query/RegistoAcademicoSQL.php');
 
    $query = new QuerySql();
    $pautaFreq = new PautaFrequencia();
@@ -38,7 +38,7 @@
 
     $discp = $_REQUEST['disp'];
     $acao = $_REQUEST['acao'];
-    $idcurso = $_REQUEST['curso'];
+    //$idcurso = $_REQUEST['curso'];
     $estado_pn=2;
 
        switch ($acao) {
@@ -128,7 +128,7 @@
              * Estado 1 avaliacao nao foi realizadas
              */
 
-            if ($ctr_est->QtdAvaliacaoPub($discp,1) == $ctr_est->QtdAvaliacaoPub($discp,2) ) {
+            if ($estudante_sql->obterQtdAvaliacaoPub($discp,2,$idcurso,0) == $estudante_sql->obterQtdAvaliacaoPub($discp,2,$idcurso,0) ) {
 
                 echo '<div  align="left" style="color: blue; margin-top:-4em"><h4>Mapa de Frequencia</h4></div>';
 

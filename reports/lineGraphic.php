@@ -6,8 +6,8 @@
  * Time: 12:35 AM
  */
 
-include("../libs/pChart/pData.class");
-include("../libs/pChart/pChart.class");
+include("../bibliotecas/pChart/pData.class");
+include("../bibliotecas/pChart/pChart.class");
 
 
 // Dataset definition
@@ -25,11 +25,11 @@ $Test = new pChart(660,230);
 $Test->drawGraphAreaGradient(90,90,90,90,TARGET_BACKGROUND);
 
 // Prepare the graph area
-$Test->setFontProperties("../libs/fonts/tahoma.ttf",8);
+$Test->setFontProperties("../bibliotecas/fonts/tahoma.ttf",8);
 $Test->setGraphArea(60,40,595,190);
 
 // Initialise graph area
-$Test->setFontProperties("../libs/fonts/tahoma.ttf",8);
+$Test->setFontProperties("../bibliotecas/fonts/tahoma.ttf",8);
 
 // Draw the SourceForge Rank graph
 $DataSet->SetYAxisName("Sourceforge Rank");
@@ -58,11 +58,11 @@ $Test->drawFilledCubicCurve($DataSet->GetData(),$DataSet->GetDataDescription(),.
 $Test->drawPlotGraph($DataSet->GetData(),$DataSet->GetDataDescription(),3,2,255,255,255);
 
 // Write the legend (box less)
-$Test->setFontProperties("../libs/fonts/tahoma.ttf",8);
+$Test->setFontProperties("../bibliotecas/fonts/tahoma.ttf",8);
 $Test->drawLegend(530,5,$DataSet->GetDataDescription(),0,0,0,0,0,0,255,255,255,FALSE);
 
 // Write the title
-$Test->setFontProperties("../libs/fonts/MankSans.ttf",18);
+$Test->setFontProperties("../bibliotecas/fonts/MankSans.ttf",18);
 $Test->setShadowProperties(1,1,0,0,0);
 $Test->drawTitle(0,0,"SourceForge ranking summary",255,255,255,660,30,TRUE);
 $Test->clearShadow();

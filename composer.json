@@ -8,5 +8,11 @@
       "name": "author's name",
       "email": "email@example.com"
     }
-  ]
+  ],
+  "require": {
+    "aiw/phpunit-tool": "dev-master",
+    "yidas/phpunit-sample": "dev-master",
+    "phpunit/php-code-coverage": "7.0.5",
+    "metamodels/phpunit-contao-database": "1.0.1"
+  }
 }

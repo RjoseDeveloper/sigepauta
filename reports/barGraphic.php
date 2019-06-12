@@ -6,8 +6,8 @@
  * Time: 12:35 AM
  */
 
-include("../libs/pChart/pData.class");
-include("../libs/pChart/pChart.class");
+include("../bibliotecas/pChart/pData.class");
+include("../bibliotecas/pChart/pChart.class");
 
 
 // Dataset definition
@@ -27,7 +27,7 @@ $DataSet->SetXAxisUnit("h");
 // Initialise the graph
 $Test = new pChart(700,230);
 $Test->drawGraphAreaGradient(132,173,131,50,TARGET_BACKGROUND);
-$Test->setFontProperties("../libs/Fonts/tahoma.ttf",8);
+$Test->setFontProperties("../bibliotecas/Fonts/tahoma.ttf",8);
 $Test->setGraphArea(120,20,675,190);
 $Test->drawGraphArea(213,217,221,FALSE);
 $Test->drawScale($DataSet->GetData(),$DataSet->GetDataDescription(),SCALE_ADDALL,213,217,221,TRUE,0,2,TRUE);
@@ -42,7 +42,7 @@ $Title = "  Average Temperatures during\r\n  the first months of 2008  ";
 $Test->drawTextBox(0,0,50,230,$Title,90,255,255,255,ALIGN_BOTTOM_CENTER,TRUE,0,0,0,30);
 
 // Draw the legend
-$Test->setFontProperties("../libs/Fonts/tahoma.ttf",8);
+$Test->setFontProperties("../bibliotecas/Fonts/tahoma.ttf",8);
 $Test->drawLegend(610,10,$DataSet->GetDataDescription(),236,238,240,52,58,82);
 
 // Render the picture

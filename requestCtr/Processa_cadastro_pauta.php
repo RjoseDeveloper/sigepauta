@@ -2,15 +2,15 @@
 
 session_start();
 
-require_once('../functions/Conexao.php');
+require_once('../dbconf/getConection.php');
 require_once('../controller/EstudanteNotaCtr.php');
 require_once('../controller/PautaNormalCtr.php');
-require_once('../QuerySql/AllQuerySQL.php');
+require_once('../Query/AllQuerySQL.php');
 require_once("../controller/PautaRecorrenciaCtr.php");
 require_once '../controller/PlanoAvaliacaoCtr.php';
 require_once('../controller/TipoAvaliacaoCtr.php');
-require_once('../QuerySql/EstudantesSQL.php');
-require_once('../QuerySql/PublicacaoPautaSQL.php');
+require_once('../Query/EstudantesSQL.php');
+require_once('../Query/PublicacaoPautaSQL.php');
 require_once('../controller/EstudanteCtr.php');
 
 $db = new mySQLConnection();
@@ -24,7 +24,7 @@ $plano_avaliacao = new PlanoAvaliacaoController();
 $publicacao_pauta = new PublicarPauta();
 $estudnteCtr = new EstudanteController();
 
-$idDoc = $query->getDoc_id($_SESSION['username']);
+$idDoc = $all_query->getDoc_id($_SESSION['username']);
 $ctr =  $_POST['acesso'];
 
 switch($ctr){
@@ -35,6 +35,7 @@ switch($ctr){
          $_SESSION['avaliacao'] = $_POST['avaliacao'];
          $_SESSION['disciplina']   = $_POST['disciplina'];
          $_SESSION['curso'] = $_POST['curso'];
+         echo 'sucess inserted one row';
 
         break;
     case 13:
@@ -61,7 +62,7 @@ switch($ctr){
 
     case 5:
 
-        $plano_avaliacao->update_peso(1,$_POST['peso'], $_POST['avaliacao']);
+        //$plano_avaliacao->update_peso(1,$_POST['peso'], $_POST['avaliacao']);
         break;
 
     case 6:

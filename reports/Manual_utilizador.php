@@ -4,7 +4,7 @@
     session_start();
    header('Content-Type: text/html; charset=UTF-8');
 
-   require_once('../functions/Conexao.php');
+   require_once('../phpUnitTest/getConection.php');
    require_once('../model/EstudanteNotaCtr.php');
    require_once('../model/PautaNormalCtr.php');
 
@@ -16,9 +16,9 @@
    require_once('../model/AllQuerySQL.php');
    require_once('../model/QueryEstudanteSQL.php');
 
-   require_once '../libs/fpdf/fpdf.php';
-   require_once '../libs/fpdf/fpdf.css';
-   define('FPDF_FONTPATH', '../libs/fpdf/font/') ;
+   require_once '../bibliotecas/fpdf/fpdf.php';
+   require_once '../bibliotecas/fpdf/fpdf.css';
+   define('FPDF_FONTPATH', '../bibliotecas/fpdf/font/') ;
 
    $ctr_est = new SqlQueryEstudante();
    $link = new mySQLConnection();

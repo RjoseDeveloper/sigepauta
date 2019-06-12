@@ -9,12 +9,13 @@ if (!isset($_SESSION['username'])){?>
 
 <?php }
 
-require_once('../QuerySql/PublicacaoPautaSQL.php');
-require_once('../functions/Conexao.php');
+require_once('../Query/PublicacaoPautaSQL.php');
+require_once('../dbconf/getConection.php');
 require_once('../controller/EstudanteNotaCtr.php');
 require_once('../controller/PautaNormalCtr.php');
-require_once('../QuerySql/PautaFrequenciaSQL.php');
+require_once('../Query/PautaFrequenciaSQL.php');
 require_once('../controller/EstudanteCtr.php');
+require_once("../Query/AllQuerySQL.php");
 
 $publicacao_Controller = new PublicarPauta();;
 $pautaFreq = new PautaFrequencia();
@@ -37,26 +38,26 @@ $nome_disp = $pautaFreq->getnomeDisp($_REQUEST['disp']);
     <title>Publicacao Pauta</title>
 
 
-    <link href="../css/table_style.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="../css/edit_pauta_style.css" type="text/css">
-    <link rel="stylesheet" href="../css/table_style.css" type="text/css">
-    <link rel="stylesheet" href="../css/estudante_style.css" type="text/css">
-    <link rel="stylesheet" href="../css/cabecalho.css" type="text/css">
+    <link href="../view/fragments/css/table_style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../view/fragments/css/edit_pauta_style.css" type="text/css">
+    <link rel="stylesheet" href="../view/fragments/css/table_style.css" type="text/css">
+    <link rel="stylesheet" href="../view/fragments/css/estudante_style.css" type="text/css">
+    <link rel="stylesheet" href="../view/fragments/css/cabecalho.css" type="text/css">
 
-    <link href="../_assets/css/jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../_assets/css/jquery.mobile.structure-1.4.3.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../_assets/css/jquery.mobile.theme-1.4.3.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../bibliotecas/jQuery/css/jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../bibliotecas/jQuery/css/jquery.mobile.structure-1.4.3.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../bibliotecas/jQuery/css/jquery.mobile.theme-1.4.3.min.css" rel="stylesheet" type="text/css"/>
 
-    <script src="../_assets/js/jquery-1.8.3.min.js"></script>
-    <script src="../_assets/js/jquery.mobile-1.4.3.min.js"></script>
-    <script type="text/javascript" src="../js/js_function.js"></script>
-    <script type="text/javascript" src="../js/js_publicar_pauta.js"></script>
-    <script src="../js/js_data_base.js" type="text/javascript" charset="utf-8"> </script>
+    <script src="../bibliotecas/jQuery/js/jquery-1.8.3.min.js"></script>
+    <script src="../bibliotecas/jQuery/js/jquery.mobile-1.4.3.min.js"></script>
+    <script type="text/javascript" src="../view/fragments/js/js_function.js"></script>
+    <script type="text/javascript" src="../view/fragments/js/js_publicar_pauta.js"></script>
+    <script src="../view/fragments/js/js_data_base.js" type="text/javascript" charset="utf-8"> </script>
 
-    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
-    <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-select.css">
-    <script src="../libs/bootstrap/js/bootstrap-select.js"></script>
+    <script src="../bibliotecas/bootstrap/js/bootstrap.min.js"></script>
+    <link href="../bibliotecas/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../bibliotecas/bootstrap/css/bootstrap-select.css">
+    <script src="../bibliotecas/bootstrap/js/bootstrap-select.js"></script>
 
     <style type="text/css" media="screen">
         body{
@@ -126,7 +127,8 @@ $nome_disp = $pautaFreq->getnomeDisp($_REQUEST['disp']);
             $result = mysqli_query($db->openConection(),$listaAvliacao);
 
             if (mysqli_num_rows($result) <= 0){
-                echo 'Nenhuma Avaliação Submetida';
+                echo 'Nenhuma Avaliação Submetida ';
+                echo '<a style="color:white" href="../view/pedagogico/Direcao.php" target="frm_content" class="ui-body-b btn btn-success">Voltar </a>';
             }else{
 
                 while ($mylista = mysqli_fetch_assoc($result)){
@@ -141,8 +143,8 @@ $nome_disp = $pautaFreq->getnomeDisp($_REQUEST['disp']);
                             <?php echo ' Data de Registo:  '. $mylista['dataReg'] ?></span>
                                 </li>
 
-                            <div class="col-md-12" class="table">
-                            <table id="tblData" class="table table-responsive">
+                            <div class="" class="table">
+                            <table id="tblData" class="table" style="">
 
                                 <tbody>
 

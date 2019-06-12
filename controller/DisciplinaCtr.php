@@ -6,9 +6,9 @@
  * Time: 11:16 PM
  */
 
-require_once '../functions/db.php';
-require_once '../functions/conexion.php';
-require_once '../QuerySql/DisciplinaSQL.php';
+require_once '../dbconf/db.php';
+require_once '../dbconf/conexion.php';
+require_once '../Query/DisciplinaSQL.php';
 $discplina = new DisciplinaSQL();
 
 if(isset($_REQUEST['acao'])){
