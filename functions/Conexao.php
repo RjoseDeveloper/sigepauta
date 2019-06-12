@@ -3,17 +3,11 @@
 		
 		private $connection;
 
-//        private $URL = "jsftj8ez0cevjz8v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-//        private $USER ="ufm6xc4c1m8wcg8b";
-//        private $DB ="ja75c6n0soets4l4";
-//        private $PASSWORD="g3ellqs2nhznnd7b";
-//        private $PORT ="3306";
-
-    private $URL = "jsftj8ez0cevjz8v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-    private $USER ="ufm6xc4c1m8wcg8b";
-    private $DB ="ja75c6n0soets4l4";
-    private $PASSWORD="g3ellqs2nhznnd7b";
-    private $PORT ="3306";
+        private $URL = "jsftj8ez0cevjz8v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        private $USER ="ufm6xc4c1m8wcg8b";
+        private $DB ="ja75c6n0soets4l4";
+        private $PASSWORD="g3ellqs2nhznnd7b";
+        private $PORT ="3306";
 
 		public function __construct(){
 			$this->openConection();
