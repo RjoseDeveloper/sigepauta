@@ -136,7 +136,7 @@ switch($param) {
         ?>
 
         <div class="container alert alert-success"> <?php echo $alert ?>
-            <a href="../view/aluno/Aluno.php#menu1" class="pull-right active_btn"> &times;</a>
+            <a href="../view/aluno/Aluno.php" class="pull-right active_btn"> &times;</a>
         </div>
 
         <?php
