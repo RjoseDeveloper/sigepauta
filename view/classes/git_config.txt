@@ -1,0 +1,24 @@
+
+Passos para configurar projectono Heroku:
+
+	> heroku git:clone -a secrete-mesa-11563    // clone nome do projecto
+
+Autenticacao Via terminal
+	> heroku login
+Enter your Heroku credentials:
+	Email: jhraimundo3@gmail.com
+	Password: **********
+Logged in as jhraimundo3@gmail.com
+
+Compilar um projecto:
+	>git add .
+	>git commit -am "message"
+
+*** Please tell me who you are.
+Run
+	>git config --global user.email "jhraimundo3@gmail"
+	>git config --global user.name "Raimundo Jose"
+	>git commit -am "message"
+	>git push heroku master
+
+C:\Users\Raimundo Jose\PhpstormProjects\secret-mesa-11563>

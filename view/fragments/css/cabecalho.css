@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fundo{
+    background: -moz-linear-gradient(left, white 10%, #365775, #ccc);
+
+    /*background: -moz-linear-gradient(#365775,white 80%, #365775);*/
+    background:-webkit-linear-gradient(left, white 10%, #365775, #ccc);
+    background:-ms-linear-gradient(left, white 10%, #365775, #ccc);
+    background:-o-linear-gradient(left, white 10%, #365775, #ccc);
+    background-attachment: fixed;
+
+
+ }
+
+
+ #fundo1{
+
+     background: -moz-linear-gradient(white 80% , #365775);
+    background:-webkit-linear-gradient(white 80% , #365775);
+    background:-ms-linear-gradient(white 80% , #365775);
+    background:-o-linear-gradient(white 80% , #365775);
+
+ }
+
+
+.tela_docente{
+
+     background: -moz-linear-gradient(#365775, white 80%, #365775);
+    background:-webkit-linear-gradient(#365775, white 80%, #365775);
+    background:-ms-linear-gradient(#365775, white 80%, #365775);
+    background:-o-linear-gradient(#365775, white 80%, #365775);
+    padding: 10px;
+
+ }
+
+.headers{
+
+          background: -moz-linear-gradient(#193742, #c3cebc);
+    background:-webkit-linear-gradient(#193742, #c3cebc);
+    background:-ms-linear-gradient(#193742, #c3cebc);
+    background:-o-linear-gradient(#193742, #c3cebc);
+
+}
+
+.panel_f{
+
+    background:-webkit-linear-gradient(left,#193742, #c3cebc);
+    background:-ms-linear-gradient(left, #193742, #c3cebc);
+    background:-o-linear-gradient(left,#193742, #c3cebc);
+    background:-moz-linear-gradient(left,#193742, #c3cebc);
+
+}
+
+
+
+
+
+
+

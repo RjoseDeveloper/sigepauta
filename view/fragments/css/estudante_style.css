@@ -1,0 +1,391 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*-------------Formatacao de cabecalho e herder --------------------*
+* css para criar um footer fixo.
+**/
+
+	footer {
+            background:#E8E8E8;
+            border: none;
+            width:100%;
+            position:fixed;
+            bottom:0;
+            left:0;
+}
+
+
+#movie-table-custom {
+
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+
+}
+
+#movie-table-custom tr, #movie-table-custom td{
+    text-align: left;
+    border: solid 1px white;
+    padding: 3px 5px;
+    font-weight: normal;
+}
+
+/*--------------------- Formatando tabelas -----------------------------------*/
+
+.movie-list thead th,
+.movie-list tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.movie-list tbody th,
+.movie-list tbody td {
+    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.movie-list tbody tr:last-child th,
+.movie-list tbody tr:last-child td {
+    border-bottom: 0;
+}
+.movie-list tbody tr:nth-child(odd) td,
+.movie-list tbody tr:nth-child(odd) th {
+    background-color: #eeeeee; /* non-RGBA fallback  */
+    background-color: rgba(0,0,0,.04);
+}
+
+
+/*-----------------------Formtacao de tabela com pesquis personalisada -------------------*/
+
+/* These apply across all breakpoints because they are outside of a media query */
+/* Make the labels light gray all caps across the board */
+.movie-list thead th,
+.movie-list tbody th .ui-table-cell-label,
+.movie-list tbody td .ui-table-cell-label {
+    text-transform: uppercase;
+    font-size: .7em;
+    color: rgba(0,0,0,0.5);
+    font-weight: normal;
+}
+/* White bg, large blue text for rank and title */
+.movie-list tbody th {
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #77bbff;
+    text-align: center;
+}
+/*  Add a bit of extra left padding for the title */
+.movie-list tbody td.title {
+    padding-left: .8em;
+}
+/* Add strokes */
+.movie-list thead th {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.movie-list tbody th,
+.movie-list tbody td {
+    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+/*  Custom stacked styles for mobile sizes */
+/*  Use a max-width media query so we don't have to undo these styles */
+@media (max-width: 40em) {
+    /*  Negate the margin between sections */
+    .movie-list tbody th {
+        margin-top: 0;
+        text-align: left;
+    }
+    /*  White bg, large blue text for rank and title */
+    .movie-list tbody th,
+    .movie-list tbody td.title {
+        display: block;
+        font-size: 1.2em;
+        line-height: 110%;
+        padding: .5em .5em;
+        background-color: #fff;
+        color: #77bbff;
+        -moz-box-shadow: 0 1px 6px rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.1);
+        box-shadow: 0 1px 6px rgba(0,0,0,.1);
+    }
+    /*  Hide labels for rank and title */
+    .movie-list tbody th .ui-table-cell-label,
+    .movie-list tbody td.title .ui-table-cell-label {
+        display: none;
+    }
+    /*  Position the title next to the rank, pad to the left */
+    .movie-list tbody td.title {
+        margin-top: -2.1em;
+        padding-left: 2.2em;
+        border-bottom: 1px solid rgba(0,0,0,.15);
+    }
+    /*  Make the data bold */
+    .movie-list th,
+    .movie-list td {
+        font-weight: bold;
+    }
+    /* Make the label elements a percentage width */
+    .movie-list td .ui-table-cell-label,
+    .movie-list th .ui-table-cell-label {
+        min-width: 20%;
+    }
+}
+/* Media query to show as a standard table at wider widths */
+@media ( min-width: 40em ) {
+    /* Show the table header rows */
+    .movie-list td,
+    .movie-list th,
+    .movie-list tbody th,
+    .movie-list tbody td,
+    .movie-list thead td,
+    .movie-list thead th {
+        display: table-cell;
+        margin: 0;
+    }
+    /* Hide the labels in each cell */
+    .movie-list td .ui-table-cell-label,
+    .movie-list th .ui-table-cell-label {
+        display: none;
+    }
+}
+/* Hack to make IE9 and WP7.5 treat cells like block level elements */
+/* Applied in a max-width media query up to the table layout breakpoint so we don't need to negate this */
+@media ( max-width: 40em ) {
+    .movie-list td,
+    .movie-list th {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        clear: left;
+    }
+}
+
+
+/*------------------Formatacao de coluna oprional ----------------------------------*/
+.movie-list thead th{
+    color: white;
+    font-weight: bold;
+}
+.movie-list thead th,
+.movie-list tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+
+}
+.movie-list tbody th,
+.movie-list tbody td {
+    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0,0,0,.05);
+
+}
+.movie-list tbody tr:last-child th,
+.movie-list tbody tr:last-child td {
+    border-bottom: 0;
+
+}
+.movie-list tbody tr:nth-child(odd) td,
+.movie-list tbody tr:nth-child(odd) th {
+    background-color: #eeeeee; /* non-RGBA fallback  */
+    background-color: rgba(0,0,0,.04);
+
+}
+
+
+
+
+
+/*Formatacao do meun-----------------------------------------*/
+
+  .th-groups th {
+    background-color: rgba(0,0,0,0.07);
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+@media screen and (max-width: 72em) {
+    /* Style the first cell in a row in a dark bar */
+    .financial-table-reflow th: first-child {
+        color: #fff;
+        background-color: #555;
+        font-size: 1.2em;
+        padding: .3em .6em .3em .6em;
+        -webkit-text-shadow: none;
+        -moz-text-shadow: none;
+        text-shadow: none;
+    }
+    /* Hide the label in the first cell */
+    .financial-table-reflow th: first-child .ui-table-cell-label {
+        display: none;
+    }
+    /* Make the grouped header labels green */
+    .ui-table-reflow th .ui-table-cell-label-top,
+    .ui-table-reflow td .ui-table-cell-label-top {
+        font-weight: bold;
+        color: #319B47;
+        font-size: 1.1em;
+    }
+}
+        /* Media query to show as a standard table at wider widths, must be very wide for this table */
+        @media screen and (min-width: 72em) {
+            /* Show the table header rows */
+            .financial-table-reflow td,
+            .financial-table-reflow th,
+            .financial-table-reflow tbody th,
+            .financial-table-reflow tbody td,
+            .financial-table-reflow thead td,
+            .financial-table-reflow thead th {
+                display: table-cell;
+                margin: 0;
+            }
+            /* Hide the labels in each cell */
+            .financial-table-reflow td .ui-table-cell-label,
+            .financial-table-reflow th .ui-table-cell-label {
+                display: none;
+            }
+        }
+        /* Hack to make IE9 and WP7.5 treat cells like block level elements */
+        /* Applied in a max-width media query up to the table layout breakpoint so we don't need to negate this*/
+        @media (max-width: 72em) {
+            .financial-table-reflow td,
+            .financial-table-reflow th {
+                width: 100%;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                float: left;
+                clear: left;
+            }
+
+        }
+
+/*
+
+ * My table reflow
+ *
+ * */
+
+/* These apply across all breakpoints because they are outside of a media query */
+/* Make the labels light gray all caps across the board */
+.movie-list thead th,
+.movie-list tbody th .ui-table-cell-label,
+.movie-list tbody td .ui-table-cell-label {
+    text-transform: uppercase;
+    font-size: .7em;
+    color: rgba(0,0,0,0.5);
+    font-weight: normal;
+}
+/* White bg, large blue text for rank and title */
+.movie-list tbody th {
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #77bbff;
+    text-align: center;
+}
+/*  Add a bit of extra left padding for the title */
+.movie-list tbody td.title {
+    padding-left: .8em;
+}
+/* Add strokes */
+.movie-list thead th {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.movie-list tbody th,
+.movie-list tbody td {
+    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+/*  Custom stacked styles for mobile sizes */
+/*  Use a max-width media query so we don't have to undo these styles */
+@media (max-width: 40em) {
+    /*  Negate the margin between sections */
+    .movie-list tbody th {
+        margin-top: 0;
+        text-align: left;
+    }
+    /*  White bg, large blue text for rank and title */
+    .movie-list tbody th,
+    .movie-list tbody td.title {
+        display: block;
+        font-size: 1.2em;
+        line-height: 110%;
+        padding: .5em .5em;
+        background-color: #fff;
+        color: #77bbff;
+        -moz-box-shadow: 0 1px 6px rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.1);
+        box-shadow: 0 1px 6px rgba(0,0,0,.1);
+    }
+    /*  Hide labels for rank and title */
+    .movie-list tbody th .ui-table-cell-label,
+    .movie-list tbody td.title .ui-table-cell-label {
+        display: none;
+    }
+    /*  Position the title next to the rank, pad to the left */
+    .movie-list tbody td.title {
+        margin-top: -2.1em;
+        padding-left: 2.2em;
+        border-bottom: 1px solid rgba(0,0,0,.15);
+    }
+    /*  Make the data bold */
+    .movie-list th,
+    .movie-list td {
+        font-weight: bold;
+    }
+    /* Make the label elements a percentage width */
+    .movie-list td .ui-table-cell-label,
+    .movie-list th .ui-table-cell-label {
+        min-width: 20%;
+    }
+}
+/* Media query to show as a standard table at wider widths */
+@media ( min-width: 40em ) {
+    /* Show the table header rows */
+    .movie-list td,
+    .movie-list th,
+    .movie-list tbody th,
+    .movie-list tbody td,
+    .movie-list thead td,
+    .movie-list thead th {
+        display: table-cell;
+        margin: 0;
+    }
+    /* Hide the labels in each cell */
+    .movie-list td .ui-table-cell-label,
+    .movie-list th .ui-table-cell-label {
+        display: none;
+    }
+}
+/* Hack to make IE9 and WP7.5 treat cells like block level elements */
+/* Applied in a max-width media query up to the table layout breakpoint so we don't need to negate this */
+@media ( max-width: 40em ) {
+    .movie-list td,
+    .movie-list th {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        clear: left;
+    }
+}
+
+.table_frequencia{
+
+    border: none; color:white;
+    text-align: center;
+
+    background: -moz-linear-gradient(#24246A, white);
+    background:-webkit-linear-gradient(#24246A, white);
+    background:-ms-linear-gradient(#24246A, white);
+    background:-o-linear-gradient(#24246A, white);
+    font-size: 14px;
+}
+.table_exame_freq th, .tbl_freq td{
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    border-color: white;
+    font-size: 12px;
+}
+
