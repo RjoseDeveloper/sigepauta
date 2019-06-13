@@ -8,9 +8,19 @@ require_once("../../dbconf/db.php");//Contiene las variables de configuracion pa
 require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
 include('../ajax/is_logged.php');//Archivo verifica que el usario que intenta acceder a la URL esta logueado
 require_once("../../Query/DocenteSQL.php");
+require_once("funcoes.php");
 
+?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <body>
+    <script type="text/javascript" src="../fragments/js/exame_extra.js"></script>
+
+
+<?php
 $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
-
 if($action == 'ajax') {
     // escaping, additionally removing everything that could be (html/javascript-) code
     $q = mysqli_real_escape_string($con, (strip_tags($_REQUEST['q'], ENT_QUOTES)));
@@ -42,6 +52,10 @@ if($action == 'ajax') {
     $reload = 'exame_extraordinario.php';
     //main query to fetch the data
 
+    $retorno = new MYSQLConsultas();
+
+    //$recebe = $retorno->estudantesEscritosCorrenteAno();
+    //echo "$recebe";
 
     $sql = "select * from (select idinscricao, nomeCompleto, curso, d.descricao as disciplina, tab6.data_registo, tab6.nivel, tab6.dataPub, status from
 	(select idinscricao, tab4.idutilizador,tab4.iddisciplina, c.descricao as curso, tab4.data_registo, tab5.nota,tab5.dataPub, tab5.descricaoteste, status, t.descricao as nivel from 
@@ -149,14 +163,14 @@ if($action == 'ajax') {
                         <?php if($status=='HABILITADO'){?>
                             <td>
                                 <button data-toggle='tab' title="DESABILITAR O ESTADO" class='btn btn-info btn-sm'
-                                        onclick="enable_status(this.value)" value="<?php echo $idinscricao;?>">
+                                        onclick="enable_desable_status(this.value)" value="<?php echo $idinscricao;?>">
                                     <span class='glyphicon glyphicon-check'><?php echo " " .$status;?></span>
                                 </button>
                             </td>
                         <?php }else{?>
                             <td>
                                 <button data-toggle='tab' title="HABILITAR O ESTADO" class='btn btn-warning btn-sm'
-                                        onclick="enable_status(this.value)" value="<?php echo $idinscricao;?>">
+                                        onclick="enable_desable_status(this.value)" value="<?php echo $idinscricao;?>">
                                     <span class='glyphicon glyphicon-edit'><?php echo " " .$status;?></span>
                                 </button>
                             </td>
@@ -176,3 +190,6 @@ if($action == 'ajax') {
     }
 }
 ?>
+    </body>
+    </head>
+</html>
