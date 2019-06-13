@@ -18,7 +18,7 @@ if (empty(!$_POST['descricao'])){
     $descricao = mysqli_real_escape_string($con,(strip_tags($_POST["descricao"],ENT_QUOTES)));
     $status=2;
 
-    echo "descricao $descricao";
+    //echo "descricao $descricao";
 
     // check if user or email address already exists
     $sql = "SELECT * FROM tipoavaliacao WHERE descricao = '" . $descricao . "'";
