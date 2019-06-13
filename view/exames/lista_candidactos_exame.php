@@ -17,6 +17,9 @@ require_once("funcoes.php");
     <head>
     <body>
     <script type="text/javascript" src="../fragments/js/exame_extra.js"></script>
+    </body>
+    </head>
+    </html>
 
 
 <?php
@@ -190,6 +193,3 @@ if($action == 'ajax') {
     }
 }
 ?>
-    </body>
-    </head>
-</html>
