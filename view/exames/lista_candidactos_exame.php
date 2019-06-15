@@ -56,50 +56,28 @@ if($action == 'ajax') {
     //main query to fetch the data
 
     $retorno = new MYSQLConsultas();
+    $tabela1 = $retorno->estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo();
+    $tabela2 = $retorno->utilizadoresEdisciplinas();
 
-    //$recebe = $retorno->estudantesEscritosCorrenteAno();
-    //echo "$recebe";
+    $tabelaFinal12= $retorno->juntandoConsultasUmEDois($tabela1, $tabela2);
 
-    $sql = "select * from (select idinscricao, nomeCompleto, curso, d.descricao as disciplina, tab6.data_registo, tab6.nivel, tab6.dataPub, status from
-	(select idinscricao, tab4.idutilizador,tab4.iddisciplina, c.descricao as curso, tab4.data_registo, tab5.nota,tab5.dataPub, tab5.descricaoteste, status, t.descricao as nivel from 
-		(select tab3.idinscricao, tab3.idutilizador, tab3.iddisciplina, tab3.data_registo, status, tab3.idturma from
-			(select tab2.idinscricao, tab1.idutilizador, tab2.data_registo, tab2.iddisciplina, tab2.status_exame as status, tab2.idturma  from 
-				(select count(*) nr_de_inscricoes_correntes,idinscricao, idutilizador, data_registo, iddisciplina from 
-					(select idinscricao, i.idutilizador, i.data_registo, i.iddisciplina 
-						from inscricao i, utilizador u, disciplina d
-						where year(i.data_registo) in(year(Now())) and u.id=i.idutilizador and d.idDisciplina=i.iddisciplina
-						ORDER BY i.idutilizador asc) sub1
-				GROUP BY idutilizador
-				HAVING COUNT(*)<=2
-				ORDER BY idutilizador) as tab1,
+    $tabela3 = $retorno->estudantesComNegativasExameNormal();
+    $tabela4 = $retorno->estudantesComNegativasExameRecorrencia();
 
-				(select idinscricao, i.idutilizador, i.data_registo, i.iddisciplina, i.status_exame, i.idturma	
-					from inscricao i, utilizador u, disciplina d
-					where year(i.data_registo) in(year(Now())) and u.id=i.idutilizador and d.idDisciplina=i.iddisciplina
-					ORDER BY i.idutilizador) as tab2
+    $tabelaFinal34= $retorno->juntandoConsultasTresEQuatro($tabela3, $tabela4);
 
-			where tab2.idutilizador=tab1.idutilizador	
-			ORDER BY tab2.idutilizador) as tab3, disciplina d, utilizador u
-		where d.idDisciplina=tab3.iddisciplina and tab3.idutilizador=u.id
-		order by tab3.idutilizador) as tab4,
+    $tabelaFinal= $retorno->juntandoTodasConsultas($tabelaFinal12, $tabelaFinal34);
 
-	(select sub3.idusers, sub3.nota, sub3.dataPub, sub3.descricaoteste, sub3.idDisciplina, sub3.idcurso from 
-		(select DISTINCT sub2.idusers, sub2.nota, sub2.dataPub, sub2.descricaoteste, sub2.idDisciplina, sub2.idcurso from 
-			(select en.nota, dataPub, a.nome, p.idusers, da.descricaoteste, p.idDisciplina, p.idcurso from pautanormal p, aluno a, estudante_nota en, data_avaliacao da	
-				where p.idusers=a.idutilizador and en.idaluno=a.idaluno and p.idPautaNormal=en.idPautaNormal and da.id_data=p.idTipoAvaliacao 
-					and da.descricaoteste='Exame Normal' and en.nota<10) as sub1,
+    //echo "$tabelaFinal12";
+    //echo "$tabelaFinal34";
+   // echo "$tabelaFinal";
 
-			(select en.nota, dataPub, a.nome, p.idusers, da.descricaoteste, p.idDisciplina, p.idcurso from pautanormal p, aluno a, estudante_nota en, data_avaliacao da
-				where p.idusers=a.idutilizador and en.idaluno=a.idaluno and p.idPautaNormal=en.idPautaNormal and da.id_data=p.idTipoAvaliacao 
-					and da.descricaoteste='Exame Recorrencia' and en.nota<10) as sub2
+    //$test12= mysqli_query($con,"select idinscricao  from ($tabelaFinal12) as tab3");
+    //$test34= mysqli_query($con,"select * from ($tabelaFinal34) as tab9");
 
-		where sub1.idusers=sub2.idusers) as sub3
-		ORDER BY sub3.idDisciplina) as tab5, curso c, turma t
+    //echo "$test->num_rows";
 
-	where tab4.iddisciplina=tab5.idDisciplina and tab4.idutilizador=tab5.idusers and c.idcurso=tab5.idcurso and t.idturma=tab4.idturma) as tab6, utilizador u, disciplina d
-
-  WHERE u.id=tab6.idutilizador and d.idDisciplina=tab6.iddisciplina) as tab10 
-  $sWhere LIMIT $offset,$per_page";
+    $sql = "select * from ($tabelaFinal) as tba7 $sWhere LIMIT $offset,$per_page";
 
     $query = mysqli_query($con, $sql);
 
@@ -114,9 +92,7 @@ if($action == 'ajax') {
                 <th>CURSO</th>
                 <th>DISCIPLINA</th>
                 <th>DATA DE INSCRICAO</th>
-                <th>Nivel</th>
-<!--                <th>Nota de Exame</th>-->
-                <th>DATA DE PUBLICACAO</th>
+                <th>NivelDaCadeira</th>
                 <th>STATUS</th>
                 <!--                <th><span class="pull-right">Acções</span></th>-->
 
@@ -128,10 +104,8 @@ if($action == 'ajax') {
                     $curso = $row['curso'];
                     $disciplina = $row['disciplina'];
                     $data_registo = $row['data_registo'];
-                    $status = $row['status'];
-                    $nivel = $row['nivel'];
-                    $dataPub = $row['dataPub'];
-//                    $nota = $row['nota'];
+                    $estado = $row['estado'];
+                    $nivelDaCadeira= $row['nivelDaCadeira'];
                     ?>
 
                     <input type="hidden" value="<?php echo $idinscricao;?>"
@@ -144,12 +118,8 @@ if($action == 'ajax') {
                            id="disciplina<?php echo $disciplina;?>">
                     <input type="hidden" value="<?php echo $data_registo;?>"
                            id="status_cliente<?php echo $data_registo;?>">
-                    <input type="hidden" value="<?php echo $nivel;?>"
-                           id="nivel<?php echo $nivel;?>">
-<!--                    <input type="hidden" value="--><?php //echo $nota;?><!--"-->
-<!--                           id="nota--><?php //echo $nota;?><!--">-->
-                    <input type="hidden" value="<?php echo $dataPub;?>"
-                           id="dataPub<?php echo $dataPub;?>">
+                    <input type="hidden" value="<?php echo $nivelDaCadeira;?>"
+                           id="nivel<?php echo $nivelDaCadeira;?>">
                     <input type="hidden" value="<?php echo $estado;?>"
                            id="estado<?php echo $estado;?>">
                     <tr>
@@ -158,23 +128,21 @@ if($action == 'ajax') {
                         <td><?php echo $curso;?></td>
                         <td><?php echo $disciplina;?></td>
                         <td><?php echo $data_registo ?></td>
-                        <td><?php echo $nivel ?></td>
-<!--                        <td>--><?php //echo $nota ?><!--</td>-->
-                        <td><?php echo $dataPub ?></td>
-                        <!--                        <td>--><?php //echo $status; ?><!--</td>-->
+                        <td><?php echo $nivelDaCadeira ?></td>
+<!--                        <td>--><?php ////echo $status; ?><!--</td>-->
 
-                        <?php if($status=='HABILITADO'){?>
+                        <?php if($estado=='HABILITADO'){?>
                             <td>
                                 <button data-toggle='tab' title="DESABILITAR O ESTADO" class='btn btn-info btn-sm'
                                         onclick="enable_desable_status(this.value)" value="<?php echo $idinscricao;?>">
-                                    <span class='glyphicon glyphicon-check'><?php echo " " .$status;?></span>
+                                    <span class='glyphicon glyphicon-check'><?php echo " " .$estado;?></span>
                                 </button>
                             </td>
                         <?php }else{?>
                             <td>
                                 <button data-toggle='tab' title="HABILITAR O ESTADO" class='btn btn-warning btn-sm'
                                         onclick="enable_desable_status(this.value)" value="<?php echo $idinscricao;?>">
-                                    <span class='glyphicon glyphicon-edit'><?php echo " " .$status;?></span>
+                                    <span class='glyphicon glyphicon-edit'><?php echo " " .$estado;?></span>
                                 </button>
                             </td>
                         <?php } ?>
