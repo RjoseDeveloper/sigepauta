@@ -6,6 +6,9 @@
  * Time: 6:48 AM
  */
 
+/**
+ * Esta classe e de Exames Especiais
+ */
 class ExamesEspeciais{
 
     public function __construct(){
