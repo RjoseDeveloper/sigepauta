@@ -14,5 +14,8 @@
     "yidas/phpunit-sample": "dev-master",
     "phpunit/php-code-coverage": "7.0.5",
     "metamodels/phpunit-contao-database": "1.0.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
   }
 }

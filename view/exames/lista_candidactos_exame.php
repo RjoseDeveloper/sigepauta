@@ -8,7 +8,7 @@ require_once("../../dbconf/db.php");//Contiene las variables de configuracion pa
 require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
 include('../ajax/is_logged.php');//Archivo verifica que el usario que intenta acceder a la URL esta logueado
 require_once("../../Query/DocenteSQL.php");
-require_once("funcoes.php");
+require_once("ExamesEspeciais.php");
 
 ?>
 
@@ -55,22 +55,22 @@ if($action == 'ajax') {
     $reload = 'exame_extraordinario.php';
     //main query to fetch the data
 
-    $retorno = new MYSQLConsultas();
-    $tabela1 = $retorno->estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo();
-    $tabela2 = $retorno->utilizadoresEdisciplinas();
+    $consultas = new ExamesEspeciais();
+    $tabela1 = $consultas->estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo();
+    $tabela2 = $consultas->utilizadoresEdisciplinas();
 
-    $tabelaFinal12= $retorno->juntandoConsultasUmEDois($tabela1, $tabela2);
+    $tabelaFinal_12= $consultas->juntandoConsultasUmEDois($tabela1, $tabela2);
 
-    $tabela3 = $retorno->estudantesComNegativasExameNormal();
-    $tabela4 = $retorno->estudantesComNegativasExameRecorrencia();
+    $tabela3 = $consultas->estudantesComNegativasExameNormal();
+    $tabela4 = $consultas->estudantesComNegativasExameRecorrencia();
 
-    $tabelaFinal34= $retorno->juntandoConsultasTresEQuatro($tabela3, $tabela4);
+    $tabelaFinal_34= $consultas->juntandoConsultasTresEQuatro($tabela3, $tabela4);
 
-    $tabelaFinal= $retorno->juntandoTodasConsultas($tabelaFinal12, $tabelaFinal34);
+    $tabelaFinal= $consultas->juntandoTodasConsultas($tabelaFinal_12, $tabelaFinal_34);
 
     //echo "$tabelaFinal12";
     //echo "$tabelaFinal34";
-   // echo "$tabelaFinal";
+   //echo "$tabelaFinal";
 
     //$test12= mysqli_query($con,"select idinscricao  from ($tabelaFinal12) as tab3");
     //$test34= mysqli_query($con,"select * from ($tabelaFinal34) as tab9");

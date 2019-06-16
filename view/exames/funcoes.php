@@ -9,11 +9,13 @@
     class MYSQLConsultas{
 
         public function __construct(){
-            $this->estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo();
+            //$this->estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo();
 
         }
 
-        //phpdocs
+        /**
+         * @return string
+         */
         function estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo(){
 
             return "select count(*) nr_de_inscricoes_correntes,idinscricao, idutilizador, data_registo, iddisciplina 
@@ -77,7 +79,8 @@
 		           ";
         }
 
-        function juntandoTodasConsultas($tab4, $tab5){
+        function juntandoTodasConsultas($tab4, $tab5)
+        {
 
             return "select distinct idinscricao, nomeCompleto, curso, d.descricao as disciplina, tab6.data_registo, tab6.nivelDaCadeira, 
                       tab6.estado from (select idinscricao, tab4.idutilizador,tab4.iddisciplina, c.descricao as curso, 
