@@ -195,7 +195,7 @@ if (!isset($_SESSION['username'])){?>
                                     <li><a href="professor/professor.php"target="frm_content" >GERIR DOCENTES <i class="pull-right glyphicon glyphicon-people"></i></a></li>
                                     <li id="manageStudentNav"><a href="curso/cursos.php" target="frm_content">CURSOS E TURMAS <i class="pull-right glyphicon glyphicon-eye"></i></a></li>
                                     <li id="manageStudentNav"><a href="disciplina/disciplinas.php" target="frm_content">GERIR DISCIPLINAS <i class="pull-right glyphicon glyphicon-send"></i></a></li>
-                                    <li id="manageStudentNav"><a href="integracao/WebService_disciplina.php" target="frm_content">INTEGRAÇÃO DE DADOS 1</a></li>
+                                    <li id="manageStudentNav"><a href="integracao/integracao.php" target="frm_content">INTEGRAÇÃO DE DADOS 1</a></li>
                                     <li value=""><a href="pauta/pautas.php" target="frm_content">PAUTAS DOCENTE</a></li>
                                     <li><a href="plano_avaliacao/Plano_avaliacao.php" target="frm_content">PLANO DE AVALIAÇÃO</a></li>
 
