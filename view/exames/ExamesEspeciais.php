@@ -9,6 +9,9 @@
 /**
  * Esta classe e de Exames Especiais
  */
+ 
+require_once("../../dbconf/getConection.php");
+ 
 class ExamesEspeciais{
 
     public function __construct(){
@@ -82,14 +85,36 @@ class ExamesEspeciais{
 		           ";
     }
 
-    function juntandoTodasConsultas($tab4, $tab5){
+    function juntandoTodasConsultas(){
+        $consultas = new ExamesEspeciais();
+		
+		$tabela1 = $consultas->estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo();
+		$tabela2 = $consultas->utilizadoresEdisciplinas();
 
-        return "select idinscricao, nomeCompleto, curso, d.descricao as disciplina, tab6.data_registo, tab6.nivelDaCadeira, 
+		$tabelaFinal_12= $consultas->juntandoConsultasUmEDois($tabela1, $tabela2);
+
+		$tabela3 = $consultas->estudantesComNegativasExameNormal();
+		$tabela4 = $consultas->estudantesComNegativasExameRecorrencia();
+
+		$tabelaFinal_34 = $consultas->juntandoConsultasTresEQuatro($tabela3, $tabela4);
+
+
+        $value= "select idinscricao, nomeCompleto, curso, d.descricao as disciplina, tab6.data_registo, tab6.nivelDaCadeira, 
                       tab6.estado from (select idinscricao, tab4.idutilizador,tab4.iddisciplina, c.descricao as curso, 
-                      tab4.data_registo, estado, t.descricao as nivelDaCadeira from ($tab4) as tab4, ($tab5) as tab5, curso c, turma t
+                      tab4.data_registo, estado, t.descricao as nivelDaCadeira from ($tabelaFinal_12) as tab4, ($tabelaFinal_34) as tab5, curso c, turma t
                       where tab4.iddisciplina=tab5.idDisciplina and tab4.idutilizador=tab5.idutilizador and c.idcurso=tab5.idcurso 
                           and t.idturma=tab4.idturma) as tab6, utilizador u, disciplina d
                       WHERE u.id=tab6.idutilizador and d.idDisciplina=tab6.iddisciplina and year(tab6.data_registo) in(year(Now()))
                   ";
+        return $value;
     }
+	
+	function result($query){
+        $consultas = new ExamesEspeciais();
+		$con = new mySQLConnection();
+		$consultaGeral =  $consultas->juntandoTodasConsultas();
+
+		return  mysqli_query($con->openConection(), "select * from ($consultaGeral) as tab7 $query");
+		
+	}
 }

@@ -51,35 +51,16 @@ if($action == 'ajax') {
     $count_query = mysqli_query($con, "SELECT count(*) AS numrows FROM $sTable $sWhere");
     $row = mysqli_fetch_array($count_query);
     $numrows = $row['numrows'];
+
     $total_pages = ceil($numrows / $per_page);
     $reload = 'exame_extraordinario.php';
     //main query to fetch the data
 
     $consultas = new ExamesEspeciais();
-    $tabela1 = $consultas->estudantesEscritosCorrenteAnoComDuasDisciplinasMaximo();
-    $tabela2 = $consultas->utilizadoresEdisciplinas();
-
-    $tabelaFinal_12= $consultas->juntandoConsultasUmEDois($tabela1, $tabela2);
-
-    $tabela3 = $consultas->estudantesComNegativasExameNormal();
-    $tabela4 = $consultas->estudantesComNegativasExameRecorrencia();
-
-    $tabelaFinal_34= $consultas->juntandoConsultasTresEQuatro($tabela3, $tabela4);
-
-    $tabelaFinal= $consultas->juntandoTodasConsultas($tabelaFinal_12, $tabelaFinal_34);
-
-    //echo "$tabelaFinal12";
-    //echo "$tabelaFinal34";
-   //echo "$tabelaFinal";
-
-    //$test12= mysqli_query($con,"select idinscricao  from ($tabelaFinal12) as tab3");
-    //$test34= mysqli_query($con,"select * from ($tabelaFinal34) as tab9");
-
-    //echo "$test->num_rows";
-
-    $sql = "select * from ($tabelaFinal) as tba7 $sWhere LIMIT $offset,$per_page";
-
-    $query = mysqli_query($con, $sql);
+	
+    //$sql = "$sWhere LIMIT $offset,$per_page";
+	
+    $query = $consultas->result("$sWhere LIMIT $offset,$per_page");
 
    //loop through fetched data
     if ($numrows > 0) {
@@ -87,6 +68,7 @@ if($action == 'ajax') {
 
         <div class="table-responsive container">
             <table class="table">
+                <tr>
                 <th>ID</th>
                 <th>NOME COMPLETO</th>
                 <th>CURSO</th>
@@ -94,9 +76,8 @@ if($action == 'ajax') {
                 <th>DATA DE INSCRICAO</th>
                 <th>NivelDaCadeira</th>
                 <th>STATUS</th>
-                <!--                <th><span class="pull-right">Acções</span></th>-->
-
                 </tr>
+
                 <?php while ($row = mysqli_fetch_array($query)) {
 
                     $idinscricao = $row['idinscricao'];

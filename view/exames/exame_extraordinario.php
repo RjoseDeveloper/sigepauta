@@ -68,7 +68,7 @@
 </div>
 		 
 	</div>
-	<hr>
+
 	<?php
 	include("../layouts/footer.php");
 	?>
