@@ -53,18 +53,7 @@
 </head>
 <body>
 
-<div class="table-responsive container">
-    <table class="table">
-
-        <h2>Lista dos estudantes</h2>
-        <font align="right"><h3>GUARDAR</h3></font>
-        <tr>
-            <th>Nr Mecanografico</th>
-            <th>Nome do Estudante</th>
-            <th>Nivel de Frequencia</th>
-        </tr>
-
-        <?php
+<?php
         //Inicia a biblioteca cURL do PHP
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -84,11 +73,31 @@
         curl_close($curl); //Encerra a biblioteca
         $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
 
-        $funcoes = new FuncoesIntegracao();
+    $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
+    if($action == 'ajax') {
+?>
 
-        $funcoes->listaDeAlunos($data);
+<div class="table-responsive container">
+    <table class="table">
 
-        //echo "$alunos->num_rows";
+        <center><h2>Lista de Estudantes</h2></center>
+
+        <DIV>
+            <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning btn-sm'
+                    onclick="botaoAlunos(1)" value="">
+                <span class='glyphicon glyphicon-edit'>GUARDAR A LISTA</span>
+            </button>
+        </DIV>
+        <br>
+
+        <tr>
+            <th>Nr Mecanografico</th>
+            <th>Nome do Estudante</th>
+            <th>Nivel de Frequencia</th>
+        </tr>
+
+        <?php
+
         foreach ($data as $c){ //cria a classe de tratamento
 
                 //Define as arrays
@@ -108,6 +117,9 @@
             <?php } ?>
         </table>
     </div>
-
+<?php }else{
+        $funcoes = new FuncoesIntegracao();
+        $funcoes->listaDeAlunos($data);
+     }?>
 </body>
 </html>

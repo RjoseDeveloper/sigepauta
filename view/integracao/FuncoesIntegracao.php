@@ -47,9 +47,12 @@ class FuncoesIntegracao {
                 $nr_mec = $row['nr_mec'];
 
                 if ($nr_mec == $id) {
+//                    $update = "update aluno set nome = $nome where $nr_mec = $id";
+//                    mysqli_query($con->openConection(), $update);
+
                     echo "$id <br>";
                 } else {
-                    //echo"inserir <br>";
+                    echo"inserir <br>";
                     // $sql="INSERT INTO aluno(nome,nr_mec) VALUES('".$nome."','".$id."')";
                     // mysqli_query($connect,$sql);
                 }
@@ -85,9 +88,17 @@ class FuncoesIntegracao {
                 $codigo = $row['codigo'];
 
                 if ($codigo == $id) {
+//                    $update1 = "update disciplina set creditos=$vlr where $codigo = $id";
+//                    $update2 = "update disciplina set descricao=$nome where $codigo = $id";
+//                    $update3 = "update disciplina set anolectivo=$nivel where $codigo = $id";
+
+//                    mysqli_query($con->openConection(), $update1);
+//                    mysqli_query($con->openConection(), $update2);
+//                    mysqli_query($con->openConection(), $update3);
+
                     echo "update <br>";
                 } else {
-                     //echo"inserted <br>";
+                     echo"inserted <br>";
                     //$sql="INSERT INTO disciplina(creditos,descricao,codigo,anolectivo,idcurso) VALUES('".$vlr."','".$nome."','".$id."','".$nivel."','".$idcurso."')";
                     //mysqli_query($connect,$sql);
                 }
@@ -119,9 +130,12 @@ class FuncoesIntegracao {
                 $codigo2 = $row['codigo'];
 
                 if ($codigo1 == $codigo2) {
+//                    $update1 = "update curso set descricao=$nome where $codigo1 = $codigo2";
+//                    mysqli_query($con->openConection(), $update1);
+
                     echo "update <br>";
                 } else {
-                    //echo"inserted <br>";
+                    echo"inserted <br>";
                     //  $sql="INSERT INTO curso(descricao,codigo) VALUES('".$nome."','".$vlr."')";
                     //mysqli_query($connect,$sql);
                 }
@@ -157,13 +171,15 @@ class FuncoesIntegracao {
                 $inscricao2 = $row['idinscricao'];
 
                 if ($inscricao1 == $inscricao2) {
-//                    $updatae=mysqli_query($con->openConection(),"update inscricao
-//                        set iddisciplina=$id
-//                    where $id = inscricao.idinscricao");
+//                    $update1 = "update inscricao set iddisciplina=$id where $inscricao1 = $inscricao2";
+//                    $update2 = "update inscricao set idutilizador=$nome where $inscricao1 = $inscricao2";
+
+//                    mysqli_query($con->openConection(), $update1);
+//                    mysqli_query($con->openConection(), $update2);
 
                     echo "update <br>";
                 } else {
-                    //echo "inserted <br>";
+                    echo "inserted <br>";
 
                     //   $sql="INSERT INTO inscricao(iddisciplina,idinscricao,idutilizador) VALUES('".$id."','".$inscricao."',''".$nome."')";
                     // mysqli_query($con->openConection(),$sql);

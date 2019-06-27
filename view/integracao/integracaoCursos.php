@@ -43,18 +43,7 @@
 
 <body>
 
-<div class="table-responsive container">
-<table class="table">
-
-    <h2>Lista dos Cursos</h2>
-    <font align="right"><h3>GUARDAR</h3></font>
-    <tr>
-        <th>Codigo</th>
-        <th>Nome do Curso</th>
-
-    </tr>
-
-    <?php
+<?php
     //Inicia a biblioteca cURL do PHP
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -74,8 +63,30 @@
     curl_close($curl); //Encerra a biblioteca
     $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
 
-    $funcoes = new FuncoesIntegracao();
-    $funcoes->listaDeCursos($data);
+    $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
+    if($action == 'ajax') {
+?>
+
+<div class="table-responsive container">
+<table class="table">
+
+    <center><h2>Lista de Cursos</h2></center>
+
+    <DIV>
+        <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning btn-sm'
+                onclick="botaoCursos(1)" value="">
+            <span class='glyphicon glyphicon-edit'>GUARDAR A LISTA</span>
+        </button>
+    </DIV>
+    <br>
+
+    <tr>
+        <th>Codigo</th>
+        <th>Nome do Curso</th>
+
+    </tr>
+
+    <?php
 
         foreach ($data as $c) {//cria a classe de tratamento
 
@@ -94,5 +105,9 @@
     ?>
     </table>
     </div>
+<?php } else{
+        $funcoes = new FuncoesIntegracao();
+        $funcoes->listaDeCursos($data);
+    }?>
 </body>
 </html>

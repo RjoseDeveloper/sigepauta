@@ -43,23 +43,7 @@
 </head>
 
 <body>
-
-    <div class="table-responsive container">
-    <table class="table">
-
-    <<h2>Lista das Disciplinas</h2>
-        <font align="right"><h3>GUARDAR</h3></font>
-
-    <tr>
-        <th>Codigo</th>
-        <th>Nome da Disciplina</th>
-        <th>Ano Academico</th>
-        <th>Creditos</th>
-
-        <th></th>
-    </tr>
-
-    <?php
+<?php
     //Inicia a biblioteca cURL do PHP
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -79,8 +63,33 @@
     curl_close($curl); //Encerra a biblioteca
     $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
 
-    $funcoes = new FuncoesIntegracao();
-    $funcoes->listaDeDisciplinas($data);
+    $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
+    if($action == 'ajax') {
+
+    ?>
+    <div class="table-responsive container">
+    <table class="table">
+
+        <center><h2>Lista de Disciplinas</h2></center>
+
+        <DIV>
+            <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning btn-sm'
+                    onclick="botaoDisciplinas(1)" value="">
+                <span class='glyphicon glyphicon-edit'>GUARDAR A LISTA</span>
+            </button>
+        </DIV>
+        <br>
+
+    <tr>
+        <th>Codigo</th>
+        <th>Nome da Disciplina</th>
+        <th>Ano Academico</th>
+        <th>Creditos</th>
+
+        <th></th>
+    </tr>
+
+<?php
 
     foreach ($data as $c) {//cria a classe de tratamento
 
@@ -108,4 +117,9 @@
 
     </table>
     </div>
+<?php }else{
+        $funcoes = new FuncoesIntegracao();
+        $funcoes->listaDeDisciplinas($data);
+    }?>
+</body>
 </html>

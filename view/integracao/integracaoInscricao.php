@@ -76,7 +76,6 @@
         $offset = ($page - 1) * $per_page;
         //Count the total number of row in your table*/
         $numrows = count($data);
-        echo"$numrows";
         $total_pages = ceil($numrows / $per_page);
         $reload = 'integracao.php';
         //main query to fetch the data
@@ -86,9 +85,15 @@
 
             <div class="table-responsive container">
                 <table class="table">
-                    <h2>Lista de Inscricao</h2>
-                    <font align="right"><h3>GUARDAR</h3></font>
+                    <center><h2>Lista de Inscricao</h2></center>
 
+                    <DIV>
+                        <button data-toggle='tab' title="GUARDAR" class='btn btn-warning btn-sm'
+                                onclick="botaoInscricoes(1)" value="">
+                            <span class='glyphicon glyphicon-edit'>GUARDAR A LISTA</span>
+                        </button>
+                    </DIV>
+                    <br>
                     <tr>
                         <th>Codigo da Disciplina</th>
                         <th>Nome do Estudante </th>
@@ -127,6 +132,8 @@
     <?php } else {
                 $funcoes = new FuncoesIntegracao();
                 $funcoes->listaDeInscricoes($data);
+
+
     }?>
 </body>
 </html>
