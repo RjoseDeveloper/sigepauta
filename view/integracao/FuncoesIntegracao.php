@@ -21,6 +21,97 @@ class FuncoesIntegracao {
 
     }
 
+    function buscarDadosNoEsiraEstudante(){
+        //Inicia a biblioteca cURL do PHP
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "8084", //porta do WS
+            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Estudante/listaArray", //Caminho do WS que vai receber o GET
+            CURLOPT_RETURNTRANSFER => true, //Recebe resposta
+            CURLOPT_ENCODING => "JSON", //Decodificação
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 90,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET", //metodo do servidor
+            CURLOPT_HTTPHEADER => array(
+                "cache-control: no-cache",
+            ),
+        )); //recebe retorno
+        $data1 = curl_exec($curl); //Recebe a lista no formato jSon do WS
+        curl_close($curl); //Encerra a biblioteca
+        $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
+        return $data;
+    }
+
+    function buscarDadosNoEsiraDisciplina(){
+        //Inicia a biblioteca cURL do PHP
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "8084", //porta do WS
+            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Disciplinas", //Caminho do WS que vai receber o GET
+            CURLOPT_RETURNTRANSFER => true, //Recebe resposta
+            CURLOPT_ENCODING => "JSON", //Decodificação
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 90,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET", //metodo do servidor
+            CURLOPT_HTTPHEADER => array(
+                "cache-control: no-cache",
+            ),
+        )); //recebe retorno
+        $data1 = curl_exec($curl); //Recebe a lista no formato jSon do WS
+        curl_close($curl); //Encerra a biblioteca
+        $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
+        return $data;
+    }
+
+    function buscarDadosNoEsiraCurso(){
+        //Inicia a biblioteca cURL do PHP
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "8084", //porta do WS
+            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Cursos", //Caminho do WS que vai receber o GET
+            CURLOPT_RETURNTRANSFER => true, //Recebe resposta
+            CURLOPT_ENCODING => "JSON", //Decodificação
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 90,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET", //metodo do servidor
+            CURLOPT_HTTPHEADER => array(
+                "cache-control: no-cache",
+            ),
+        )); //recebe retorno
+
+        $data1 = curl_exec($curl); //Recebe a lista no formato jSon do WS
+        curl_close($curl); //Encerra a biblioteca
+        $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
+
+        return $data;
+    }
+
+    function buscarDadosNoEsiraInscricao(){
+        //Inicia a biblioteca cURL do PHP
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "8084", //porta do WS
+            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Inscricao", //Caminho do WS que vai receber o GET
+            CURLOPT_RETURNTRANSFER => true, //Recebe resposta
+            CURLOPT_ENCODING => "JSON", //Decodificação
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 90,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET", //metodo do servidor
+            CURLOPT_HTTPHEADER => array(
+                "cache-control: no-cache",
+            ),
+        )); //recebe retorno
+        $data1 = curl_exec($curl); //Recebe a lista no formato jSon do WS
+        curl_close($curl); //Encerra a biblioteca
+        $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
+
+        return $data;
+    }
+
     /**
      * Funcao que actualiza ou insere registos de alunos na tabela aluno da base de dados do sigepauta e
      * retorna a quantidade de registos antes de sofrer modificacao
