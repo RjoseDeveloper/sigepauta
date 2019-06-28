@@ -1,0 +1,16 @@
+{
+    "name": "yidas/phpunit-sample",
+    "description": "The demonstration of PHPUnit",
+    "keywords": ["sample", "phpunit", "unit-test", "test-driven-development"],
+    "homepage": "https://github.com/yidas/phpunit-sample",
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/yidas/phpunit-sample/issues",
+        "source": "https://github.com/yidas/phpunit-sample"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "phpunit/phpunit": ">=5.5.0"
+    }
+}

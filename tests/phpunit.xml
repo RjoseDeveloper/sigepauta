@@ -17,12 +17,13 @@
     </php>
     <testsuites>
         <testsuite name="allTests">
-            <file>TestarConsultasTest.php</file>
+            <file>IntegracaoTest.php</file>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory suffix=".php">../view/exames</directory>
+            <directory suffix=".php">../view/integracao</directory>
         </whitelist>
     </filter>
     <logging>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="allTests" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.563987">
+    <testsuite name="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.563987">
+      <testcase name="testListaDeAlunos" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="16" assertions="1" time="0.563987"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

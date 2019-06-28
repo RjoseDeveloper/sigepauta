@@ -10,7 +10,7 @@
  * Esta classe trata de funcoes de integracao
  */
 
-require_once("../../dbconf/getConection.php");
+require_once'../../dbconf/getConection.php';
 
 class FuncoesIntegracao {
     /**
