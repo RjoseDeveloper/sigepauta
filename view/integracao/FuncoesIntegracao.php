@@ -40,6 +40,7 @@ class FuncoesIntegracao {
         $data1 = curl_exec($curl); //Recebe a lista no formato jSon do WS
         curl_close($curl); //Encerra a biblioteca
         $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
+
         return $data;
     }
 
@@ -62,6 +63,7 @@ class FuncoesIntegracao {
         $data1 = curl_exec($curl); //Recebe a lista no formato jSon do WS
         curl_close($curl); //Encerra a biblioteca
         $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
+
         return $data;
     }
 
@@ -84,9 +86,9 @@ class FuncoesIntegracao {
 
         $data1 = curl_exec($curl); //Recebe a lista no formato jSon do WS
         curl_close($curl); //Encerra a biblioteca
-        $data = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
+        $data2 = json_decode($data1); //Decodifica o retorno gerado no modelo jSon
 
-        return $data;
+        return $data2;
     }
 
     function buscarDadosNoEsiraInscricao(){
@@ -115,7 +117,7 @@ class FuncoesIntegracao {
     /**
      * Funcao que actualiza ou insere registos de alunos na tabela aluno da base de dados do sigepauta e
      * retorna a quantidade de registos antes de sofrer modificacao
-     * @param list
+     * @param mixed
      * @return integer
      */
     function listaDeAlunos($listaEsira) {
@@ -125,7 +127,6 @@ class FuncoesIntegracao {
         $consulta= mysqli_query($con->openConection(),"select count(*) as nrDeRegistos from aluno");
         $linhas = mysqli_fetch_array($consulta);
         $contador = $linhas['nrDeRegistos'];
-
 
         foreach ($listaEsira as $c) {//cria a classe de tratamento
 
@@ -141,21 +142,22 @@ class FuncoesIntegracao {
 //                    $update = "update aluno set nome = $nome where $nr_mec = $id";
 //                    mysqli_query($con->openConection(), $update);
 
-                    echo "$id <br>";
+                    //echo "$id <br>";
                 } else {
-                    echo"inserir <br>";
+                    //echo "inserir <br>";
                     // $sql="INSERT INTO aluno(nome,nr_mec) VALUES('".$nome."','".$id."')";
                     // mysqli_query($connect,$sql);
                 }
             }
         }
+        $con->closeDatabase();
         return $contador;
     }
 
     /**
      * Funcao que actualiza ou insere registos na tabela disciplina da base de dados do sigepauta e
      * retorna a quantidade de registos antes de sofrer modificacao
-     * @param list
+     * @param mixed
      * @return integer
      */
     function listaDeDisciplinas($listaEsira) {
@@ -187,21 +189,22 @@ class FuncoesIntegracao {
 //                    mysqli_query($con->openConection(), $update2);
 //                    mysqli_query($con->openConection(), $update3);
 
-                    echo "update <br>";
+                //    echo "update <br>";
                 } else {
-                     echo"inserted <br>";
+                 //    echo"inserted <br>";
                     //$sql="INSERT INTO disciplina(creditos,descricao,codigo,anolectivo,idcurso) VALUES('".$vlr."','".$nome."','".$id."','".$nivel."','".$idcurso."')";
                     //mysqli_query($connect,$sql);
                 }
             }
         }
+        $con->closeDatabase();
         return $contador;
     }
 
     /**
      * Funcao que actualiza ou insere registos na tabela curso da base de dados do sigepauta e
      * retorna a quantidade de registos antes de sofrer modificacao
-     * @param list
+     * @param mixed
      * @return integer
      */
     function listaDeCursos($listaEsira) {
@@ -224,21 +227,22 @@ class FuncoesIntegracao {
 //                    $update1 = "update curso set descricao=$nome where $codigo1 = $codigo2";
 //                    mysqli_query($con->openConection(), $update1);
 
-                    echo "update <br>";
+                  //  echo "update <br>";
                 } else {
-                    echo"inserted <br>";
+                 //   echo"inserted <br>";
                     //  $sql="INSERT INTO curso(descricao,codigo) VALUES('".$nome."','".$vlr."')";
                     //mysqli_query($connect,$sql);
                 }
             }
         }
+        $con->closeDatabase();
         return $contador;
     }
 
     /**
      * Funcao que actualiza ou insere registos na tabela inscricao da base de dados do sigepauta e
      * retorna a quantidade de registos antes de sofrer modificacao
-     * @param list
+     * @param mixed
      * @return integer
      */
     function listaDeInscricoes($listaEsira) {
@@ -268,9 +272,9 @@ class FuncoesIntegracao {
 //                    mysqli_query($con->openConection(), $update1);
 //                    mysqli_query($con->openConection(), $update2);
 
-                    echo "update <br>";
+                   // echo "update <br>";
                 } else {
-                    echo "inserted <br>";
+                  //  echo "inserted <br>";
 
                     //   $sql="INSERT INTO inscricao(iddisciplina,idinscricao,idutilizador) VALUES('".$id."','".$inscricao."',''".$nome."')";
                     // mysqli_query($con->openConection(),$sql);
@@ -278,6 +282,8 @@ class FuncoesIntegracao {
 
             }
         }
+
+        $con->closeDatabase();
         return $contador;
     }
 }

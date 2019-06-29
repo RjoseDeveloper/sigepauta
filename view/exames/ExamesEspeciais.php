@@ -67,6 +67,14 @@ class ExamesEspeciais{
 					    and da.descricaoteste='Exame Recorrencia' and en.nota<10";
     }
 
+    /**
+     * Funcao retorna uma consulta de estudantes inscritos no ano corrente e
+     * com no maximo duas disciplinas do 3 ou 4 nivel
+     * @param1 mixed
+     * @param2 mixed
+     * @return string
+     */
+
     function juntandoConsultasUmEDois($tab1, $tab2){
 
         return "select tab3.idinscricao, tab3.idutilizador, tab3.iddisciplina, tab3.data_registo, 
@@ -76,6 +84,15 @@ class ExamesEspeciais{
                       where tab2.idutilizador=tab1.idutilizador ORDER BY tab2.idutilizador) as tab3
 		          ";
     }
+
+    /**
+     * Funcao retorna uma consulta de estudantes com nota negativa
+     * no exame normal e de recorrencia
+     * @param1 mixed
+     * @param2 mixed
+     * @return string
+     */
+
     function juntandoConsultasTresEQuatro($sub3, $sub4){
         return "select sub3.idutilizador, sub3.nota, sub3.dataPub, sub3.descricaoteste, sub3.idDisciplina, 
                       sub3.idcurso from 
@@ -84,6 +101,12 @@ class ExamesEspeciais{
 		                ORDER BY sub3.idDisciplina
 		           ";
     }
+
+    /**
+     * Funcao retorna uma consulta de estudantes e disciplinas que se inscreveu no corrente ano e
+     * com nota negativa no exame normal e de recorrencia
+     * @return string
+     */
 
     function juntandoTodasConsultas(){
         $consultas = new ExamesEspeciais();
@@ -108,13 +131,22 @@ class ExamesEspeciais{
                   ";
         return $value;
     }
-	
-	function result($query){
+
+    /**
+     * Funcao retorna uma lista de estudantes inscritos e com no maximo de duas disciplinas do 3 ou 4 ano
+     * com notas negativas de exame normal e de recorrencia das mesmas
+     * @param string
+     * @return mixed
+     */
+
+    function result($query){
         $consultas = new ExamesEspeciais();
 		$con = new mySQLConnection();
 		$consultaGeral =  $consultas->juntandoTodasConsultas();
 
-		return  mysqli_query($con->openConection(), "select * from ($consultaGeral) as tab7 $query");
-		
+		$result = mysqli_query($con->openConection(), "select * from ($consultaGeral) as tab7 $query");
+
+        $con->closeDatabase();
+		return $result;
 	}
 }

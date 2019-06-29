@@ -58,8 +58,6 @@ if($action == 'ajax') {
 
     $consultas = new ExamesEspeciais();
 	
-    //$sql = "$sWhere LIMIT $offset,$per_page";
-	
     $query = $consultas->result("$sWhere LIMIT $offset,$per_page");
 
    //loop through fetched data
