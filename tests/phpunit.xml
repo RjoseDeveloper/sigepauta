@@ -18,6 +18,7 @@
     <testsuites>
         <testsuite name="allTests">
             <file>IntegracaoTest.php</file>
+            <file>ExameEspecialTest.php</file>
         </testsuite>
     </testsuites>
     <filter>
