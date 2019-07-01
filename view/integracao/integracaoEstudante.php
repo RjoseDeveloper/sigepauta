@@ -63,20 +63,24 @@
 ?>
 
 <div class="table-responsive container">
+
+    <div class="row">
+        <div class="col-md-6 pull-left">
+            LISTA DE ESTUDANTES
+        </div>
+
+        <div class="col-md-4 pull-right">
+            <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning'
+                    onclick="botaoAlunos(1)" value="">
+                <span class='glyphicon glyphicon-save'>INTERGRAR</span>
+            </button>
+        </div>
+
+    </div>
     <table class="table">
 
-        <center><h2>Lista de Estudantes</h2></center>
-
-        <DIV>
-            <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning btn-sm'
-                    onclick="botaoAlunos(1)" value="">
-                <span class='glyphicon glyphicon-edit'>GUARDAR A LISTA</span>
-            </button>
-        </DIV>
-        <br>
-
         <tr>
-            <th>Nr Mecanografico</th>
+            <th>Numero Mecanografico</th>
             <th>Nome do Estudante</th>
             <th>Nivel de Frequencia</th>
         </tr>

@@ -54,27 +54,30 @@
 
 <div class="table-responsive container">
 <table class="table">
+    <div class="row">
+        <div class="col-md-6 pull-left">
+            LISTA DE CURSOS
+        </div>
 
-    <center><h2>Lista de Cursos</h2></center>
+        <div class="col-md-4 pull-right">
+            <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning'
+                    onclick="botaoCursos(1)" value="">
+                <span class='glyphicon glyphicon-save'> INTERGRAR</span>
+            </button>
+        </div>
 
-    <DIV>
-        <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning btn-sm'
-                onclick="botaoCursos(1)" value="">
-            <span class='glyphicon glyphicon-edit'>GUARDAR A LISTA</span>
-        </button>
-    </DIV>
-    <br>
+    </div>
+
 
     <tr>
-        <th>Codigo</th>
-        <th>Nome do Curso</th>
+        <th>CODIGO</th>
+        <th>NOME DO CURSO</th>
 
     </tr>
 
     <?php
 
         foreach ($data as $c) {//cria a classe de tratamento
-
             //Define as arrays
             $codigo1 = $c->codigo_curso;
             $nome = $c->descricao;

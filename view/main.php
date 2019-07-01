@@ -177,7 +177,7 @@ if (!isset($_SESSION['username'])){?>
 
                                     <li id="addStudentNav"><a href="aluno/alunos_all.php?acao=master" target="frm_content">GERIR ESTUDANTES  <i class="pull-right glyphicon glyphicon-user"></i></a></li>
                                     <li><a  href="exames/exame_extraordinario.php" target="frm_content" >PEDIDOS DE EXAMES</a></li>
-<!--                                    <li><a  href="registo_academico/Registo_Academico.php" target="frm_content">RELATORIOS DE PAUTAS</a></li>-->
+                                    <li><a  href="aluno/inscricao_matricula.php" target="frm_content">MATRICULAS E INSCRICOES</a></li>
 
 
                                 </ul>

@@ -16,6 +16,9 @@ class FuncoesIntegracao {
     /**
      * constructor da classe
      */
+    
+    private $BASE_WS ="http://localhost:8084/webaplicationesira/webresources/esira/";
+    private $PORT_WS ="8084";
 
     function _construct() {
 
@@ -25,8 +28,8 @@ class FuncoesIntegracao {
         //Inicia a biblioteca cURL do PHP
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "8084", //porta do WS
-            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Estudante/listaArray", //Caminho do WS que vai receber o GET
+            CURLOPT_PORT => $this->PORT_WS, //porta do WS
+            CURLOPT_URL => $this->BASE_WS."Estudante/listaArray", //Caminho do WS que vai receber o GET
             CURLOPT_RETURNTRANSFER => true, //Recebe resposta
             CURLOPT_ENCODING => "JSON", //Decodificação
             CURLOPT_MAXREDIRS => 10,
@@ -48,8 +51,8 @@ class FuncoesIntegracao {
         //Inicia a biblioteca cURL do PHP
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "8084", //porta do WS
-            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Disciplinas", //Caminho do WS que vai receber o GET
+            CURLOPT_PORT => $this->PORT_WS, //porta do WS
+            CURLOPT_URL => $this->BASE_WS."Disciplinas", //Caminho do WS que vai receber o GET
             CURLOPT_RETURNTRANSFER => true, //Recebe resposta
             CURLOPT_ENCODING => "JSON", //Decodificação
             CURLOPT_MAXREDIRS => 10,
@@ -71,8 +74,8 @@ class FuncoesIntegracao {
         //Inicia a biblioteca cURL do PHP
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "8084", //porta do WS
-            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Cursos", //Caminho do WS que vai receber o GET
+            CURLOPT_PORT => $this->PORT_WS, //porta do WS
+            CURLOPT_URL => $this->BASE_WS."Cursos", //Caminho do WS que vai receber o GET
             CURLOPT_RETURNTRANSFER => true, //Recebe resposta
             CURLOPT_ENCODING => "JSON", //Decodificação
             CURLOPT_MAXREDIRS => 10,
@@ -95,8 +98,8 @@ class FuncoesIntegracao {
         //Inicia a biblioteca cURL do PHP
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "8084", //porta do WS
-            CURLOPT_URL => "http://localhost:8084/webaplicationesira/webresources/esira/Inscricao", //Caminho do WS que vai receber o GET
+            CURLOPT_PORT => $this->PORT_WS, //porta do WS
+            CURLOPT_URL => $this->BASE_WS."Inscricao", //Caminho do WS que vai receber o GET
             CURLOPT_RETURNTRANSFER => true, //Recebe resposta
             CURLOPT_ENCODING => "JSON", //Decodificação
             CURLOPT_MAXREDIRS => 10,

@@ -69,16 +69,23 @@
         if ($numrows > 0) { ?>
 
             <div class="table-responsive container">
-                <table class="table">
-                    <center><h2>Lista de Inscricao</h2></center>
 
-                    <DIV>
-                        <button data-toggle='tab' title="GUARDAR" class='btn btn-warning btn-sm'
+                <div class="row">
+                    <div class="col-md-5">
+                        LISTA DE INSCRICAO E DISCIPLINAS
+                    </div>
+
+                    <div class="col-md-4">
+                        <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning'
                                 onclick="botaoInscricoes(1)" value="">
-                            <span class='glyphicon glyphicon-edit'>GUARDAR A LISTA</span>
+                            <span class='glyphicon glyphicon-save'>INTERGRAR</span>
                         </button>
-                    </DIV>
-                    <br>
+                    </div>
+
+                </div>
+
+                <table class="table">
+
                     <tr>
                         <th>Codigo da Disciplina</th>
                         <th>Nome do Estudante </th>

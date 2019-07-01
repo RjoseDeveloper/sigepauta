@@ -169,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="modal fade" id="_modalogin" tabindex="-1" role="dialog"
        aria-labelledby="mediumModalLabel" aria-hidden="true" data-backdrop="static">
 
-      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-dialog" role="document">
           <div class="modal-content">
 
               <div class="modal-header">

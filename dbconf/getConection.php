@@ -6,7 +6,7 @@
         private $URL = "localhost";
         private $USER ="root";
         private $DB ="pautas_fe";
-        private $PASSWORD="dblinkx";
+        private $PASSWORD="mysql";
         private $PORT ="3306";
 
 //    private $URL = "jsftj8ez0cevjz8v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
