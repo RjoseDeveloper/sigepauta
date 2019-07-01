@@ -49,7 +49,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="nav_top_fx_w3ls_agileinfo">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					<button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 					    aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -67,14 +68,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div id="navbar" class="navbar-collapse collapse">
 					<div class="nav_right_top">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a  href="#" data-toggle="modal" data-target="#_modalogin" data-backdrop="false">Autentinticar</a></li>
+							<li class="active"><a  href="#" data-toggle="modal"
+                                                   data-target="#_modalogin" data-backdrop="false">ENTRAR</a></li>
 
 						</ul>
 						<ul class="nav navbar-nav">
-							<li><a class="request" href="#">Home</a></li>
-							<li><a href="#">Sobre o Sistema</a></li>
+							<li><a class="request" href="#">HOME</a></li>
+<!--							<li><a href="#">Sobre o Sistema</a></li>-->
 				
-							<li><a href="#">Contactos</a></li>
+							<li><a href="#" class="request" >SIGPAUTA</a></li>
 						
 						</ul>
 					</div>

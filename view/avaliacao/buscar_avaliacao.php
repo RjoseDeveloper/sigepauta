@@ -4,10 +4,10 @@
 Autor: rjose
 ---------------------------*/
 /* Connect To Database*/
-require_once ("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-require_once ("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
+require_once("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
 include('../ajax/is_logged.php');//Archivo verifica que el usario que intenta acceder a la URL esta logueado
-require_once ("../../Query/DocenteSQL.php");
+require_once("../../Query/DocenteSQL.php");
 
 $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 if (isset($_GET['id'])){
@@ -44,7 +44,7 @@ if (isset($_GET['id'])){
         ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <strong>Error!</strong> Não pode eliminar possui disciplinas.
+            <strong>Error!</strong> Não pode eliminar possui disciplinas Associadas.
         </div>
         <?php
     }
@@ -79,7 +79,7 @@ if($action == 'ajax'){
     $row= mysqli_fetch_array($count_query);
     $numrows = $row['numrows'];
     $total_pages = ceil($numrows/$per_page);
-    $reload = './avaliacao.php';
+    $reload = 'avaliacao.php';
     //main query to fetch the data
 
 
@@ -91,7 +91,7 @@ if($action == 'ajax'){
     //loop through fetched data
     if ($numrows>0){?>
 
-        <div class="table-responsive container">
+        <div class="table-responsive container col-md-12">
             <table class="table">
                 <tr  class="info">
                     <th>ID</th>
@@ -108,16 +108,8 @@ if($action == 'ajax'){
                     $fullname= utf8_encode($row['descricao']);
 
                     $status=$row['estado'];
-
-
-                    if ($status==2){
-
-                        $txt = "<span class='panel panel-success'>Confirmada</span>";
-
-                    }else{
-                        $txt = "<span class='alert-danger'>Nao Confirmada</span>";
-                    }
-
+                    if ($status==2){$text_estado=" Confirmada ";$label_class='label-success';}
+                    else{$text_estado=" Nao confirmada";$label_class='label-warning';}
 
 
                     ?>
@@ -125,12 +117,10 @@ if($action == 'ajax'){
                     <input type="hidden" value="<?php echo $row['idTipoAvaliacao'];?>" id="nombres<?php echo $user_id;?>">
                     <input type="hidden" value="<?php echo $row['descricao'];?>" id="apellidos<?php echo $user_id;?>">
 
-
-
                     <tr>
                         <td><?php echo $i; ?></td>
                         <td><?php echo $fullname; ?></td>
-                        <td ><?php echo $txt; ?></td>
+                        <td><span class="label <?php echo $label_class;?>"><?php echo $text_estado; ?></span></td>
 
 
                         <td ><span class="pull-right">

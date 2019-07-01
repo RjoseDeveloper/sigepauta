@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5990a45a-ad6f-4f2d-8a1f-762c75cb42b6" name="Default Changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" afterPath="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbconf/db.php" afterPath="$PROJECT_DIR$/dbconf/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbconf/getConection.php" afterPath="$PROJECT_DIR$/dbconf/getConection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/avaliacao/buscar_avaliacao.php" afterPath="$PROJECT_DIR$/view/avaliacao/buscar_avaliacao.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/avaliacao/form_avaliacao.php" afterPath="$PROJECT_DIR$/view/avaliacao/form_avaliacao.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/integracao/integracao.php" afterPath="$PROJECT_DIR$/view/integracao/integracao.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/integracao/integracaoCursos.php" afterPath="$PROJECT_DIR$/view/integracao/integracaoCursos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" afterPath="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" afterPath="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" afterPath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/main.php" afterPath="$PROJECT_DIR$/view/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sigepauta.iml" afterPath="$PROJECT_DIR$/.idea/sigepauta.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -42,23 +32,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8846154" vertical-offset="2660" max-vertical-offset="4284">
-              <caret line="171" column="30" selection-start-line="171" selection-start-column="30" selection-end-line="171" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.45878136" vertical-offset="1130" max-vertical-offset="4318">
+              <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
               <folding>
-                <marker date="1561978346132" expanded="true" signature="10134:10150" placeholder="..." />
+                <marker date="1561979986695" expanded="true" signature="10229:10245" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integracao.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="integracao.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/integracao/integracao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2982456" vertical-offset="0" max-vertical-offset="1292">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -165,7 +155,6 @@
         <option value="$PROJECT_DIR$/view/exames/ExamesEspeciais.php" />
         <option value="$PROJECT_DIR$/dbconf/db.php" />
         <option value="$PROJECT_DIR$/dbconf/getConection.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/view/main.php" />
         <option value="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" />
@@ -173,6 +162,7 @@
         <option value="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoCursos.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracao.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -414,16 +404,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9862069" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115517244" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39827585" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21092564" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.323217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -504,7 +494,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2703" max-vertical-offset="4284">
           <caret line="163" column="10" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="10" />
           <folding>
-            <marker date="1561978346132" expanded="true" signature="10134:10150" placeholder="..." />
+            <marker date="1561979986695" expanded="true" signature="10229:10245" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -805,16 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8846154" vertical-offset="2660" max-vertical-offset="4284">
-          <caret line="171" column="30" selection-start-line="171" selection-start-column="30" selection-end-line="171" selection-end-column="30" />
-          <folding>
-            <marker date="1561978346132" expanded="true" signature="10134:10150" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbconf/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18640351" vertical-offset="0" max-vertical-offset="456">
@@ -899,9 +879,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/integracao/integracao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2982456" vertical-offset="0" max-vertical-offset="1292">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45878136" vertical-offset="1130" max-vertical-offset="4318">
+          <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
+          <folding>
+            <marker date="1561979986695" expanded="true" signature="10229:10245" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
