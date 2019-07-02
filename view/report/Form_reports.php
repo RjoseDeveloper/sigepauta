@@ -29,7 +29,7 @@ $teste = FALSE;
     <?php include '../../view/layouts/head.php' ?>
 
     <script  src="../fragments/js/js_function.js" type="text/javascript"></script>
-    <script src="../fragments/js/js_data_base.js" type="text/javascript" charset="utf-8"> </script>
+    <script src="../fragments/js/js_registo_academico.js" type="text/javascript" charset="utf-8"> </script>
     <script  src="../fragments/js/js_editar_pauta.js" type="text/javascript"></script>
 
     <style>
@@ -146,17 +146,18 @@ $teste = FALSE;
                                     </ul>
 
                 <button  class="btn btn-default btn_pauta_final">MAPA DE FREQUENCIA</button>
-                <a href="2"  class="btn btn-default"  >RELATORIO DE EXAME</a>
+<!--                <a href="#"  class="btn btn-default btn_pauta_exame"  >RELATORIO DE EXAME</a>-->
         <a href="#"  class="btn btn-info btn_relatorio_semestral"  >RELATORIO SEMESTRAL</a>
 
                     </div>
                     <div align="center" class="sucesso"></div>
                     <input type="hidden" value="" id="idpauta"/>
-                    <div style=" margin-top: -4em" class="mostrar_avaliacao"></div>
+                    <div class="mostrar_avaliacao"></div>
                     <br>
                 </div>
 
-<div class="list_pautas container"></div>
+<div class="pautas_freq container"></div>
+<!--<div class="pautas_freq"></div>-->
 
 
 </div> <!---  container -->

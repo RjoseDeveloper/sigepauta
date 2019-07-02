@@ -29,7 +29,7 @@
          $idAluno = $estudante_sql->getIdEstByNameApelido($_SESSION['nomeC'], "", 1);
          $idcurso = $estudante_sql->obterIdCursoEstudante($idAluno);
 
-     }elseif($_SESSION['tipo'] == 'racademico' && $_REQUEST['ctr'] != 'exames'){
+     }elseif($_SESSION['tipo'] != 'estudante' && $_REQUEST['ctr'] != 'exames'){
          $idcurso = $_REQUEST['curso'];
      }else{
          $idAluno = $_REQUEST['idaluno'];
@@ -49,12 +49,11 @@
 
                  if ($mediaf > 0){
 
-                     echo '<div ><br>';
-                     echo ' <div  align="left" style="color: blue; margin-top:-1em"><h4>Pautas de Exame</h4></div>';
-                     echo '<table class="table ui-body-d ui-shadow table-stripe ui-responsive" >';
+                     echo ' <br><div  align="left" style="color: blue"><h4>Pautas de Exame</h4></div>';
+                     echo '<table data-role="table" id="table-custom" class="table ui-body-c ui-responsive">';
 
                      echo '<tbody class="table_exame_freq">';
-                     echo '<tr class="ui-bar-b table_frequencia" style="border:none" ><th>No.</th>';
+                     echo '<tr class="ui-bar-b" style="border:none" ><th>No.</th>';
                      echo '<th>Nota de <br> Frequencia</th>';
                      echo '<th>Resultado <br> Qualitativo de <br> Frequencia</th>';
                      echo '<th>Exame Normal</th>';
@@ -64,7 +63,7 @@
 
                      echo '</tr>';
 
-                     echo '<tr class="tbl_freq">';
+                     echo '<tr class="">';
                      echo '<td>'.$nrmec.'</td>';
                      echo '<td>'.$mediaf.'</td>';
 
@@ -116,7 +115,7 @@
                      echo '<h4 style="color:red; text-align:center; margin-top: -1em">Nenhuma avaliação publicada</h4>';
                 }
 
-              echo '</tbody></table></div><br>';
+              echo '</tbody></table><br>';
         break;
 
         case 2:
@@ -130,74 +129,14 @@
 
             if ($estudante_sql->obterQtdAvaliacaoPub($discp,2,$idcurso,0) == $estudante_sql->obterQtdAvaliacaoPub($discp,2,$idcurso,0) ) {
 
-                echo '<div  align="left" style="color: blue; margin-top:-4em"><h4>Mapa de Frequencia</h4></div>';
-
-                echo '<div><table data-role="table" id="table-custom" class="table ui-body-c ui-responsive">';
-                echo '<thead class="table_exame_freq">';
-
-                if (($_SESSION['tipo'] != 'racademico')) {
-
-                    $media = $pautaFreq->obterMediaFrequecia($discp, $idAluno, 2,$idcurso, 0);
-                    $query = $pautaFreq->ordenacaoTestes($discp, $idAluno, $estado_pn,$idcurso,0);
-
-                    $result = mysqli_query($db->openConection(), $query);
-
-                    //if (mysqli_num_rows($result) > 0){
-
-                        echo '<tr class="table_frequenciax" style="border: none; font-size: 13px; background-color: #fff">';
-
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<th>'.$row['descricao'].'</th>';
-                            $peso = $pautaFreq->returnPesoAvaliacao($discp,$row['tipo']);
-                            $frm = $frm.'Media('.$row['descricao'].') *'.$peso/100;
-                            $frm = $frm.'+';
-                        }
-
-                        /// Aplicar algoritmo de ordenacao para agrupar notas, calcular a media e nota de frequencia.
-
-                        echo '<th>Media de <br> Frequencia</th>';
-                        echo '<th>Resultado <br>Qualitativo de <br> Frequencia</th>';
-                        echo '</tr></thead><tbody>';
-
-                    echo '<tr class="tbl_freq">';
-
-                $q_sql = $pautaFreq->ordenacaoTestes($discp, $idAluno, $estado_pn,$idcurso,0);
-                $re_r = mysqli_query($db->openConection(), $q_sql);
-
-                    while ($row = mysqli_fetch_assoc($re_r)) {
-
-                        if ($row['nota'] != -1 || $idAluno > 0){
-                            echo '<td>'.$row['nota'].'</td>';
-                        }else{
-                            echo '<td style="color: red">SN</td>';
-                        }
-                    }
-
-                    echo '<td>'.$media.'</td>';
-
-                    if ($media >= 10 && $media< 16 ){
-                        $estado = "Admitido";
-                    }
-                    if($media >=16){
-                        $estado = "Dispensado";
-                    }
-                    if($media < 10){
-                        $estado = "Excluido";
-                    }
-                    echo '<td>'.$estado.'</td>';
-                    $formula ='MediaFreq = '.$frm;
-                    echo '</tr>';
-//
-//                    }else{
-//                        echo'Impossivel Calcular a nota de frequencia';
-//                    }
-
-                } else {
+                echo '<br> <div  align="left" style="color: blue"><h4>Mapa de Frequencia</h4></div>';
+                echo '<table data-role="table" id="table-custom" class="table ui-body-c ui-responsive">';
+                echo '<thead>';
 
                     $query = $pautaFreq->ordenacaoTestes($discp,"",$estado_pn,$idcurso, 2); // ordena segundo deacordo com a pauta normal
                     $result = mysqli_query($db->openConection(), $query);
 
-                    echo '<tr class="table_frequencia table-responsive" style="color:#0000CC; background:none; border-top: 2px solid #ccc">  ';
+                    echo '<tr style="color:#0000CC;">  ';
                     echo '<th>No.</th>';
                     echo '<th>Nome Completo</th>';
 
@@ -216,7 +155,7 @@
 
                         echo '<tbody><tr>';
                         echo '<td>'.$linha['nrEstudante'].'</td>';
-                        echo '<td>'.$linha['nomeCompleto'].'</td>';
+                        echo '<td style="text-align: left">'.$linha['nomeCompleto'].'</td>';
                         echo '<input type="hidden" value="'.$linha['idaluno'].'" id="comp_nrmec"/>';
 
                         $media = $pautaFreq->obterMediaFrequecia($discp, $linha['idaluno'], $estado_pn,  $idcurso, 0);
@@ -244,18 +183,16 @@
                         echo '<td>'.$estado.'</td>';
                         echo '<td><button onclick="gerir_frequencia_disp(this.value,'.$idcurso.','.$discp.')"
                                 class="btn btn-primary" value="'.$linha['idaluno'].'">
-                                <span class="glyphicon glyphicon-search"></span></button></td>';
+                                <span class="glyphicon glyphicon-eye"></span>Ver</button></td>';
                         $formula ='MediaFreq = '.$frm;
                         echo '</tr>';
                     }
+                echo '</tbody></table>';
+
+                echo '<div style="color: green; font-size: 13px" align="center">'.$formula.' </div>';
 
                 }
 
-                echo '</tbody></table>';
-                echo '<div style="color: green; font-size: 13px" align="center">'.$formula.' </div></div>';
-                echo '<!--button class=" btn btn-warning" style="margin-top:-1em;" >
-                        <span class="glyphicon glyphicon-print"></span>&nbsp; Imprimir</button-->';
-            }
 
             break;
             case 3:

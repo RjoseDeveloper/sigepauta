@@ -68,7 +68,7 @@ if (!isset($_SESSION['username'])){?>
 </head>
 <body>
 
-        <div class="container col-sm-12">
+        <div class="container">
             <?php
 
             $user =$_SESSION['username'];
@@ -121,27 +121,10 @@ if (!isset($_SESSION['username'])){?>
 
                         </select>
 
-                        <!--                            <label for="data_nascimento">Data de Nacimento:</label>-->
-                        <!--                            <input type="date" id="data_nascimento" name="data_nascimento" value="" class="form-control" required/>-->
-                        <!---->
-                        <!--                            <label for="nivelescolar">Nivel Escolar:</label>-->
-                        <!--                            <select class="form-control" data-style="btn-primary" data-width="auto" id="nivelescolar" name="nivelescolar">-->
-                        <!--                                <option value="0" desabled="desabled">Selecionar nivel escolar</option>-->
-                        <!--                                --><?php
-                        //                                $resut = mysqli_query($con,'SELECT * FROM nivelescolar');
-                        //                                while ($row = mysqli_fetch_assoc($resut)){ ?>
-                        <!--                                    <option value="--><?php //echo $row['idnivel'] ?><!--">--><?php //echo utf8_encode($row['descricao']) ?><!--</option>-->
-                        <!--                                --><?php //}  ?>
-                        <!--                            </select>-->
-
-                    </div> <!-- fim primeiro bloco---->
-
-                    <div style=" padding: 8px 30px;border-radius: 5px" class="col-sm-6 pull-right">
-
-                        <h4 style="color:green" class="alert alert-info">Endereço e Informações Medicas</h4>
-                        <!------ Novo Estudante --------->
 
                         <div class="regista_aluno">
+
+                            <h4 style="color:green" class="alert alert-info">Endereço e Informações Medicas</h4>
 
                             <label for="endereco">Morada:</label>
 
@@ -191,7 +174,22 @@ if (!isset($_SESSION['username'])){?>
                             </div>
 
                         </div>
-                    </div>
+
+                        <!--                            <label for="data_nascimento">Data de Nacimento:</label>-->
+                        <!--                            <input type="date" id="data_nascimento" name="data_nascimento" value="" class="form-control" required/>-->
+                        <!---->
+                        <!--                            <label for="nivelescolar">Nivel Escolar:</label>-->
+                        <!--                            <select class="form-control" data-style="btn-primary" data-width="auto" id="nivelescolar" name="nivelescolar">-->
+                        <!--                                <option value="0" desabled="desabled">Selecionar nivel escolar</option>-->
+                        <!--                                --><?php
+                        //                                $resut = mysqli_query($con,'SELECT * FROM nivelescolar');
+                        //                                while ($row = mysqli_fetch_assoc($resut)){ ?>
+                        <!--                                    <option value="--><?php //echo $row['idnivel'] ?><!--">--><?php //echo utf8_encode($row['descricao']) ?><!--</option>-->
+                        <!--                                --><?php //}  ?>
+                        <!--                            </select>-->
+
+                    </div> <!-- fim primeiro bloco---->
+
 
                 </form>
 

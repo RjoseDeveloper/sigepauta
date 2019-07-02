@@ -130,14 +130,21 @@ require_once('../controller/EstudanteCtr.php');
                 $db->closeDatabase();
                  break;
 
-             case 13:
-                    $rs = mysqli_query($db->openConection(),$ra_sql->obter_registos_disp_curso($_POST['curso']));
-                    while ($row= mysqli_fetch_assoc($rs)){
-                        echo '<li value="'.$row['idDisciplina'].'" onclick="buscar_pauta_freq(this.value)" class="lista_disciplinas">';
-                        echo $row['descricao'];
-                        echo '<span class="glyphicon glyphicon-chevron-right pull-right"></span></li>';
-                    }
-                 break;
+             case 13:?>
+
+                 <label>Seleccionar Disciplina</label>
+<select data-role="listview" class="form-control" class="ul_disp_curso" onchange="buscar_pauta_freq(this.value)">
+    <option value="0" data-theme="b" > <span class="glyphicon glyphicon-list"></span> Lista de Disciplinas</option>
+<?php
+
+
+    $rs = mysqli_query($db->openConection(),$ra_sql->obter_registos_disp_curso($_POST['curso']));
+                    while ($row= mysqli_fetch_assoc($rs)){?>
+                        <option value="<?php echo $row['idDisciplina']; ?>"><?php echo $row['descricao']?></option>;
+                    <?php } break;?>
+    </select>
+    <?php
+
             default:
                 echo 'Nenhum parametro foi enviado';
 	}

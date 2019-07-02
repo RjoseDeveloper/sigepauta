@@ -5,14 +5,18 @@
  * Date: 6/12/2019
  * Time: 5:25 AM
  */
+session_start();
+include '../layouts/head.php';
 
+require_once("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
 ?>
-
-<div class="container col-sm-12">
+<div class="jumbotron container">
+<div class="container">
 
     <form class="form-horizontal" method="post" id="guardar_inscricao" name="guardar_inscricao">
 
-        <div class="col-xs-12 msg_sucesso" style="background: #fff; padding: 8px;
+        <div class="col-xs-12 msg_sucesso" style=" padding: 8px;
                      color: #0000CC; font-size: 18px;"> ADICIONAR DISCIPLINAS DO SEMESTRE </div>
 
         <div class="col-xs-6 pull-left">
@@ -42,7 +46,7 @@
 
             <label for="curso">Curso:</label>
 
-            <select class="form-control" data-style="btn-primary" onchange="lista_turmas(this.value)"
+        <select class="form-control" data-style="btn-primary" onchange="lista_turmas(this.value)"
                     data-width="auto" id="curso" name="curso" required="">
                 <option value="0">--Seleccionar Curso--</option>
                 <?php
@@ -86,13 +90,12 @@
             <br>
 
             <div class="pull-right">
-                <button type="submit" class="btn btn-primary" id="btn_inscricaov">
-                    <span class="glyphicon glyphicon-chevron-right" title="Cadastrar"> Registar Operação</button>
+                <button type="submit" class="btn btn-info" id="btn_inscricao"> Guardar Dados</button>
 
                 <!--                        <a href="#" class="btn btn-success" id="btn_print" onclick="imprimir_ficha()">-->
                 <!--                            <span class="glyphicon glyphicon-print" title="Imprimir"></span></a>-->
             </div>
         </div>
     </form>
-
+</div>
 </div>

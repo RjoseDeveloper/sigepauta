@@ -78,26 +78,8 @@ $db = new mySQLConnection();
                       <tr>
                           <td>Director Geral:</td>
                           <td>
-
-
-
-                              <select class="form-control input-sm" id="director" name="director">
-                                  <?php
-                                  $sql_vendedor=mysqli_query($con,$main_query->get_director_inst());
-                                  while ($rw=mysqli_fetch_array($sql_vendedor)){
-                                      $nombre_vendedor=$rw["nomeCompleto"];
-                                      if ($rw["id"]==$row['idutilizador_resp']){
-                                          $selected="selected";
-                                      } else {
-                                          $selected="";
-                                      }
-                                      ?>
-                                      <option value="<?php echo $row['idutilizador_resp'] ?>" <?php echo $selected;?>><?php echo $nombre_vendedor?></option>
-
-                                  <?php
-                                  }
-                                  ?>
-                              </select>
+<input type="text" class="form-control input-sm" name="director"
+                                     value="<?php echo $row['diretor']?>" required>
                           </td>
                       </tr>
 

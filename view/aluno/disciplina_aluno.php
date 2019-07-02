@@ -7,12 +7,14 @@ $pessoa = new PessoaSQL();
 $estudante_sql = new EstudantesSQL();
 $queries = $pessoa->get_disciplina_aluno($_SESSION['username']);
 
-
+include "form_disciplina.php";
 $query = mysqli_query($con, $queries);?>
 
 <div class="table-responsive container tbl_disciplina">
-    <h4> DADOS DE INSCRIÇÃO</h4><hr>
+    <h4 > DADOS DE INSCRIÇÃO</h4>
 
+    <div class="pull-right"><a href="" data-toggle="modal" data-backdrop="false" data-target="#registar_disciplina" class="btn btn-info ">Adicionar Disciplina</a> </div>
+    <br> <br>
     <table class="table">
         <tr class="info">
 
@@ -59,4 +61,6 @@ $query = mysqli_query($con, $queries);?>
         ?>
 
     </table>
+
+
 </div>

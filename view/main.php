@@ -111,7 +111,7 @@ if (!isset($_SESSION['username'])){?>
 
                     <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                     <ul class="nav navbar-nav navbar-right" style="margin-bottom: 2px">
-                        <li class="active"><a href="../../www/index.php" target="frm_content">HOME</a></li>
+                        <li class="active"><a href="../index.php" target="frm_content">HOME</a></li>
                         <li ><a href="aluno/Estudante_pauta.php" target="frm_content">PAUTAS PUBLICADAS</a></li>
                         <li><a  href="aluno/Aluno.php" target="frm_content" >INSCRIÇÃO ESTUDANTE</a></li>
                         <li value="plano_av"><a href="plano_avaliacao/Plano_docente.php" target="frm_content" >PLANO DE AVALIAÇÃO</a></li>
@@ -128,7 +128,7 @@ if (!isset($_SESSION['username'])){?>
                     <div class="navbar-collapse collapse" id="templatemo-nav-bar">
 
                     <ul class="nav navbar-nav navbar-right" style="margin-top: 5px">
-                        <li class="active"><a href="/" target="frm_content">HOME</a></li>
+                        <li class="active"><a href="../index.php" target="frm_content">HOME</a></li>
                         <li ><a href="pedagogico/Direcao.php" target="frm_content">PUBLICAÇÃO DE PAUTAS</a></li>
                         <li value=""><a href="pauta/pautas.php" target="frm_content">PAUTAS DOCENTE</a></li>
                         <li value="plano_av"><a href="report/Form_reports.php?acao=10" target="frm_content">RELATORIOS DE PAUTAS</a></li>

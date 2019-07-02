@@ -99,22 +99,20 @@ if (!isset($_SESSION['username'])){?>
                             <?php } ?>
                     </ul>
 
+
+                        <div  class="lista_disciplinas">&nbsp;</div>
+
+
                 </div>
-    <div class="col-md-5 " style="float: right">
-        <ul data-role="listview" class="ul_disp_curso" data-inset="true" data-mini="true" data-inline="true">
-            <li value="0" data-theme="b" > <span class="glyphicon glyphicon-list"></span> Lista de Disciplinas</li>
-            <div  class="lista_disciplinas">&nbsp;</div>
-        </ul>
-    </div>
-    <br><br>
-
-                    <div  style="" class="main_div getPtn2 col-md-12">
-                        <div class="pautas_freq"></div>
-                        <div class="res_exames_1"></div>
-                           </div> <!-- fim div float right --> <!--fim colapsibleset--->
 
 
-                      </div>
+        </div>
+
+    <div class="main_div getPtn2 col-md-12">
+        <div class="pautas_freq"></div>
+        <div class="res_exames_1"></div>
+
+    </div> <!-- fim div float right --> <!--fim colapsibleset--->
 </div> <!-------------- fim page ----------->
 
 <div class="container">

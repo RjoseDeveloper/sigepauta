@@ -136,7 +136,7 @@ function login_online(){
             data: {username:un,password:pw, acao: 2},
             success: function(result){
                 $(".result_login").html(result)
-                    .css({'font-size':'16px','color':'white'});
+                    .css({'font-size':'18px','color':'red'});
             }
         });
 

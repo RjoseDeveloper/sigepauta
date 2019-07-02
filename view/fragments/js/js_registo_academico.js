@@ -204,8 +204,8 @@ function buscar_disciplina(item){
 }
 
 function buscar_pauta_freq(item){
+   //alert(localStorage.getItem('curso_id'));
 
-    //alert(localStorage.getItem('curso_id'));
 
     $.ajax({
 
@@ -213,6 +213,7 @@ function buscar_pauta_freq(item){
         type:"POST",
         data:{acao:2, disp:item, curso:localStorage.getItem('curso_id'), ctr:1},
         success:function (result){
+            //alert(result)
              $('.pautas_freq').html(result).fadeIn('slow');
         }
     });

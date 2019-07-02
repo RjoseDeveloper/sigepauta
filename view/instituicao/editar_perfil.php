@@ -39,7 +39,7 @@
 
 		$sql="UPDATE perfil_instituicao SET nome_instituicao='".$nombre_empresa."', contacto='".$telefono."', 
 		email='".$email."', nuit='".$impuesto."', idendereco ='".$direccion."',cidade='".$ciudad."', 
-		provincia='".$estado."', dirpedagogico='".$pedagogico."',idutilizador_resp='".$diretor."',
+		provincia='".$estado."', dirpedagogico='".$pedagogico."',diretor='".$diretor."',
 		codigopostal='".$codigo_postal."', nome2instituicao = '".$nome2inst."' WHERE idperfil='1'";
 
 

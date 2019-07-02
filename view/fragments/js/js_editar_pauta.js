@@ -284,19 +284,15 @@ $(document).ready(function(e) {
 
     function mostrar_relatorio(item) {
 
-        //alert(item);
-
         var c = $('select#select_curso').val();
-        //alert(c);
+
 
         $.ajax({
             url: "../../requestCtr/Processa_lista_Avaliacao.php",
             type: "POST",
             data: {acao: 2, disp: item, curso: c},
             success: function (result) {
-
-                $('.list_pautas').show('slow');
-                $('.list_pautas').html(result);
+                $('.pautas_freq').html(result);
             }
         })
 
@@ -318,7 +314,11 @@ $(document).ready(function(e) {
         });
 
         $('.btn_pauta_final').click(function () {
-            window.location = "../../reports/Pauta_final_excel.php?disp=" + item + "&curso=" + c;
+           // window.location = "Pauta_final_excel.php?disp=" + item + "&curso=" + c;
+            localStorage.setItem('curso_id',c);
+            buscar_pauta_freq(item);
+
+
         });
 
         $('.btn_relatorio_semestral').click(function () {
