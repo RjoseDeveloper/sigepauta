@@ -10,7 +10,7 @@
  * Esta classe e de Exames Especiais
  */
  
-require_once("../../dbconf/getConection.php");
+require_once 'C:\xampp\htdocs\sigepauta\dbconf\getConection.php';
  
 class ExamesEspeciais{
 
