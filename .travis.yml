@@ -1,0 +1,8 @@
+# Config file for https://travis-ci.org/
+
+language: php
+
+# Define the php versions against we want to test our code
+php:
+- 7.1
+- 7.2
