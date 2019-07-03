@@ -62,23 +62,24 @@ class IntegracaoTest extends  \PHPUnit\Framework\TestCase{
 
         $this->assertEquals(20, $ld->listaDeDisciplinas($data));
     }
+
     /**
      * @covers FuncoesIntegracao::listaDeCursos
      */
+
     function testListaDeCursos(){
         $lc = new FuncoesIntegracao();
 
-        //$data = $lc->buscarDadosNoEsiraCurso();
-
-        $this->assertEquals(6, $lc->listaDeCursos());
+        $this->assertEquals(11, $lc->listaDeCursos());
     }
+
     /**
      * @covers FuncoesIntegracao::listaDeInscricoes
      */
+
     function testListaDeInscricoes() {
         $li = new FuncoesIntegracao();
-        $data = $li->buscarDadosNoEsiraInscricao();
 
-        $this->assertEquals(54, $li->listaDeInscricoes($data));
+        $this->assertEquals(54, $li->listaDeInscricoes());
     }
 }

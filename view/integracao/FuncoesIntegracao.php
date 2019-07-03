@@ -173,7 +173,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-        //$this->message($cont_up,$cont_ins);
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -243,7 +243,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-        //$this->message($cont_up,$cont_ins);
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -253,9 +253,7 @@ class FuncoesIntegracao {
      * @param mixed
      * @return integer
      */
-    function listaDeCursos() {
-
-        $listaEsira= $this->buscarDadosNoEsiraCurso();
+    function listaDeCursos($listaEsira) {
 
         $con = new mySQLConnection();
         $curso= mysqli_query($con->openConection(), "select codigo from curso");
@@ -303,7 +301,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-        //$this->message($cont_up,$cont_ins);
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -363,7 +361,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-        //$this->message($cont_up,$cont_ins);
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
