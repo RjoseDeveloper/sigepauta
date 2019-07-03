@@ -94,12 +94,12 @@ class FuncoesIntegracao {
         return $data2;
     }
 
-    function buscarDadosNoEsiraInscricao(){
+    function buscarDadosNoEsiraInscricao($inf, $sup){
         //Inicia a biblioteca cURL do PHP
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_PORT => $this->PORT_WS, //porta do WS
-            CURLOPT_URL => $this->BASE_WS."Inscricao", //Caminho do WS que vai receber o GET
+            CURLOPT_URL => $this->BASE_WS."Inscricao?inf=".$inf."&sup=".$sup, //Caminho do WS que vai receber o GET
             CURLOPT_RETURNTRANSFER => true, //Recebe resposta
             CURLOPT_ENCODING => "JSON", //Decodificação
             CURLOPT_MAXREDIRS => 10,

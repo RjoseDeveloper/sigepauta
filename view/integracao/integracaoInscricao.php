@@ -48,18 +48,18 @@
     <?php
 
     $funcoes = new FuncoesIntegracao();
-    $data = $funcoes->buscarDadosNoEsiraInscricao();
 
     $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
     if($action == 'ajax') {
 
-        include '../ajax/pagination.php'; //include pagination file
-        //pagination variables
         $page = (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) ? $_REQUEST['page'] : 1;
         $per_page = 4; //how much records you want to show
         $adjacents = 4; //gap between pages after number of adjacents
         $offset = ($page - 1) * $per_page;
-        //Count the total number of row in your table*/
+
+        $data = $funcoes->buscarDadosNoEsiraInscricao($offset, $per_page);
+
+        //Count the total number of row in your table*
         $numrows = sizeof($data);
         $total_pages = ceil($numrows / $per_page);
         $reload = 'integracao.php';
@@ -81,6 +81,7 @@
                             <span class='glyphicon glyphicon-save'>INTERGRAR</span>
                         </button>
                     </div>
+                    <br>
 
                 </div>
 
@@ -122,7 +123,6 @@
         <?php } ?>
 
     <?php } else {
-                $funcoes = new FuncoesIntegracao();
                 $funcoes->listaDeInscricoes($data);
 
 

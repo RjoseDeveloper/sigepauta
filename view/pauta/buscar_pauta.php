@@ -92,6 +92,8 @@
         //echo $sql;
 		$query = mysqli_query($con, $sql);
 
+		echo $sql;
+
 		//loop through fetched data
 		if ($numrows>0){?>
 
