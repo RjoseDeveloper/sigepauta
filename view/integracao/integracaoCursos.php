@@ -94,7 +94,7 @@
     </table>
     </div>
 <?php } else{
-        $funcoes->listaDeCursos();
+        $funcoes->listaDeCursos($data);
     }?>
 </body>
 </html>
