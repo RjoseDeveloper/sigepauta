@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5990a45a-ad6f-4f2d-8a1f-762c75cb42b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sigepauta.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sigepauta.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconf/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbconf/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconf/getConection.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbconf/getConection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/pauta/buscar_pauta.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/pauta/buscar_pauta.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-523">
-              <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -48,14 +46,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="232" column="20" lean-forward="true" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+            <state relative-caret-position="224">
+              <caret line="242" column="47" lean-forward="true" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
               <folding>
                 <element signature="n#_construct#0;n#FuncoesIntegracao#0;n#!!top" />
                 <element signature="n#buscarDadosNoEsiraDisciplina#0;n#FuncoesIntegracao#0;n#!!top" />
-                <element signature="n#listaDeAlunos#0;n#FuncoesIntegracao#0;n#!!top" />
-                <element signature="n#listaDeDisciplinas#0;n#FuncoesIntegracao#0;n#!!top" />
                 <element signature="n#listaDeInscricoes#0;n#FuncoesIntegracao#0;n#!!top" />
+                <element signature="e#11177#11184#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/view/main.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -145,58 +142,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/aiw/phpunit-tool" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/yidas/phpunit-sample" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/contao-community-alliance/composer-plugin" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/tecnick.com/tcpdf" />
-      <path value="$PROJECT_DIR$/vendor/true/punycode" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/php-diff" />
-      <path value="$PROJECT_DIR$/vendor/leafo/scssphp" />
-      <path value="$PROJECT_DIR$/vendor/contao/core" />
-      <path value="$PROJECT_DIR$/vendor/michelf/php-markdown" />
-      <path value="$PROJECT_DIR$/vendor/oyejorge/less.php" />
-      <path value="$PROJECT_DIR$/vendor/simplepie/simplepie" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/matthiasmullie/minify" />
-      <path value="$PROJECT_DIR$/vendor/matthiasmullie/path-converter" />
-      <path value="$PROJECT_DIR$/vendor/contao-components/compass" />
-      <path value="$PROJECT_DIR$/vendor/metamodels/phpunit-contao-database" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/kornrunner/dbunit" />
-    </include_path>
-  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
@@ -218,18 +164,7 @@
             <path>
               <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
-              <item name="dbconf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="exames" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
@@ -249,7 +184,7 @@
     <property name="ToolWindowDocumentation.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562158058734" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562159177971" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pautasfe" />
@@ -328,12 +263,12 @@
       <workItem from="1561730354855" duration="3433000" />
       <workItem from="1561804213012" duration="7768000" />
       <workItem from="1561812574825" duration="9053000" />
-      <workItem from="1562143548301" duration="9236000" />
+      <workItem from="1562143548301" duration="10222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122121000" />
+    <option name="totallyTimeSpent" value="123107000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -368,7 +303,7 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.17427386" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2461964" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="1" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32935154" />
@@ -879,14 +814,14 @@
     <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-523">
-          <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>
@@ -913,14 +848,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="232" column="20" lean-forward="true" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+        <state relative-caret-position="224">
+          <caret line="242" column="47" lean-forward="true" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
           <folding>
             <element signature="n#_construct#0;n#FuncoesIntegracao#0;n#!!top" />
             <element signature="n#buscarDadosNoEsiraDisciplina#0;n#FuncoesIntegracao#0;n#!!top" />
-            <element signature="n#listaDeAlunos#0;n#FuncoesIntegracao#0;n#!!top" />
-            <element signature="n#listaDeDisciplinas#0;n#FuncoesIntegracao#0;n#!!top" />
             <element signature="n#listaDeInscricoes#0;n#FuncoesIntegracao#0;n#!!top" />
+            <element signature="e#11177#11184#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

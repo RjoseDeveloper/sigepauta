@@ -130,6 +130,8 @@ class FuncoesIntegracao {
         $consulta= mysqli_query($con->openConection(),"select count(*) as nrDeRegistos from aluno");
         $linhas = mysqli_fetch_array($consulta);
         $contador = $linhas['nrDeRegistos'];
+        $cont_up=0;
+        $cont_ins=0;
 
         foreach ($listaEsira as $c) {//cria a classe de tratamento
 
@@ -146,14 +148,17 @@ class FuncoesIntegracao {
 //                    mysqli_query($con->openConection(), $update);
 
                     //echo "$id <br>";
+                    $cont_up++;
                 } else {
                     //echo "inserir <br>";
                     // $sql="INSERT INTO aluno(nome,nr_mec) VALUES('".$nome."','".$id."')";
                     // mysqli_query($connect,$sql);
+                    $cont_ins++;
                 }
             }
         }
         $con->closeDatabase();
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -171,6 +176,8 @@ class FuncoesIntegracao {
         $consulta= mysqli_query($con->openConection(),"select count(*) as nrDeRegistos from disciplina");
         $linhas = mysqli_fetch_array($consulta);
         $contador = $linhas['nrDeRegistos'];
+        $cont_up=0;
+        $cont_ins=0;
 
         foreach ($listaEsira as $c) {
 
@@ -193,14 +200,17 @@ class FuncoesIntegracao {
 //                    mysqli_query($con->openConection(), $update3);
 
                 //    echo "update <br>";
+                    $cont_up++;
                 } else {
                  //    echo"inserted <br>";
                     //$sql="INSERT INTO disciplina(creditos,descricao,codigo,anolectivo,idcurso) VALUES('".$vlr."','".$nome."','".$id."','".$nivel."','".$idcurso."')";
                     //mysqli_query($connect,$sql);
+                    $cont_ins++;
                 }
             }
         }
         $con->closeDatabase();
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -217,6 +227,8 @@ class FuncoesIntegracao {
         $consulta= mysqli_query($con->openConection(),"select count(*) as nrDeRegistos from curso");
         $linhas = mysqli_fetch_array($consulta);
         $contador = $linhas['nrDeRegistos'];
+        $cont_ins=0;
+        $cont_up=0;
 
         foreach ($listaEsira as $c) {
 
@@ -227,18 +239,19 @@ class FuncoesIntegracao {
                 $codigo2 = $row['codigo'];
 
                 if ($codigo1 == $codigo2) {
-//                    $update1 = "update curso set descricao=$nome where $codigo1 = $codigo2";
-//                    mysqli_query($con->openConection(), $update1);
+                    $update1 = "update curso set descricao=$nome where $codigo1 = $codigo2";
+                    mysqli_query($con->openConection(), $update1);
 
-                  //  echo "update <br>";
+                    $cont_up++;
                 } else {
-                 //   echo"inserted <br>";
-                    //  $sql="INSERT INTO curso(descricao,codigo) VALUES('".$nome."','".$vlr."')";
-                    //mysqli_query($connect,$sql);
+                    $sql="INSERT INTO curso(descricao,codigo) VALUES($nome,$codigo1)";
+                    mysqli_query($con->openConection(),$sql);
+                    $cont_ins++;
                 }
             }
         }
         $con->closeDatabase();
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -288,5 +301,36 @@ class FuncoesIntegracao {
 
         $con->closeDatabase();
         return $contador;
+    }
+
+    function message($update, $insert){
+
+        $messages2[] = "$insert REGISTO(S) FOI(RAM) INSERIDO(S) COM SUCESSO!!!.<br>.<br>";
+        $messages1[] = "$update REGISTO(S) FOI(RAM) ACTUALIZADO(S) COM SUCESSO!!!.<br>.<br>";
+        ?>
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Operação Efectuada: </strong><br><br>
+
+            <?php
+            if($update != 0) {
+                foreach ($messages1 as $message) {
+                    echo $message;
+                }
+            }else{
+
+                echo"NENHUMA ACTUALIZACAO FOI FEITA!!!.<br>.<br>";
+            }
+            if($insert != 0){
+                foreach ($messages2 as $message) {
+                    echo $message;
+                }
+            }else{
+                echo"NENHUMA INSERCAO FOI FEITA!!!.<br>.<br>";
+            }
+            ?>
+        </div>
+
+        <?php
     }
 }
