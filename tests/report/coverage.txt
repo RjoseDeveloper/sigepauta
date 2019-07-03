@@ -1,0 +1,12 @@
+
+
+Code Coverage Report:     
+  2019-07-01 15:58:00     
+                          
+ Summary:                 
+  Classes:  0.00% (0/2)   
+  Methods: 22.22% (4/18)  
+  Lines:    4.63% (28/605)
+
+FuncoesIntegracao
+  Methods:  44.44% ( 4/ 9)   Lines:  32.56% ( 28/ 86)

@@ -1,0 +1,19 @@
+/*
+ * This file is part of Contao.
+ *
+ * (c) Leo Feyer
+ *
+ * @license LGPL-3.0-or-later
+ */
+
+table.sortable thead th {
+	background-image:url("../images/default.gif");
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+table.sortable thead th.headerSortDown {
+	background-image:url("../images/asc.gif");
+}
+table.sortable thead th.headerSortUp {
+	background-image:url("../images/desc.gif");
+}
