@@ -94,12 +94,12 @@ class FuncoesIntegracao {
         return $data2;
     }
 
-    function buscarDadosNoEsiraInscricao($inf, $sup){
+    function buscarDadosNoEsiraInscricao(){
         //Inicia a biblioteca cURL do PHP
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_PORT => $this->PORT_WS, //porta do WS
-            CURLOPT_URL => $this->BASE_WS."Inscricao?inf=".$inf."&sup=".$sup, //Caminho do WS que vai receber o GET
+            CURLOPT_URL => $this->BASE_WS."Inscricao", //Caminho do WS que vai receber o GET
             CURLOPT_RETURNTRANSFER => true, //Recebe resposta
             CURLOPT_ENCODING => "JSON", //Decodificação
             CURLOPT_MAXREDIRS => 10,
@@ -133,30 +133,44 @@ class FuncoesIntegracao {
         $cont_up=0;
         $cont_ins=0;
 
+        while ($row = mysqli_fetch_array($alunos)) {
+            $nr_mec = $row['nr_mec'];
+            $dados[]=$nr_mec;
+        }
+
+        $cont=0;
+
         foreach ($listaEsira as $c) {//cria a classe de tratamento
 
             $id = $c->nr_estudante;
             $nome = $c->nome_completo;
             $vlr = $c->nivel_frequencia;
 
-            while ($row = mysqli_fetch_array($alunos)) {
+            //echo "<br>".$id."<br>";
 
-                $nr_mec = $row['nr_mec'];
+            foreach($dados as $nr_mec) {
 
-                if ($nr_mec == $id) {
-//                    $update = "update aluno set nome = $nome where $nr_mec = $id";
-//                    mysqli_query($con->openConection(), $update);
+                //echo $nr_mec." ";
 
-                    //echo "$id <br>";
+                if ($nr_mec === $id) {
+
+                    $update = "update aluno set nome = '$nome' where '".$nr_mec."' = '".$id."'";
+                    mysqli_query($con->openConection(), $update);
+
+                    $cont++;
                     $cont_up++;
-                } else {
-                    //echo "inserir <br>";
-                    // $sql="INSERT INTO aluno(nome,nr_mec) VALUES('".$nome."','".$id."')";
-                    // mysqli_query($connect,$sql);
-                    $cont_ins++;
+                    break;
                 }
             }
+
+            if($cont == 0 ){
+                $sql="INSERT INTO aluno(nome,nr_mec) VALUES('".$nome."','".$id."')";
+                mysqli_query($con->openConection(),$sql);
+                $cont_ins++;
+            }
+            $cont=0;
         }
+
         $con->closeDatabase();
         $this->message($cont_up,$cont_ins);
         return $contador;
@@ -179,36 +193,54 @@ class FuncoesIntegracao {
         $cont_up=0;
         $cont_ins=0;
 
+        while ($row = mysqli_fetch_array($disciplina)) {
+            $cod = $row['codigo'];
+            $dados[] = $cod;
+        }
+        $cont=0;
+
         foreach ($listaEsira as $c) {
 
             $id = $c->codigo;
             $nome = $c->nome;
             $nivel = $c->nivel;
-            $vlr = $c->credito;
+            $credt = $c->credito;
             $idcurso = $c->curso;
 
-            while ($row = mysqli_fetch_array($disciplina)) {
-                $codigo = $row['codigo'];
+            //echo "<br>".$id."<br>";
+
+            foreach ($dados as $codigo) {
+
+                $cod=0;
+                $cod = $cod.$codigo;
+
+                //echo $cod." ";
 
                 if ($codigo == $id) {
-//                    $update1 = "update disciplina set creditos=$vlr where $codigo = $id";
-//                    $update2 = "update disciplina set descricao=$nome where $codigo = $id";
-//                    $update3 = "update disciplina set anolectivo=$nivel where $codigo = $id";
 
-//                    mysqli_query($con->openConection(), $update1);
-//                    mysqli_query($con->openConection(), $update2);
-//                    mysqli_query($con->openConection(), $update3);
+                    $update1 = "update disciplina set creditos='$credt' where '".$cod."' = '".$id."'";
+                    $update2 = "update disciplina set descricao='$nome' where '".$cod."' = '".$id."'";
+                    $update3 = "update disciplina set anolectivo='$nivel' where '".$cod."' = '".$id."'";
 
-                //    echo "update <br>";
+                    mysqli_query($con->openConection(), $update1);
+                    mysqli_query($con->openConection(), $update2);
+                    mysqli_query($con->openConection(), $update3);
+
+                    $cont++;
                     $cont_up++;
-                } else {
-                 //    echo"inserted <br>";
-                    //$sql="INSERT INTO disciplina(creditos,descricao,codigo,anolectivo,idcurso) VALUES('".$vlr."','".$nome."','".$id."','".$nivel."','".$idcurso."')";
-                    //mysqli_query($connect,$sql);
-                    $cont_ins++;
+                    break;
                 }
             }
+
+            if($cont==0){
+                $sql="INSERT INTO disciplina(creditos,descricao,codigo,anolectivo,idcurso) 
+                  VALUES('".$credt."','".$nome."','".$id."','".$nivel."','".$idcurso."')";
+                mysqli_query($con->openConection(),$sql);
+                $cont_ins++;
+            }
+            $cont=0;
         }
+
         $con->closeDatabase();
         $this->message($cont_up,$cont_ins);
         return $contador;
@@ -229,27 +261,43 @@ class FuncoesIntegracao {
         $contador = $linhas['nrDeRegistos'];
         $cont_ins=0;
         $cont_up=0;
+        $cont=0;
+
+        while ($row = mysqli_fetch_array($curso)) {
+            $cod = $row['codigo'];
+            $dados[] = $cod;
+        }
 
         foreach ($listaEsira as $c) {
-
-            $codigo1 = $c->codigo_curso;
+            $vlr = $c->codigo_curso;
             $nome = $c->descricao;
 
-            while ($row = mysqli_fetch_array($curso)) {
-                $codigo2 = $row['codigo'];
+            //echo "<br>".$vlr."<br>";
 
-                if ($codigo1 == $codigo2) {
-                    $update1 = "update curso set descricao=$nome where $codigo1 = $codigo2";
-                    mysqli_query($con->openConection(), $update1);
+            foreach ($dados as $codigo2){
 
+                //echo $codigo2." ";
+
+                if ( $vlr===$codigo2 ) { //verifcando se sao do mesmo tipo e tem mesmo valor
+
+                    $update = "update curso set descricao='$nome' where '".$vlr."' = '".$codigo2."'";
+                    mysqli_query($con->openConection(), $update);
                     $cont_up++;
-                } else {
-                    $sql="INSERT INTO curso(descricao,codigo) VALUES($nome,$codigo1)";
-                    mysqli_query($con->openConection(),$sql);
-                    $cont_ins++;
+                    $cont++;
+                    break;
                 }
             }
+
+            if( $cont==0 ){
+                $sql="INSERT INTO curso(descricao,codigo) 
+                    VALUES('".$nome."','".$vlr."')";
+                mysqli_query($con->openConection(),$sql);
+                $cont_ins++;
+            }
+
+            $cont=0;
         }
+
         $con->closeDatabase();
         $this->message($cont_up,$cont_ins);
         return $contador;
@@ -271,35 +319,47 @@ class FuncoesIntegracao {
         $contador = $linhas['nrDeRegistos'];
 
 
+        while ($row = mysqli_fetch_array($inscricao)) {
+            $inscricao2 = $row['idinscricao'];
+            $dados[] = $inscricao2;
+        }
+
+        $cont_up=0;
+        $cont_ins=0;
+        $cont=0;
+
         foreach ($listaEsira as $c) {//cria a classe de tratamento
 
             $id = $c->id_disciplina;
             $nome = $c->id_estudante;
             $inscricao1 = $c->id_inscricao;
 
-            while ($row = mysqli_fetch_array($inscricao)) {
-
-                $inscricao2 = $row['idinscricao'];
+            foreach ($dados as $inscricao2){
 
                 if ($inscricao1 == $inscricao2) {
-//                    $update1 = "update inscricao set iddisciplina=$id where $inscricao1 = $inscricao2";
-//                    $update2 = "update inscricao set idutilizador=$nome where $inscricao1 = $inscricao2";
 
-//                    mysqli_query($con->openConection(), $update1);
-//                    mysqli_query($con->openConection(), $update2);
+                    $update1 = "update inscricao set iddisciplina='$id' where '".$inscricao1."' = '".$inscricao2."'";
+                    $update2 = "update inscricao set idutilizador='$nome' where '".$inscricao1."' = '".$inscricao2."'";
 
-                   // echo "update <br>";
-                } else {
-                  //  echo "inserted <br>";
+                    mysqli_query($con->openConection(), $update1);
+                    mysqli_query($con->openConection(), $update2);
 
-                    //   $sql="INSERT INTO inscricao(iddisciplina,idinscricao,idutilizador) VALUES('".$id."','".$inscricao."',''".$nome."')";
-                    // mysqli_query($con->openConection(),$sql);
+                    $cont++;
+                    $cont_up++;
+                    break;
                 }
-
             }
+
+            if( $cont == 0 ){
+                $sql="INSERT INTO inscricao(iddisciplina,idinscricao,idutilizador) VALUES('".$id."','".$inscricao1."','".$nome."')";
+                mysqli_query($con->openConection(),$sql);
+                $cont_ins++;
+            }
+            $cont=0;
         }
 
         $con->closeDatabase();
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 

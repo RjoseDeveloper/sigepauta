@@ -48,6 +48,7 @@
     <?php
 
     $funcoes = new FuncoesIntegracao();
+    $data = $funcoes->buscarDadosNoEsiraInscricao();
 
     $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
     if($action == 'ajax') {
@@ -56,9 +57,6 @@
         $per_page = 4; //how much records you want to show
         $adjacents = 4; //gap between pages after number of adjacents
         $offset = ($page - 1) * $per_page;
-
-        $data = $funcoes->buscarDadosNoEsiraInscricao($offset, $per_page);
-
         //Count the total number of row in your table*
         $numrows = sizeof($data);
         $total_pages = ceil($numrows / $per_page);
@@ -78,7 +76,7 @@
                     <div class="col-md-4">
                         <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning'
                                 onclick="botaoInscricoes(1)" value="">
-                            <span class='glyphicon glyphicon-save'>INTERGRAR</span>
+                            <span class='glyphicon glyphicon-save'>INTEGRAR</span>
                         </button>
                     </div>
                     <br>

@@ -62,7 +62,7 @@
         <div class="col-md-4 pull-right">
             <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning'
                     onclick="botaoCursos(1)" value="">
-                <span class='glyphicon glyphicon-save'> INTERGRAR</span>
+                <span class='glyphicon glyphicon-save'> INTEGRAR</span>
             </button>
         </div>
 
