@@ -39,5 +39,16 @@
     "type": "project",
     "config": {
         "component-dir": "../assets/components"
-    }
+    },
+    "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+    
 }
