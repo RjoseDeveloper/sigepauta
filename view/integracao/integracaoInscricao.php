@@ -123,7 +123,6 @@
     <?php } else {
                 $funcoes->listaDeInscricoes($data);
 
-
     }?>
 </body>
 </html>

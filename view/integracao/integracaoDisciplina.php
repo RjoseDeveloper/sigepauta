@@ -108,7 +108,6 @@
     </table>
     </div>
 <?php }else{
-        $funcoes = new FuncoesIntegracao();
         $funcoes->listaDeDisciplinas($data);
     }?>
 </body>

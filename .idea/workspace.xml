@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5990a45a-ad6f-4f2d-8a1f-762c75cb42b6" name="Default Changelist" comment="" />
+    <list default="true" id="5990a45a-ad6f-4f2d-8a1f-762c75cb42b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" afterDir="false" />
+    </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,11 +33,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+            <state relative-caret-position="350">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/integracao/integracaoEstudante.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/integracao/integracaoDisciplina.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1623">
+              <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -51,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="150" column="23" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
+            <state relative-caret-position="308">
+              <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -63,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/integracao/integracaoInscricao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+            <state relative-caret-position="208">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -98,7 +120,6 @@
         <option value="$PROJECT_DIR$/view/exames/lista_candidactos_exame.php" />
         <option value="$PROJECT_DIR$/tests/ExameEspecialTest.php" />
         <option value="$PROJECT_DIR$/view/exames/ExamesEspeciais.php" />
-        <option value="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracao.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/view/fragments/js/js_index.js" />
@@ -118,12 +139,13 @@
         <option value="$PROJECT_DIR$/dbconf/db.php" />
         <option value="$PROJECT_DIR$/dbconf/getConection.php" />
         <option value="$PROJECT_DIR$/view/pauta/buscar_pauta.php" />
-        <option value="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" />
         <option value="$PROJECT_DIR$/view/ajax/paginacao.php" />
         <option value="$PROJECT_DIR$/view/fragments/js/integracao.js" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoCursos.php" />
-        <option value="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" />
         <option value="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" />
+        <option value="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" />
+        <option value="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" />
+        <option value="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" />
       </list>
     </option>
   </component>
@@ -258,12 +280,12 @@
       <workItem from="1561804213012" duration="7768000" />
       <workItem from="1561812574825" duration="9053000" />
       <workItem from="1562143548301" duration="27499000" />
-      <workItem from="1562178831394" duration="6371000" />
+      <workItem from="1562178831394" duration="6552000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146755000" />
+    <option name="totallyTimeSpent" value="146936000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -290,13 +312,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.10729023" side_tool="true" weight="0.2913961" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8927098" visible="true" weight="0.24899329" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.8927098" visible="true" weight="0.24899329" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2461964" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2461964" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="1" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32935154" />
@@ -339,7 +361,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requestCtr/Processa_pautafreq.php" />
     <entry file="file://$PROJECT_DIR$/requestCtr/Processa_lista_Avaliacao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -740,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoEstudante.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbconf/getConection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -808,20 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoInscricao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -835,8 +835,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="150" column="23" selection-start-line="150" selection-start-column="23" selection-end-line="150" selection-end-column="23" />
+        <state relative-caret-position="308">
+          <caret line="143" column="13" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoInscricao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoEstudante.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoDisciplina.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1623">
+          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>

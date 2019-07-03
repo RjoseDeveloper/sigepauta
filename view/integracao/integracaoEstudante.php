@@ -107,7 +107,6 @@
         </table>
     </div>
 <?php }else{
-        $funcoes = new FuncoesIntegracao();
         $funcoes->listaDeAlunos($data);
      }?>
 </body>
