@@ -7,77 +7,44 @@
  */
 require_once("../view/integracao/FuncoesIntegracao.php");
 
-class IntegracaoTest extends  \PHPUnit\Framework\TestCase{
+use PHPUnit\Framework\TestCase;
 
-    /**
+class IntegracaoTest extends  TestCase{
+
+   /**
      * @covers FuncoesIntegracao::buscarDadosNoEsiraEstudante
      */
     function testBuscarDadosNoEsiraEstudante(){
         $la = new FuncoesIntegracao();
-        $data= $la->buscarDadosNoEsiraEstudante();
+        $dataBEE= $la->buscarDadosNoEsiraEstudante();
 
-        $this->assertEquals(665, count($data));
+        $this->assertEquals(665, count($dataBEE));
     }
-    /**
+	
+	/**
      * @covers FuncoesIntegracao::buscarDadosNoEsiraDisciplina
      */
     function testBuscarDadosNoEsiraDisciplina(){
         $la = new FuncoesIntegracao();
-        $data= $la->buscarDadosNoEsiraDisciplina();
-        $this->assertEquals(379, count($data));
+        $dataBDE= $la->buscarDadosNoEsiraDisciplina();
+        $this->assertEquals(379, count($dataBDE));
     }
-    /**
+	/**
      * @covers FuncoesIntegracao::buscarDadosNoEsiraCurso
      */
     function testBscarDadosNoEsiraCurso(){
         $la = new FuncoesIntegracao();
-        $data= $la->buscarDadosNoEsiraCurso();
-        $this->assertEquals(5, count($data));
+        $dataBCE= $la->buscarDadosNoEsiraCurso();
+        $this->assertEquals(5, count($dataBCE));
     }
-    /**
+	 /**
      * @covers FuncoesIntegracao::buscarDadosNoEsiraInscricao
      */
     function testBuscarDadosNoEsiraInscricao(){
 
         $la = new FuncoesIntegracao();
-        $data= $la->buscarDadosNoEsiraInscricao();
-        $this->assertEquals(15746, count($data));
+        $dataBIE= $la->buscarDadosNoEsiraInscricao();
+        $this->assertEquals(15746, count($dataBIE));
     }
-    /**
-     * @covers FuncoesIntegracao::listaDeAlunos
-     */
-    public  function testListaDeAlunos(){
-
-        $la = new FuncoesIntegracao();
-        $data = $la->buscarDadosNoEsiraEstudante();
-
-        $this->assertEquals(21, $la->listaDeAlunos($data));
-    }
-    /**
-     * @covers FuncoesIntegracao::listaDeDisciplinas
-     */
-    function testListaDeDisciplinas(){
-        $ld = new FuncoesIntegracao();
-        $data = $ld->buscarDadosNoEsiraDisciplina();
-
-        $this->assertEquals(20, $ld->listaDeDisciplinas($data));
-    }
-    /**
-     * @covers FuncoesIntegracao::listaDeCursos
-     */
-    function testListaDeCursos(){
-        $lc = new FuncoesIntegracao();
-        $data = $lc->buscarDadosNoEsiraCurso();
-
-        $this->assertEquals(6, $lc->listaDeCursos($data));
-    }
-    /**
-     * @covers FuncoesIntegracao::listaDeInscricoes
-     */
-    function testListaDeInscricoes() {
-        $li = new FuncoesIntegracao();
-        $data = $li->buscarDadosNoEsiraInscricao();
-
-        $this->assertEquals(54, $li->listaDeInscricoes($data));
-    }
+   
 }
