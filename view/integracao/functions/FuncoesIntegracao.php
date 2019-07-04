@@ -10,7 +10,7 @@
  * Esta classe trata de funcoes de integracao
  */
 
-require_once '../../dbconf/getConection.php';
+require_once '../dbconf/getConection.php';
 
 class FuncoesIntegracao {
     /**
@@ -357,7 +357,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-        $this->message($cont_up,$cont_ins);
+        //$this->message($cont_up,$cont_ins);
         return $contador;
     }
 

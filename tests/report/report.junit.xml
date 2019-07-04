@@ -1,139 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="allTests" tests="19" assertions="26" errors="15" failures="3" skipped="0" time="2.017579">
-    <testsuite name="CursoControllerTest" file="C:\xampp\htdocs\sigepauta\tests\CursoControllerTest.php" tests="1" assertions="3" errors="1" failures="0" skipped="0" time="0.688597">
-      <testcase name="testInsert" class="CursoControllerTest" classname="CursoControllerTest" file="C:\xampp\htdocs\sigepauta\tests\CursoControllerTest.php" line="21" assertions="3" time="0.688597">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>Encontramos problemas ao Criar  o CursoEncontramos problemas ao Criar  o CursoEncontramos problemas ao Criar  o Curso</system-out>
-      </testcase>
-    </testsuite>
-    <testsuite name="ActividadeControllerTest" file="C:\xampp\htdocs\sigepauta\tests\ActividadeControllerTest.php" tests="1" assertions="1" errors="1" failures="0" skipped="0" time="0.109292">
-      <testcase name="testCreate" class="ActividadeControllerTest" classname="ActividadeControllerTest" file="C:\xampp\htdocs\sigepauta\tests\ActividadeControllerTest.php" line="12" assertions="1" time="0.109292">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>Encontramos problemas ao Criar a actividade</system-out>
-      </testcase>
-    </testsuite>
-    <testsuite name="EstudanteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php" tests="6" assertions="2" errors="6" failures="1" skipped="0" time="0.469349">
-      <testcase name="testRead" class="EstudanteControllerTest" classname="EstudanteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php" line="11" assertions="0" time="0.121006">
-        <error type="PHPUnit\Framework\Error\Warning">EstudanteControllerTest::testRead
-mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given
-
-C:\xampp\htdocs\sigepauta\controller\EstudanteCtr.php:19
-C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php:13
-</error>
-      </testcase>
-      <testcase name="testInsert" class="EstudanteControllerTest" classname="EstudanteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php" line="19" assertions="0" time="0.036704">
-        <error type="PHPUnit\Framework\Error\Notice">EstudanteControllerTest::testInsert
-Undefined variable: esc
-
-C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php:22
-</error>
-      </testcase>
-      <testcase name="testIncluir_estudante" class="EstudanteControllerTest" classname="EstudanteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php" line="29" assertions="0" time="0.008358">
-        <error type="PHPUnit\Framework\RiskyTestError">Risky Test
-</error>
-      </testcase>
-      <testcase name="testUpdate_inclusao" class="EstudanteControllerTest" classname="EstudanteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php" line="38" assertions="0" time="0.025289">
-        <error type="PHPUnit\Framework\Error\Warning">EstudanteControllerTest::testUpdate_inclusao
-mysqli_stmt_bind_param(): Number of variables doesn't match number of parameters in prepared statement
-
-C:\xampp\htdocs\sigepauta\controller\EstudanteCtr.php:63
-C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php:40
-</error>
-      </testcase>
-      <testcase name="testAssociar_estudante_disp" class="EstudanteControllerTest" classname="EstudanteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php" line="47" assertions="0" time="0.051925">
-        <error type="ArgumentCountError">EstudanteControllerTest::testAssociar_estudante_disp
-ArgumentCountError: Too few arguments to function EstudanteController::associar_estudante_disp(), 1 passed in C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php on line 49 and exactly 3 expected
-
-C:\xampp\htdocs\sigepauta\controller\EstudanteCtr.php:68
-C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php:49
-</error>
-      </testcase>
-      <testcase name="testDelete" class="EstudanteControllerTest" classname="EstudanteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php" line="57" assertions="2" time="0.226067">
-        <error type="PHPUnit\Framework\UnintentionallyCoveredCodeError">Risky Test
-</error>
-        <failure type="PHPUnit\Framework\ExpectationFailedException">EstudanteControllerTest::testDelete
-Failed asserting that null matches expected true.
-
-C:\xampp\htdocs\sigepauta\tests\EstudanteControllerTest.php:64
-</failure>
-      </testcase>
-    </testsuite>
-    <testsuite name="EstudanteNotaControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteNotaControllerTest.php" tests="4" assertions="7" errors="3" failures="1" skipped="0" time="0.357862">
-      <testcase name="testInsertF1" class="EstudanteNotaControllerTest" classname="EstudanteNotaControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteNotaControllerTest.php" line="10" assertions="2" time="0.150558">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>Lamentamos Houve um erro no envio da Pauta&lt;br&gt;Pauta Enviada com Sucesso&lt;br&gt;</system-out>
-      </testcase>
-      <testcase name="testRead" class="EstudanteNotaControllerTest" classname="EstudanteNotaControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteNotaControllerTest.php" line="21" assertions="1" time="0.035540">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">EstudanteNotaControllerTest::testRead
-Failed asserting that true matches expected false.
-
-C:\xampp\htdocs\sigepauta\tests\EstudanteNotaControllerTest.php:24
-</failure>
-      </testcase>
-      <testcase name="testUpdate" class="EstudanteNotaControllerTest" classname="EstudanteNotaControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteNotaControllerTest.php" line="31" assertions="2" time="0.092428">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>Nota actualizada com sucesso para [1]Nota actualizada com sucesso para [-1]</system-out>
-      </testcase>
-      <testcase name="testDelete" class="EstudanteNotaControllerTest" classname="EstudanteNotaControllerTest" file="C:\xampp\htdocs\sigepauta\tests\EstudanteNotaControllerTest.php" line="39" assertions="2" time="0.079336">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>removido com sucesso!removido com sucesso!</system-out>
-      </testcase>
-    </testsuite>
-    <testsuite name="DocenteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\DocenteControllerTest.php" tests="2" assertions="4" errors="1" failures="0" skipped="0" time="0.068992">
-      <testcase name="testRead" class="DocenteControllerTest" classname="DocenteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\DocenteControllerTest.php" line="11" assertions="0" time="0.012810">
-        <error type="PHPUnit\Framework\Error\Warning">DocenteControllerTest::testRead
-mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given
-
-C:\xampp\htdocs\sigepauta\controller\DocenteCtr.php:13
-C:\xampp\htdocs\sigepauta\tests\DocenteControllerTest.php:13
-</error>
-      </testcase>
-      <testcase name="testInsert_docente" class="DocenteControllerTest" classname="DocenteControllerTest" file="C:\xampp\htdocs\sigepauta\tests\DocenteControllerTest.php" line="19" assertions="4" time="0.056182"/>
-    </testsuite>
-    <testsuite name="PautaNormalTest" file="C:\xampp\htdocs\sigepauta\tests\PautaNormalTest.php" tests="5" assertions="9" errors="3" failures="1" skipped="0" time="0.323488">
-      <testcase name="testRead" class="PautaNormalTest" classname="PautaNormalTest" file="C:\xampp\htdocs\sigepauta\tests\PautaNormalTest.php" line="11" assertions="2" time="0.062364">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">PautaNormalTest::testRead
-Failed asserting that two arrays are equal.
---- Expected
-+++ Actual
-@@ @@
-     'idcurso' =&gt; '30'
-     'idDisciplina' =&gt; '15'
-     'idTipoAvaliacao' =&gt; '1'
--    'estado' =&gt; '1'
-+    'estado' =&gt; '2'
-     'dataReg' =&gt; '2019-04-07'
--    'dataPub' =&gt; '2019-06-19'
-+    'dataPub' =&gt; '2019-04-08'
-     'idsemestre' =&gt; '1'
-     'idusers' =&gt; '3'
- )
-
-C:\xampp\htdocs\sigepauta\tests\PautaNormalTest.php:17
-</failure>
-      </testcase>
-      <testcase name="testInsert" class="PautaNormalTest" classname="PautaNormalTest" file="C:\xampp\htdocs\sigepauta\tests\PautaNormalTest.php" line="22" assertions="2" time="0.091162">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>errorerror</system-out>
-      </testcase>
-      <testcase name="testUpdate" class="PautaNormalTest" classname="PautaNormalTest" file="C:\xampp\htdocs\sigepauta\tests\PautaNormalTest.php" line="30" assertions="2" time="0.120862">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>Pauta publicada com sucessoPauta publicada com sucesso</system-out>
-      </testcase>
-      <testcase name="testDelete" class="PautaNormalTest" classname="PautaNormalTest" file="C:\xampp\htdocs\sigepauta\tests\PautaNormalTest.php" line="38" assertions="2" time="0.025470">
-        <error type="PHPUnit\Framework\OutputError">Risky Test
-</error>
-        <system-out>problemas na remocao!problemas na remocao!</system-out>
-      </testcase>
-      <testcase name="testGetMaxRowValue" class="PautaNormalTest" classname="PautaNormalTest" file="C:\xampp\htdocs\sigepauta\tests\PautaNormalTest.php" line="47" assertions="1" time="0.023630"/>
+  <testsuite name="allTests" tests="8" assertions="8" errors="0" failures="0" skipped="0" time="95.356605">
+    <testsuite name="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" tests="8" assertions="8" errors="0" failures="0" skipped="0" time="95.356605">
+      <testcase name="testBuscarDadosNoEsiraEstudante" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="17" assertions="1" time="0.651574"/>
+      <testcase name="testBuscarDadosNoEsiraDisciplina" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="27" assertions="1" time="0.032867"/>
+      <testcase name="testBscarDadosNoEsiraCurso" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="35" assertions="1" time="0.036680"/>
+      <testcase name="testBuscarDadosNoEsiraInscricao" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="43" assertions="1" time="0.311057"/>
+      <testcase name="testListaDeAlunos" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="52" assertions="1" time="33.612809"/>
+      <testcase name="testListaDeDisciplinas" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="60" assertions="1" time="18.725457"/>
+      <testcase name="testListaDeCursos" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="69" assertions="1" time="0.547243"/>
+      <testcase name="testListaDeInscricoes" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="77" assertions="1" time="41.438917"/>
     </testsuite>
   </testsuite>
 </testsuites>

@@ -17,20 +17,20 @@
     </php>
     <testsuites>
         <testsuite name="allTests">
-            <file>_IntegracaoTest.php</file>
-			<file>CursoControllerTest.php</file>
-            <file>TipoAvaliacaoControllerTest.php</file>
-            <file>ActividadeControllerTest.php</file>
-            <file>EstudanteControllerTest.php</file>
-            <file>EstudanteNotaControllerTest.php</file>
-            <file>DocenteControllerTest.php</file>
-            <file>PautaNormalTest.php</file>
+            <file>IntegracaoTest.php</file>
+			<file>_CursoControllerTest.php</file>
+            <file>_TipoAvaliacaoControllerTest.php</file>
+            <file>_ActividadeControllerTest.php</file>
+            <file>_EstudanteControllerTest.php</file>
+            <file>_EstudanteNotaControllerTest.php</file>
+            <file>_DocenteControllerTest.php</file>
+            <file>_PautaNormalTest.php</file>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory suffix=".php">../view/integracao/functions/</directory>
-			<directory suffix=".php">../controller/</directory>
+			<!-- <directory suffix=".php">../controller/</directory> -->
         </whitelist>
     </filter>
     <logging>
