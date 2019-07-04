@@ -1,7 +1,7 @@
 ﻿<?php
 
 
-require_once '../dbconf/getConection.php';
+require_once '../../dbconf/getConection.php';
 
 class EstudanteController {
 
