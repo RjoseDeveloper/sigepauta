@@ -4,7 +4,7 @@
 
     <?php
         include("../layouts/head.php");
-        require_once 'functions/FuncoesIntegracao.php';
+        require_once ('functions/FuncoesIntegracao.php');
         require_once("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
         require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
     ?>
@@ -49,7 +49,8 @@
             }
             </script>
        -->
-       <style>p.alinha{padding-left: 6.8em }</style>
+    <style>p.alinha{padding-left: 6.8em}</style>
+
 </head>
 <body>
 
@@ -72,16 +73,14 @@
         <div class="col-md-4 pull-right">
             <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning'
                     onclick="botaoAlunos(1)" value="">
-                <span class='glyphicon glyphicon-save'>INTERGRAR</span>
+                <span class='glyphicon glyphicon-save'>INTEGRAR</span>
             </button>
         </div>
 
     </div>
-  
-    
     <table class="table">
 
-        <tr>
+        <tr p>
             <th><p class="alinha">Numero Mecanografico</p></th>
             <th><p class="alinha">Nome do Estudante</p></th>
             <th><p class="alinha">Nivel de Frequencia</p></th>

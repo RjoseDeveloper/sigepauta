@@ -10,11 +10,7 @@
  * Esta classe trata de funcoes de integracao
  */
 
-<<<<<<< HEAD:view/integracao/functions/FuncoesIntegracao.php
-require_once '../dbconf/getConection.php';
-=======
-require_once'C:\xampp\htdocs\sigepauta\dbconf\getConection.php';
->>>>>>> 06289a03d099a331c390c85d09f92bd052470d79:view/integracao/FuncoesIntegracao.php
+require_once '../../dbconf/getConection.php';
 
 class FuncoesIntegracao {
     /**
@@ -124,12 +120,10 @@ class FuncoesIntegracao {
      * @param mixed
      * @return integer
      */
-<<<<<<< HEAD:view/integracao/functions/FuncoesIntegracao.php
-    function listaDeAlunos() {
-=======
-    function listaDeAlunos($listaEsira) {
 
->>>>>>> 06289a03d099a331c390c85d09f92bd052470d79:view/integracao/FuncoesIntegracao.php
+    function listaDeAlunos() {
+
+
         $con = new mySQLConnection();
         $alunos = mysqli_query($con->openConection(), "select nr_mec from aluno");
 
@@ -177,12 +171,8 @@ class FuncoesIntegracao {
             foreach($dados as $nr_mec) {
 
                 if ($nr_mec === $id) {
-
-<<<<<<< HEAD:view/integracao/functions/FuncoesIntegracao.php
                     $update = "update aluno set nome = '$nome' where '{$nr_mec}' = '{$id}'";
-=======
                     $update = "update aluno set nome = '$nome' where '$nr_mec' = '$id'";
->>>>>>> 06289a03d099a331c390c85d09f92bd052470d79:view/integracao/FuncoesIntegracao.php
                     mysqli_query($con->openConection(), $update);
 
                     $cont++;
@@ -200,7 +190,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-       // $this->message($cont_up,$cont_ins);
+       $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -291,7 +281,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-       // $this->message($cont_up,$cont_ins);
+       $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -301,12 +291,7 @@ class FuncoesIntegracao {
      * @param mixed
      * @return integer
      */
-<<<<<<< HEAD:view/integracao/functions/FuncoesIntegracao.php
     function listaDeCursos() {
-=======
-    function listaDeCursos($listaEsira) {
-
->>>>>>> 06289a03d099a331c390c85d09f92bd052470d79:view/integracao/FuncoesIntegracao.php
         $con = new mySQLConnection();
         $curso= mysqli_query($con->openConection(), "select codigo from curso");
 
@@ -375,7 +360,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-        //$this->message($cont_up,$cont_ins);
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 
@@ -435,13 +420,10 @@ class FuncoesIntegracao {
 
                 if ($inscricao1 == $inscricao2) {
 
-<<<<<<< HEAD:view/integracao/functions/FuncoesIntegracao.php
                      $update1 = "update inscricao set iddisciplina='$id' where '".$inscricao1."' = '".$inscricao2."'";
                      $update2 = "update inscricao set idutilizador='$nome' where '".$inscricao1."' = '".$inscricao2."'";
-=======
                     $update1 = "update inscricao set iddisciplina='$id' where '$inscricao1' = '$inscricao2'";
                     $update2 = "update inscricao set idutilizador='$nome' where '$inscricao1' = '$inscricao2'";
->>>>>>> 06289a03d099a331c390c85d09f92bd052470d79:view/integracao/FuncoesIntegracao.php
 
                      mysqli_query($con->openConection(), $update1);
                      mysqli_query($con->openConection(), $update2);
@@ -461,7 +443,7 @@ class FuncoesIntegracao {
         }
 
         $con->closeDatabase();
-       // $this->message($cont_up,$cont_ins);
+        $this->message($cont_up,$cont_ins);
         return $contador;
     }
 

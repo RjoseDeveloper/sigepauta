@@ -3,10 +3,10 @@
 <head>
 
     <?php
-        include ("../layouts/head.php");
-        require_once 'functions/FuncoesIntegracao.php';
-        require_once ("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
-        require_once ("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
+        include("../layouts/head.php");
+        require_once ('functions/FuncoesIntegracao.php');
+        require_once("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
+        require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
     ?>
 
     <title>Recebendo dados do esira</title>
@@ -38,7 +38,7 @@
 
 
     </script>
-<style>p.alinha{padding-left: 9em }</style>
+    <style>p.alinha{padding-left: 16em}</style>
 </head>
 
 <body>

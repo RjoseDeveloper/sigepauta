@@ -40,6 +40,8 @@
 
     </script>
 
+    <style>p.alinha{padding-left: 8.0em}</style>
+
 </head>
 
 <body>
@@ -62,7 +64,7 @@
             <div class="col-md-4 pull-right">
                 <button data-toggle='tab' title="GUARDAR LISTA" class='btn btn-warning'
                         onclick="botaoDisciplinas(1)" value="">
-                    <span class='glyphicon glyphicon-save'>INTERGRAR</span>
+                    <span class='glyphicon glyphicon-save'>INTEGRAR</span>
                 </button>
             </div>
 
@@ -71,12 +73,10 @@
 
 
     <tr>
-        <th>Codigo</th>
-        <th>Nome da Disciplina</th>
-        <th>Ano Academico</th>
-        <th>Creditos</th>
-
-        <th></th>
+        <th><p class="alinha">Codigo</p></th>
+        <th><p class="alinha">Nome da Disciplina</p></th>
+        <th><p class="alinh">Ano Academico</p></th>
+        <th><p class="alinha">Creditos</p></th>
     </tr>
 
 <?php

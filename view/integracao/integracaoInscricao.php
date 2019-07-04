@@ -37,9 +37,10 @@
             });
         });
 
-
     </script>
-<style>p.alinha{padding-left: 6.8em }</style>
+
+    <style>p.alinha{padding-left: 8em}</style>
+
 </head>
 
 <body>
@@ -86,9 +87,9 @@
                 <table class="table">
 
                     <tr>
-                        <th><p class="alinha">Codigo da Disciplina</th>
-                        <th><p class="alinha">Nome do Estudante </th>
-                        <th><p class="alinha">Codigo da Inscricao </th>
+                        <th><p class="alinha">Codigo da Disciplina</p></th>
+                        <th><p class="alinha">Nome do Estudante</p></th>
+                        <th><p class="alinha">Codigo da Inscricao</p></th>
                     </tr>
 
                     <?php foreach ($data as $c) {
