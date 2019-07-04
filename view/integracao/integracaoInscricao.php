@@ -4,7 +4,7 @@
 
     <?php
         include("../layouts/head.php");
-        require_once 'FuncoesIntegracao.php';
+        require_once 'functions/FuncoesIntegracao.php';
         require_once("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
         require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
         include('../ajax/is_logged.php');//Archivo verifica que el usario que intenta acceder a la URL esta logueado
@@ -39,7 +39,7 @@
 
 
     </script>
-
+<style>p.alinha{padding-left: 6.8em }</style>
 </head>
 
 <body>
@@ -86,9 +86,9 @@
                 <table class="table">
 
                     <tr>
-                        <th>Codigo da Disciplina</th>
-                        <th>Nome do Estudante </th>
-                        <th>Codigo da Inscricao </th>
+                        <th><p class="alinha">Codigo da Disciplina</th>
+                        <th><p class="alinha">Nome do Estudante </th>
+                        <th><p class="alinha">Codigo da Inscricao </th>
                     </tr>
 
                     <?php foreach ($data as $c) {
@@ -121,7 +121,7 @@
         <?php } ?>
 
     <?php } else {
-                $funcoes->listaDeInscricoes($data);
+                $funcoes->listaDeInscricoes();
 
     }?>
 </body>

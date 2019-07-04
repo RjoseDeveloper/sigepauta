@@ -10,7 +10,7 @@
 		   $mydb = new mySQLConnection();
 		   if ($mydb){
 
-			   $query= "SELECT * FROM examerecorrencia` WHERE idpautaNormal ={$id}";
+			   $query= "SELECT * FROM `examerecorrencia` WHERE idpautaNormal ={$id}";
 			   $result_set = mysqli_query($mydb->openConection(),$query);
 			   $found = mysqli_fetch_assoc($result_set);
 		   return($found);

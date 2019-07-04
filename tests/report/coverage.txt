@@ -1,0 +1,20 @@
+
+
+Code Coverage Report:      
+  2019-07-04 05:42:48      
+                           
+ Summary:                  
+  Classes:  0.00% (0/11)   
+  Methods:  1.79% (1/56)   
+  Lines:    8.26% (84/1017)
+
+CursoController
+  Methods:   0.00% ( 0/ 1)   Lines:  88.89% (  8/  9)
+DocenteController
+  Methods:   0.00% ( 0/ 6)   Lines:   6.67% (  4/ 60)
+EstudanteNotaController
+  Methods:  20.00% ( 1/ 5)   Lines:  75.68% ( 28/ 37)
+MannagerController
+  Methods:   0.00% ( 0/ 1)   Lines:  88.89% (  8/  9)
+PautaNormalController
+  Methods:   0.00% ( 0/ 6)   Lines:  69.23% ( 36/ 52)

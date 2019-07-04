@@ -6,26 +6,23 @@
  * Time: 7:03 AM
  */
 
-require '../dbconf/getConection.php';
+require_once '../dbconf/getConection.php';
 class MannagerController {
-
-    private $conn;
-
-    public function __construct(){
-        $this->conn= new mySQLConnection();
-    }
-
+ 
     public function create($descricao){
-
+        $conn = new mySQLConnection();
+        
         $query = "INSERT INTO actividade (descricao) VALUE (?)";
-
-        $stmt = mysqli_prepare($this->conn->openConection(),$query);
+        $stmt = mysqli_prepare($conn->openConection(),$query);
         $result = mysqli_stmt_bind_param($stmt,'s',$descricao);
 
-        if(mysqli_stmt_execute($stmt)){echo 'Actividade Criada com sucesso.';
-        }else{echo 'Encontramos problemas ao Criar a actividade';}
+        if(mysqli_stmt_execute($stmt)){
+            echo 'Actividade Criada com sucesso.';
+        }else{
+            echo 'Encontramos problemas ao Criar a actividade';
+        }
 
-        $this->conn->closeDatabase();
+        $conn->closeDatabase();
     }
 
 }

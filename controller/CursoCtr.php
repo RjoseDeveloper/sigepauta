@@ -7,7 +7,7 @@
        public function insert($dir,$nome,$facul,$codigo){
 
            $mydb = new mySQLConnection();
-           $query = "INSERT INTO `curso`( `coordenador`, `descricao`, `idFaculdade`, `codigo`) VALUES (?,?,?,?)";
+           $query = "INSERT INTO `curso`( `coordenador`, `descricao`, `idperfil_instituicao`, `codigo`) VALUES (?,?,?,?)";
 
                $stmt = mysqli_prepare($mydb->openConection(),$query);
                $result = mysqli_stmt_bind_param($stmt,'isii',$dir,$nome,$facul,$codigo);

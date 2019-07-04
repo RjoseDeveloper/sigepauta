@@ -22,8 +22,8 @@
     },
     "autoload": {
         "classmap": [
-            "view/exames",
-            "view/integracao"
+            "view/integracao/functions",
+            "controller/"
         ]
     },
     "repositories": [

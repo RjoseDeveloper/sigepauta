@@ -1,6 +1,7 @@
 ﻿<?php
 
 
+require_once '../dbconf/getConection.php';
 
 class EstudanteController {
 
@@ -56,7 +57,7 @@ class EstudanteController {
 
     public function update_inclusao($idpauta){
 
-        $q= 'UPDATE estudante_inclusao SET estado = 2 WHERE idpauta= ?';
+        $q= "UPDATE estudante_inclusao SET estado = 2 WHERE idpauta= '$idpauta'";
 
         $stmt = mysqli_prepare($this->db->openConection(),$q);
         mysqli_stmt_bind_param($stmt,'i',$idpauta);
@@ -74,7 +75,7 @@ class EstudanteController {
         mysqli_stmt_bind_param($stmt,'iii',$aluno,$disp,$curso);
 
         if(mysqli_stmt_execute($stmt)){
-            echo('Estudante sssociado com sucesso!');
+            echo('Estudante associado com sucesso!');
         }else{
             echo('Problemas na insercao!');
         }
@@ -89,7 +90,7 @@ class EstudanteController {
 
    
 
-        $query = "DELETE FROM `estudante` WHERE idCurso = ?";
+        $query = "DELETE FROM `estudante` WHERE idCurso = '$id'";
         if ($stmt = mysqli_prepare($this->db->openConection(),$query)){
             $result = mysqli_stmt_bind_param($stmt,'i',$id);
 

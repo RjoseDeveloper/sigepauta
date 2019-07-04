@@ -4,7 +4,7 @@
 
     <?php
         include("../layouts/head.php");
-        require_once 'FuncoesIntegracao.php';
+        require_once 'functions/FuncoesIntegracao.php';
         require_once("../../dbconf/db.php");//Contiene las variables de configuracion para conectar a la base de datos
         require_once("../../dbconf/conexion.php");//Contiene funcion que conecta a la base de datos
     ?>
@@ -108,7 +108,7 @@
     </table>
     </div>
 <?php }else{
-        $funcoes->listaDeDisciplinas($data);
+        $funcoes->listaDeDisciplinas();
     }?>
 </body>
 </html>
