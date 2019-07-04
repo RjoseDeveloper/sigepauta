@@ -2,29 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5990a45a-ad6f-4f2d-8a1f-762c75cb42b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/IntegracaoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/IntegracaoTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/clover.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/exames/ExamesEspeciais.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/exames/ExamesEspeciais.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/exames/actualizar_status_exame.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/exames/actualizar_status_exame.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/exames/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/exames/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/exames/exame_extraordinario.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/exames/exame_extraordinario.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/exames/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/exames/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/exames/lista_candidactos_exame.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/exames/lista_candidactos_exame.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/FuncoesIntegracao.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/FuncoesIntegracao.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/integracao.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/integracao.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoCursos.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoCursos.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoDisciplina.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoDisciplina.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoEstudante.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoEstudante.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoInscricao.php.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/coverage/integracao/integracaoInscricao.php.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/report/report.junit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/report/report.junit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -57,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+            <state relative-caret-position="361">
+              <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -66,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1578">
-              <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+            <state relative-caret-position="160">
+              <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
               <folding>
                 <element signature="n#_construct#0;n#FuncoesIntegracao#0;n#!!top" />
                 <element signature="n#buscarDadosNoEsiraDisciplina#0;n#FuncoesIntegracao#0;n#!!top" />
@@ -97,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/IntegracaoTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+            <state relative-caret-position="242">
+              <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -172,9 +149,9 @@
         <option value="$PROJECT_DIR$/view/exames/ExamesEspeciais.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" />
-        <option value="$PROJECT_DIR$/view/integracao/integracaoCursos.php" />
         <option value="$PROJECT_DIR$/tests/phpunit.xml" />
         <option value="$PROJECT_DIR$/tests/IntegracaoTest.php" />
+        <option value="$PROJECT_DIR$/view/integracao/integracaoCursos.php" />
         <option value="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" />
       </list>
     </option>
@@ -299,7 +276,7 @@
     <property name="ToolWindowDocumentation.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562191830973" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562201040506" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pautasfe" />
@@ -379,12 +356,12 @@
       <workItem from="1561804213012" duration="7768000" />
       <workItem from="1561812574825" duration="9053000" />
       <workItem from="1562143548301" duration="27499000" />
-      <workItem from="1562178831394" duration="11328000" />
+      <workItem from="1562178831394" duration="13068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151712000" />
+    <option name="totallyTimeSpent" value="153452000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -411,13 +388,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.10729023" side_tool="true" weight="0.2913961" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8927098" visible="true" weight="0.24899329" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8927098" visible="true" weight="0.1624161" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.29460582" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.21991701" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="1" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32935154" />
@@ -770,13 +747,6 @@
         <state relative-caret-position="-2427" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/integracao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -821,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/phpunit.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -837,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/IntegracaoTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+        <state relative-caret-position="242">
+          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -849,10 +812,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1578">
-          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+        <state relative-caret-position="160">
+          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
           <folding>
             <element signature="n#_construct#0;n#FuncoesIntegracao#0;n#!!top" />
             <element signature="n#buscarDadosNoEsiraDisciplina#0;n#FuncoesIntegracao#0;n#!!top" />

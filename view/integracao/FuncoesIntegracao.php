@@ -155,7 +155,7 @@ class FuncoesIntegracao {
 
                 if ($nr_mec === $id) {
 
-                    $update = "update aluno set nome = '$nome' where '".$nr_mec."' = '".$id."'";
+                    $update = "update aluno set nome = '$nome' where '$nr_mec' = '$id'";
                     mysqli_query($con->openConection(), $update);
 
                     $cont++;
@@ -219,9 +219,9 @@ class FuncoesIntegracao {
 
                 if ($codigo == $id) {
 
-                    $update1 = "update disciplina set creditos='$credt' where '".$cod."' = '".$id."'";
-                    $update2 = "update disciplina set descricao='$nome' where '".$cod."' = '".$id."'";
-                    $update3 = "update disciplina set anolectivo='$nivel' where '".$cod."' = '".$id."'";
+                    $update1 = "update disciplina set creditos='$credt' where '$cod' = '$id'";
+                    $update2 = "update disciplina set descricao='$nome' where '$cod' = '$id'";
+                    $update3 = "update disciplina set anolectivo='$nivel' where '$cod' = '$id'";
 
                     mysqli_query($con->openConection(), $update1);
                     mysqli_query($con->openConection(), $update2);
@@ -282,7 +282,7 @@ class FuncoesIntegracao {
 
                 if ( $vlr===$codigo2 ) { //verifcando se sao do mesmo tipo e tem mesmo valor
 
-                    $update = "update curso set descricao='$nome' where '".$vlr."' = '".$codigo2."'";
+                    $update = "update curso set descricao='$nome' where '$vlr' = '$codigo2'";
                     mysqli_query($con->openConection(), $update);
                     $cont_up++;
                     $cont++;
@@ -340,8 +340,8 @@ class FuncoesIntegracao {
 
                 if ($inscricao1 == $inscricao2) {
 
-                    $update1 = "update inscricao set iddisciplina='$id' where '".$inscricao1."' = '".$inscricao2."'";
-                    $update2 = "update inscricao set idutilizador='$nome' where '".$inscricao1."' = '".$inscricao2."'";
+                    $update1 = "update inscricao set iddisciplina='$id' where '$inscricao1' = '$inscricao2'";
+                    $update2 = "update inscricao set idutilizador='$nome' where '$inscricao1' = '$inscricao2'";
 
                     mysqli_query($con->openConection(), $update1);
                     mysqli_query($con->openConection(), $update2);
