@@ -18,6 +18,7 @@
     <testsuites>
         <testsuite name="allTests">
             <file>IntegracaoTest.php</file>
+<<<<<<< HEAD
 			<file>_CursoControllerTest.php</file>
             <file>_TipoAvaliacaoControllerTest.php</file>
             <file>_ActividadeControllerTest.php</file>
@@ -25,12 +26,20 @@
             <file>_EstudanteNotaControllerTest.php</file>
             <file>_DocenteControllerTest.php</file>
             <file>_PautaNormalTest.php</file>
+=======
+            <file>_ExameEspecialTest.php</file>
+>>>>>>> 06289a03d099a331c390c85d09f92bd052470d79
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
+<<<<<<< HEAD
             <directory suffix=".php">../view/integracao/functions/</directory>
 			<!-- <directory suffix=".php">../controller/</directory> -->
+=======
+            <directory suffix=".php">../view/exames</directory>
+            <directory suffix=".php">../view/integracao</directory>
+>>>>>>> 06289a03d099a331c390c85d09f92bd052470d79
         </whitelist>
     </filter>
     <logging>

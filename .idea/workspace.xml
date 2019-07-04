@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5990a45a-ad6f-4f2d-8a1f-762c75cb42b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,48 +25,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/integracao/integracao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state>
               <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="361">
+              <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/integracao/integracaoEstudante.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/integracao/integracaoDisciplina.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1623">
-              <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+            <state relative-caret-position="120">
+              <caret line="277" lean-forward="true" selection-start-line="277" selection-end-line="277" />
               <folding>
                 <element signature="n#_construct#0;n#FuncoesIntegracao#0;n#!!top" />
                 <element signature="n#buscarDadosNoEsiraDisciplina#0;n#FuncoesIntegracao#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/phpunit.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/report/coverage/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/IntegracaoTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -85,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/integracao/integracaoInscricao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="52" />
+            <state relative-caret-position="254">
+              <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -115,11 +122,8 @@
         <option value="$PROJECT_DIR$/tests/TestarConsultasTest.php" />
         <option value="$PROJECT_DIR$/tests/vendor/phpunit/phpunit/phpunit.xml" />
         <option value="$PROJECT_DIR$/tests/IgnoreCodeCoverageClassTest.php" />
-        <option value="$PROJECT_DIR$/tests/IntegracaoTest.php" />
-        <option value="$PROJECT_DIR$/tests/phpunit.xml" />
         <option value="$PROJECT_DIR$/view/exames/lista_candidactos_exame.php" />
         <option value="$PROJECT_DIR$/tests/ExameEspecialTest.php" />
-        <option value="$PROJECT_DIR$/view/exames/ExamesEspeciais.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracao.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/view/fragments/js/js_index.js" />
@@ -141,11 +145,14 @@
         <option value="$PROJECT_DIR$/view/pauta/buscar_pauta.php" />
         <option value="$PROJECT_DIR$/view/ajax/paginacao.php" />
         <option value="$PROJECT_DIR$/view/fragments/js/integracao.js" />
-        <option value="$PROJECT_DIR$/view/integracao/integracaoCursos.php" />
-        <option value="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoInscricao.php" />
+        <option value="$PROJECT_DIR$/view/exames/ExamesEspeciais.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoEstudante.php" />
         <option value="$PROJECT_DIR$/view/integracao/integracaoDisciplina.php" />
+        <option value="$PROJECT_DIR$/tests/phpunit.xml" />
+        <option value="$PROJECT_DIR$/tests/IntegracaoTest.php" />
+        <option value="$PROJECT_DIR$/view/integracao/integracaoCursos.php" />
+        <option value="$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php" />
       </list>
     </option>
   </component>
@@ -158,7 +165,58 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/simplepie/simplepie" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/oyejorge/less.php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/php-diff" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/contao/core" />
+      <path value="$PROJECT_DIR$/vendor/michelf/php-markdown" />
+      <path value="$PROJECT_DIR$/vendor/leafo/scssphp" />
+      <path value="$PROJECT_DIR$/vendor/yidas/phpunit-sample" />
+      <path value="$PROJECT_DIR$/vendor/true/punycode" />
+      <path value="$PROJECT_DIR$/vendor/aiw/phpunit-tool" />
+      <path value="$PROJECT_DIR$/vendor/contao-community-alliance/composer-plugin" />
+      <path value="$PROJECT_DIR$/vendor/matthiasmullie/path-converter" />
+      <path value="$PROJECT_DIR$/vendor/contao-components/compass" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/matthiasmullie/minify" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/tecnick.com/tcpdf" />
+      <path value="$PROJECT_DIR$/vendor/kornrunner/dbunit" />
+      <path value="$PROJECT_DIR$/vendor/metamodels/phpunit-contao-database" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
@@ -181,13 +239,31 @@
             <path>
               <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="coverage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="integracao" type="462c0819:PsiDirectoryNode" />
+              <item name="exames" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -200,7 +276,7 @@
     <property name="ToolWindowDocumentation.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562176094594" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562201415623" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pautasfe" />
@@ -280,12 +356,12 @@
       <workItem from="1561804213012" duration="7768000" />
       <workItem from="1561812574825" duration="9053000" />
       <workItem from="1562143548301" duration="27499000" />
-      <workItem from="1562178831394" duration="6552000" />
+      <workItem from="1562178831394" duration="13440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146936000" />
+    <option name="totallyTimeSpent" value="153824000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -312,13 +388,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.10729023" side_tool="true" weight="0.2913961" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.8927098" visible="true" weight="0.24899329" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.8927098" visible="true" weight="0.1624161" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2461964" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.21991701" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="1" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32935154" />
@@ -361,150 +437,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requestCtr/Processa_lista_Avaliacao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requestCtr/Processa_registo_academico.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="135" column="92" selection-start-line="135" selection-start-column="92" selection-end-line="135" selection-end-column="92" />
-          <folding>
-            <marker date="1562098995705" expanded="true" signature="-1:-1" placeholder="SELECT docen..docente..." />
-            <marker date="1562098995705" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562098995705" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562098995705" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562098995705" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562098995705" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Query/EstudantesSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="333" column="18" selection-start-line="333" selection-start-column="18" selection-end-line="338" selection-end-column="31" />
-          <folding>
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT idEst..estudante..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..tipoavaliacao..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..tipoavaliacao..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..data_avaliacao..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT aluno..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT aluno..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT utili..utilizador..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..estudante..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT aluno..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT pauta..pautanormal..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..disciplina..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..examerecorrencia..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..pautanormal..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..turma..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT data_..pautanormal..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..disciplina..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT curso..curso..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT disci..disciplina..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..tipoavaliacao..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT data_..planoavaliacao..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..tipoavaliacao..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..professor..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..aluno..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante_nota..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..estudante..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="SELECT count..inscricao..." />
-            <marker date="1561973556321" expanded="true" signature="-1:-1" placeholder="select * fro..curso..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/report/Form_reports.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="148" column="19" selection-start-line="148" selection-start-column="19" selection-end-line="148" selection-end-column="97" />
-          <folding>
-            <marker date="1562103326446" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..turma..." />
-            <marker date="1562103326446" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103326446" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103326446" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requestCtr/Processa_pauta_freq.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="160" column="54" selection-start-line="160" selection-start-column="54" selection-end-line="160" selection-end-column="54" />
-          <folding>
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1562103401937" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Query/PautaFrequenciaSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="72" column="14" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
-          <folding>
-            <element signature="n#obterMediaFrequecia#0;n#PautaFrequencia#0;n#!!top" expanded="true" />
-            <element signature="n#ordenacaoTestes#0;n#PautaFrequencia#0;n#!!top" expanded="true" />
-            <marker date="1561973556324" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..estudante_nota..." />
-            <marker date="1561973556324" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..estudante_nota..." />
-            <marker date="1561973556324" expanded="true" signature="-1:-1" placeholder="SELECT aluno..aluno..." />
-            <marker date="1561973556324" expanded="true" signature="-1:-1" placeholder="SELECT descr..disciplina..." />
-            <marker date="1561973556324" expanded="true" signature="-1:-1" placeholder="SELECT estud..estudante..." />
-            <marker date="1561973556324" expanded="true" signature="-1:-1" placeholder="SELECT plano..planoavaliacao..." />
-            <marker date="1561973556324" expanded="true" signature="-1:-1" placeholder="SELECT disci..disciplina..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/aluno/Estudante_pauta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/fragments/js/alunos_all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -815,24 +747,6 @@
         <state relative-caret-position="-2427" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/integracao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
-          <folding>
-            <element signature="n#_construct#0;n#FuncoesIntegracao#0;n#!!top" />
-            <element signature="n#buscarDadosNoEsiraDisciplina#0;n#FuncoesIntegracao#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -840,31 +754,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoInscricao.php">
+    <entry file="file://$PROJECT_DIR$/view/exames/ExamesEspeciais.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="52" />
+        <state relative-caret-position="198">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestarConsultasTest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ExameEspecialTest.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/report/coverage.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/report/coverage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/integracao/integracaoEstudante.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+        <state relative-caret-position="263">
+          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/integracao/integracaoDisciplina.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1623">
-          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
+        <state relative-caret-position="230">
+          <caret line="110" column="42" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/IntegracaoTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="76" column="44" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracaoInscricao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="123" column="47" selection-start-line="123" selection-start-column="47" selection-end-line="123" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/integracao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/integracao/integracaoCursos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="361">
+          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/integracao/FuncoesIntegracao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="277" lean-forward="true" selection-start-line="277" selection-end-line="277" />
+          <folding>
+            <element signature="n#_construct#0;n#FuncoesIntegracao#0;n#!!top" />
+            <element signature="n#buscarDadosNoEsiraDisciplina#0;n#FuncoesIntegracao#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
+<<<<<<< HEAD
   <testsuite name="allTests" tests="8" assertions="8" errors="0" failures="0" skipped="0" time="95.356605">
     <testsuite name="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" tests="8" assertions="8" errors="0" failures="0" skipped="0" time="95.356605">
       <testcase name="testBuscarDadosNoEsiraEstudante" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="17" assertions="1" time="0.651574"/>
@@ -10,6 +11,11 @@
       <testcase name="testListaDeDisciplinas" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="60" assertions="1" time="18.725457"/>
       <testcase name="testListaDeCursos" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="69" assertions="1" time="0.547243"/>
       <testcase name="testListaDeInscricoes" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="77" assertions="1" time="41.438917"/>
+=======
+  <testsuite name="allTests" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.302955">
+    <testsuite name="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.302955">
+      <testcase name="testListaDeCursos" class="IntegracaoTest" classname="IntegracaoTest" file="C:\xampp\htdocs\sigepauta\tests\IntegracaoTest.php" line="68" assertions="1" time="0.302955"/>
+>>>>>>> 06289a03d099a331c390c85d09f92bd052470d79
     </testsuite>
   </testsuite>
 </testsuites>

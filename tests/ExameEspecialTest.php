@@ -9,7 +9,13 @@
 require_once  '../view/exames/ExamesEspeciais.php';
 
 class ExameEspecialTest extends \PHPUnit\Framework\TestCase {
+<<<<<<< HEAD
 
+=======
+    /**
+     * @covers ExamesEspeciais::result
+     */
+>>>>>>> 06289a03d099a331c390c85d09f92bd052470d79
     function testResult(){
         $ee = new ExamesEspeciais();
 
