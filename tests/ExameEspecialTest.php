@@ -7,8 +7,10 @@
  */
 
 require_once  './src/view/exames/ExamesEspeciais.php';
+use PHPUnit\Framework\TestCase;
 
-class ExameEspecialTest extends \PHPUnit\Framework\TestCase {
+class ExameEspecialTest extends TestCase {
+
     /**
      * @covers ExamesEspeciais::result
      */
