@@ -11,6 +11,15 @@ use PHPUnit\Framework\TestCase;
 
 class ExameEspecialTest extends TestCase {
 
+    private $fucEe;
+    public function __construct(){
+        $this->fucEe = new ExamesEspeciais();
+        parent::__construct();
+    }
+
+    public function testInstanceFuncoesIntragacao(){
+        $this->assertInstanceOf(FuncoesIntegracao::class, $this->fucEe);
+    }
     /**
      * @covers ExamesEspeciais::result
      */

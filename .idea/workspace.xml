@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5990a45a-ad6f-4f2d-8a1f-762c75cb42b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ActividadeControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CursoControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DocenteControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/EstudanteControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/EstudanteNotaControllerTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/exames/ExamesEspeciais.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/exames/ExamesEspeciais.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/ExameEspecialTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ExameEspecialTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/PautaExameRecorrenciaControllerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/PautaNormalTest.php" beforeDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +26,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/ExameEspecialTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="210">
+              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/IntragrationFunctionsTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/integracao/functions/FuncoesIntegracao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/exames/ExamesEspeciais.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2694">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -47,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/exames/actualizar_status_exame.php" />
         <option value="$PROJECT_DIR$/view/fragments/js/exame_extra.js" />
         <option value="$PROJECT_DIR$/view/avaliacao/buscar_avaliacao.php" />
         <option value="$PROJECT_DIR$/view/avaliacao/form_avaliacao.php" />
@@ -97,6 +116,7 @@
         <option value="$PROJECT_DIR$/tests/EstudanteNotaControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/PautaExameRecorrenciaControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/PautaNormalTest.php" />
+        <option value="$PROJECT_DIR$/src/view/exames/ExamesEspeciais.php" />
         <option value="$PROJECT_DIR$/tests/ExameEspecialTest.php" />
       </list>
     </option>
@@ -184,7 +204,7 @@
             <path>
               <item name="sigepauta" type="b2602c69:ProjectViewProjectNode" />
               <item name="sigepauta" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -197,7 +217,7 @@
     <property name="ToolWindowDocumentation.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562681507090" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562682574657" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -278,12 +298,12 @@
       <workItem from="1561812574825" duration="9053000" />
       <workItem from="1562143548301" duration="27499000" />
       <workItem from="1562178831394" duration="13440000" />
-      <workItem from="1562677740534" duration="1980000" />
+      <workItem from="1562677740534" duration="3041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155804000" />
+    <option name="totallyTimeSpent" value="156865000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -307,7 +327,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.10729023" side_tool="true" weight="0.2913961" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.8927098" visible="true" weight="0.23298033" />
@@ -359,13 +378,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/fragments/js/shared.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/fragments/js/js_index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -673,9 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/IntragrationFunctionsTest.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/PautaExameRecorrenciaControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-121">
@@ -692,15 +701,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/integracao/functions/FuncoesIntegracao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        <state relative-caret-position="147">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/IntragrationFunctionsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/exames/ExamesEspeciais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2694">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/ExameEspecialTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="210">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
