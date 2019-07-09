@@ -1,6 +1,6 @@
 <?php
 
-require_once '../controller/ActividadeCtr.php';
+require_once './src/controller/ActividadeCtr.php';
 
 use PHPUnit\Framework\TestCase;
 

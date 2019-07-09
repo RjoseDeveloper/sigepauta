@@ -1,6 +1,6 @@
 <?php 
 use PHPUnit\Framework\TestCase;
-require_once '../controller/EstudanteNotaCtr.php';
+require_once './src/controller/EstudanteNotaCtr.php';
 
 class EstudanteNotaControllerTest extends TestCase{
     

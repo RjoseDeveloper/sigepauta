@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use MetaModels\Test\Contao\Database;
-require_once '../controller/EstudanteCtr.php';
+require_once './src/controller/EstudanteCtr.php';
 
 class EstudanteControllerTest extends TestCase{
     /**

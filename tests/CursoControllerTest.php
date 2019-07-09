@@ -1,20 +1,10 @@
 <?php
 
-require_once '../dbconf/db.php';
-require_once '../dbconf/conexion.php';
-require_once '../dbconf/getConection.php';
-require_once '../controller/CursoCtr.php';
-
+require_once './src/controller/CursoCtr.php';
 use PHPUnit\Framework\TestCase;
-use PHPUnit\DbUnit\TestCaseTrait;
-use MetaModels\Test\Contao\Database;
-
-  
 
 class CursoControllerTest extends TestCase{
-    
-      
-    
+
  /**
   * @covers CursoController::insert
   */

@@ -1,12 +1,9 @@
 <?php
 
-require_once '../controller/PautaRecorrenciaCtr.php';
-require_once '../dbconf/db.php';
-require_once '../dbconf/conexion.php';
-require_once '../dbconf/getConection.php';
+require_once './src/controller/PautaRecorrenciaCtr.php';
 
 use PHPUnit\Framework\TestCase;
-use MetaModels\Test\Contao\Database;
+
 
 
 class PautaExameRecorrenciaControllerTest extends TestCase{

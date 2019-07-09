@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-require_once '../controller/DocenteCtr.php';
+require_once './src/controller/DocenteCtr.php';
 
 class DocenteControllerTest extends TestCase{
     

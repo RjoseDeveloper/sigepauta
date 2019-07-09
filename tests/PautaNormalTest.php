@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require_once '../controller/PautaNormalCtr.php';
+require_once './src/controller/PautaNormalCtr.php';
 
 class PautaNormalTest extends TestCase{
 
