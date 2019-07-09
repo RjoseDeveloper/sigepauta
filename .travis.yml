@@ -11,8 +11,5 @@ before_install:
 before_script:
     - composer install
 script: phpunit --configuration phpunit.xml --coverage-text
- 
-notifications:
- email: fbiemo@unilurio.ac.mz,
- sabaco@unilurio.ac.mz
 
+ 
