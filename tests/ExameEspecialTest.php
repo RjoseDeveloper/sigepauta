@@ -11,14 +11,24 @@ use PHPUnit\Framework\TestCase;
 
 class ExameEspecialTest extends TestCase {
 
+    /**
+     * @var ExamesEspeciais
+     */
     private $fucEe;
+
+    /**
+     * ExameEspecialTest constructor.
+     */
     public function __construct(){
         $this->fucEe = new ExamesEspeciais();
         parent::__construct();
     }
 
+    /**
+     * @covers \PHPUnit\Framework\Constraint\IsInstanceOf
+     */
     public function testInstanceFuncoesIntragacao(){
-        $this->assertInstanceOf(FuncoesIntegracao::class, $this->fucEe);
+        $this->assertInstanceOf(ExamesEspeciais::class, $this->fucEe);
     }
     /**
      * @covers ExamesEspeciais::result
