@@ -6,7 +6,7 @@
  * Time: 7:03 AM
  */
 
-require_once '../../dbconf/getConection.php';
+require_once './src/dbconf/getConection.php';
 class MannagerController {
  
     public function create($descricao){
