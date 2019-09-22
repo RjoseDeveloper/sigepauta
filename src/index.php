@@ -162,9 +162,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 	
-			<p class="copy-right">UNIVERSIDADE LURIO, FACULDADE DE ENGENHARIA<br>
-                Departamento de Engenharia Informatica<br>
-                 Desenvolvido pelo Data Center &copy 2018 | Website <a href="http://www.fe.unilurio.ac.mz">fe.unilurio.ac.mz</a></p>
+			<p class="copy-right">INSTITUICAO PROPONENTE<br>
+                Departamento de Desenvolvimento de Sistema<br>
+                 Desenvolvido pelo Data Center &copy 2018 | Website <a href="#">datacente.org</a></p>
 		</div>
 	</div>
 	
